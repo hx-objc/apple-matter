@@ -1,0 +1,12 @@
+{
+  "dependencies": {},
+  "description": "Haxe externs for hxmc: Matter (smart home accessories), on every platform.",
+  "haxe": {
+    "classPath": "src",
+    "name": "apple-matter"
+  },
+  "license": "MIT",
+  "name": "@hx-objc/apple-matter",
+  "repository": "github:hx-objc/apple-matter",
+  "version": "0.1.0"
+}
