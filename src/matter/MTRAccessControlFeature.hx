@@ -2,7 +2,9 @@
 package matter;
 
 enum abstract MTRAccessControlFeature(Int) to Int {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Extension = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ManagedDevice = 2;
 	inline function new(v:Int) this = v;
 	var None = 0;

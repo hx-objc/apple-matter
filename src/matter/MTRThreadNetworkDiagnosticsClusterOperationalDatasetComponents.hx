@@ -7,44 +7,82 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRThreadNetworkDiagnosticsClusterOperationalDatasetComponents extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRThreadNetworkDiagnosticsClusterOperationalDatasetComponents extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function alloc():MTRThreadNetworkDiagnosticsClusterOperationalDatasetComponents;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var activeTimestampPresent(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_activeTimestampPresent():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_activeTimestampPresent(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var pendingTimestampPresent(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_pendingTimestampPresent():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_pendingTimestampPresent(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var masterKeyPresent(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_masterKeyPresent():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_masterKeyPresent(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var networkNamePresent(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_networkNamePresent():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_networkNamePresent(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var extendedPanIdPresent(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_extendedPanIdPresent():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_extendedPanIdPresent(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var meshLocalPrefixPresent(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_meshLocalPrefixPresent():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_meshLocalPrefixPresent(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var delayPresent(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_delayPresent():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_delayPresent(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var panIdPresent(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_panIdPresent():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_panIdPresent(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var channelPresent(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_channelPresent():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_channelPresent(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var pskcPresent(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_pskcPresent():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_pskcPresent(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var securityPolicyPresent(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_securityPolicyPresent():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_securityPolicyPresent(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var channelMaskPresent(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_channelMaskPresent():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_channelMaskPresent(v:NSNumberArg):NSNumberArg;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	override function init():MTRThreadNetworkDiagnosticsClusterOperationalDatasetComponents;
 }

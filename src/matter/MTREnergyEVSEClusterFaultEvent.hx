@@ -7,20 +7,34 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTREnergyEVSEClusterFaultEvent extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4) extern class MTREnergyEVSEClusterFaultEvent extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():MTREnergyEVSEClusterFaultEvent;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var sessionID(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_sessionID():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_sessionID(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var state(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_state():NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_state(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var faultStatePreviousState(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_faultStatePreviousState():NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_faultStatePreviousState(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var faultStateCurrentState(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_faultStateCurrentState():NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_faultStateCurrentState(v:NSNumberArg):NSNumberArg;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	override function init():MTREnergyEVSEClusterFaultEvent;
 }

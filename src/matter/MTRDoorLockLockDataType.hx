@@ -4,18 +4,32 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRDoorLockLockDataType(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Unspecified = cast 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ProgrammingCode = cast 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var UserIndex = cast 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var WeekDaySchedule = cast 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var YearDaySchedule = cast 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var HolidaySchedule = cast 5;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var PIN = cast 6;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var RFID = cast 7;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Fingerprint = cast 8;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var FingerVein = cast 9;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var Face = cast 10;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var AliroCredentialIssuerKey = cast 11;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var AliroEvictableEndpointKey = cast 12;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var AliroNonEvictableEndpointKey = cast 13;
 }

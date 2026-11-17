@@ -10,89 +10,166 @@ import hxmc.objc.Id;
 import hxmc.unsafe.UInt16;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRClusterThreadNetworkDiagnostics extends MTRGenericCluster {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRClusterThreadNetworkDiagnostics extends MTRGenericCluster {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():MTRClusterThreadNetworkDiagnostics;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function resetCountsWithParams(params:Null<MTRThreadNetworkDiagnosticsClusterResetCountsParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function resetCountsWithExpectedValues(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeChannelWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRoutingRoleWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeNetworkNameWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributePanIdWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeExtendedPanIdWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMeshLocalPrefixWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeOverrunCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeNeighborTableWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeRouteTableWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributePartitionIdWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeWeightingWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDataVersionWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeStableDataVersionWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeLeaderRouterIdWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDetachedRoleCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeChildRoleCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRouterRoleCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeLeaderRoleCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAttachAttemptCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributePartitionIdChangeCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeBetterPartitionAttachAttemptCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeParentChangeCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxTotalCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxUnicastCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxBroadcastCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxAckRequestedCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxAckedCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxNoAckRequestedCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxDataCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxDataPollCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxBeaconCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxBeaconRequestCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxOtherCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxRetryCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxDirectMaxRetryExpiryCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxIndirectMaxRetryExpiryCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxErrCcaCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxErrAbortCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTxErrBusyChannelCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxTotalCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxUnicastCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxBroadcastCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxDataCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxDataPollCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxBeaconCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxBeaconRequestCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxOtherCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxAddressFilteredCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxDestAddrFilteredCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxDuplicatedCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxErrNoFrameCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxErrUnknownNeighborCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxErrInvalidSrcAddrCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxErrSecCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxErrFcsCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRxErrOtherCountWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeActiveTimestampWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributePendingTimestampWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDelayWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeSecurityPolicyWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeChannelPage0MaskWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeOperationalDatasetComponentsWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeActiveNetworkFaultsListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeGeneratedCommandListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcceptedCommandListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAttributeListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeFeatureMapWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeClusterRevisionWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function initWithDevice(device:MTRDevice, endpointID:NSNumberArg, queue:NSObject):Null<MTRClusterThreadNetworkDiagnostics>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function initWithDevice(device:MTRDevice, endpoint:UInt16, queue:NSObject):Null<MTRClusterThreadNetworkDiagnostics>;
 	@:selector("resetCountsWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function resetCountsWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:Null<MTRThreadNetworkDiagnosticsClusterResetCountsParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("resetCountsWithExpectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function resetCountsWithExpectedValuesExpectedValueIntervalCompletionHandler(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeNeighborTableListWithParams(params:Null<MTRReadParams>):NSDictionary<NSString, Id>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRouteTableListWithParams(params:Null<MTRReadParams>):NSDictionary<NSString, Id>;
 }

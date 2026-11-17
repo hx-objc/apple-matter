@@ -4,13 +4,21 @@ package matter;
 import foundation.NSNumberArg;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRMetricData extends NSObject {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6) extern class MTRMetricData extends NSObject {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function alloc():MTRMetricData;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var value(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_value():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var errorCode(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_errorCode():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var duration(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_duration():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	override function init():MTRMetricData;
 }

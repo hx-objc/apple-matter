@@ -7,26 +7,46 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRWaterHeaterManagementClusterWaterHeaterBoostInfoStruct extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4) extern class MTRWaterHeaterManagementClusterWaterHeaterBoostInfoStruct extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():MTRWaterHeaterManagementClusterWaterHeaterBoostInfoStruct;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var duration(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_duration():NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_duration(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var oneShot(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_oneShot():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_oneShot(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var emergencyBoost(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_emergencyBoost():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_emergencyBoost(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var temporarySetpoint(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_temporarySetpoint():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_temporarySetpoint(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var targetPercentage(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_targetPercentage():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_targetPercentage(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var targetReheat(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_targetReheat():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_targetReheat(v:Null<NSNumberArg>):Null<NSNumberArg>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	override function init():MTRWaterHeaterManagementClusterWaterHeaterBoostInfoStruct;
 }

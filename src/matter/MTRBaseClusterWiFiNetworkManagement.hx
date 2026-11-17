@@ -8,30 +8,55 @@ import foundation.NSNumber;
 import foundation.NSNumberArg;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRBaseClusterWiFiNetworkManagement extends MTRGenericBaseCluster {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4) extern class MTRBaseClusterWiFiNetworkManagement extends MTRGenericBaseCluster {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():MTRBaseClusterWiFiNetworkManagement;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function networkPassphraseRequestWithParams(params:Null<MTRWiFiNetworkManagementClusterNetworkPassphraseRequestParams>, completion:(Null<MTRWiFiNetworkManagementClusterNetworkPassphraseResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function networkPassphraseRequestWithCompletion(completion:(Null<MTRWiFiNetworkManagementClusterNetworkPassphraseResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeSSIDWithCompletion(completion:(Null<NSData>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function subscribeAttributeSSIDWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSData>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function readAttributeSSIDWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSData>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributePassphraseSurrogateWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function subscribeAttributePassphraseSurrogateWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function readAttributePassphraseSurrogateWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeGeneratedCommandListWithCompletion(completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function subscribeAttributeGeneratedCommandListWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function readAttributeGeneratedCommandListWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeAcceptedCommandListWithCompletion(completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function subscribeAttributeAcceptedCommandListWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function readAttributeAcceptedCommandListWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeAttributeListWithCompletion(completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function subscribeAttributeAttributeListWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function readAttributeAttributeListWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeFeatureMapWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function subscribeAttributeFeatureMapWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function readAttributeFeatureMapWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeClusterRevisionWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function subscribeAttributeClusterRevisionWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function readAttributeClusterRevisionWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function initWithDevice(device:MTRBaseDevice, endpointID:NSNumberArg, queue:NSObject):Null<MTRBaseClusterWiFiNetworkManagement>;
 }

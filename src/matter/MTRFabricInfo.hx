@@ -6,30 +6,55 @@ import foundation.NSNumberArg;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRFabricInfo extends NSObject {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5) extern class MTRFabricInfo extends NSObject {
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	static function alloc():MTRFabricInfo;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var rootPublicKey(get, never) : NSData;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	function get_rootPublicKey():NSData;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var vendorID(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	function get_vendorID():NSNumberArg;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var fabricID(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	function get_fabricID():NSNumberArg;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var nodeID(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	function get_nodeID():NSNumberArg;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var label(get, never) : NSStringArg;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	function get_label():NSStringArg;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var rootCertificate(get, never) : Null<NSData>;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	function get_rootCertificate():Null<NSData>;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var rootCertificateTLV(get, never) : Null<NSData>;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	function get_rootCertificateTLV():Null<NSData>;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var intermediateCertificate(get, never) : Null<NSData>;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	function get_intermediateCertificate():Null<NSData>;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var intermediateCertificateTLV(get, never) : Null<NSData>;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	function get_intermediateCertificateTLV():Null<NSData>;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var operationalCertificate(get, never) : Null<NSData>;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	function get_operationalCertificate():Null<NSData>;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var operationalCertificateTLV(get, never) : Null<NSData>;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	function get_operationalCertificateTLV():Null<NSData>;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var fabricIndex(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	function get_fabricIndex():NSNumberArg;
 }

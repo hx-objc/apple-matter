@@ -8,142 +8,227 @@ import foundation.NSNumberArg;
 import hxmc.unsafe.UInt16;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRBaseClusterOperationalCredentials extends MTRGenericBaseCluster {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRBaseClusterOperationalCredentials extends MTRGenericBaseCluster {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():MTRBaseClusterOperationalCredentials;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function attestationRequestWithParams(params:MTROperationalCredentialsClusterAttestationRequestParams, completion:(Null<MTROperationalCredentialsClusterAttestationResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function certificateChainRequestWithParams(params:MTROperationalCredentialsClusterCertificateChainRequestParams, completion:(Null<MTROperationalCredentialsClusterCertificateChainResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function CSRRequestWithParams(params:MTROperationalCredentialsClusterCSRRequestParams, completion:(Null<MTROperationalCredentialsClusterCSRResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function addNOCWithParams(params:MTROperationalCredentialsClusterAddNOCParams, completion:(Null<MTROperationalCredentialsClusterNOCResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function updateNOCWithParams(params:MTROperationalCredentialsClusterUpdateNOCParams, completion:(Null<MTROperationalCredentialsClusterNOCResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function updateFabricLabelWithParams(params:MTROperationalCredentialsClusterUpdateFabricLabelParams, completion:(Null<MTROperationalCredentialsClusterNOCResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function removeFabricWithParams(params:MTROperationalCredentialsClusterRemoveFabricParams, completion:(Null<MTROperationalCredentialsClusterNOCResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function addTrustedRootCertificateWithParams(params:MTROperationalCredentialsClusterAddTrustedRootCertificateParams, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeNOCsWithParams(params:Null<MTRReadParams>, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeNOCsWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeNOCsWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeFabricsWithParams(params:Null<MTRReadParams>, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeFabricsWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeFabricsWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeSupportedFabricsWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeSupportedFabricsWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeSupportedFabricsWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeCommissionedFabricsWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeCommissionedFabricsWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeCommissionedFabricsWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeTrustedRootCertificatesWithCompletion(completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeTrustedRootCertificatesWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeTrustedRootCertificatesWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeCurrentFabricIndexWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeCurrentFabricIndexWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeCurrentFabricIndexWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeGeneratedCommandListWithCompletion(completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeGeneratedCommandListWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeGeneratedCommandListWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeAcceptedCommandListWithCompletion(completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeAcceptedCommandListWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeAcceptedCommandListWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeAttributeListWithCompletion(completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeAttributeListWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeAttributeListWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeFeatureMapWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeFeatureMapWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeFeatureMapWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeClusterRevisionWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeClusterRevisionWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeClusterRevisionWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function initWithDevice(device:MTRBaseDevice, endpointID:NSNumberArg, queue:NSObject):Null<MTRBaseClusterOperationalCredentials>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function initWithDevice(device:MTRBaseDevice, endpoint:UInt16, queue:NSObject):Null<MTRBaseClusterOperationalCredentials>;
 	@:selector("attestationRequestWithParams:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function attestationRequestWithParamsCompletionHandler(params:MTROperationalCredentialsClusterAttestationRequestParams, completionHandler:(Null<MTROperationalCredentialsClusterAttestationResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("certificateChainRequestWithParams:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function certificateChainRequestWithParamsCompletionHandler(params:MTROperationalCredentialsClusterCertificateChainRequestParams, completionHandler:(Null<MTROperationalCredentialsClusterCertificateChainResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("CSRRequestWithParams:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function CSRRequestWithParamsCompletionHandler(params:MTROperationalCredentialsClusterCSRRequestParams, completionHandler:(Null<MTROperationalCredentialsClusterCSRResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("addNOCWithParams:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function addNOCWithParamsCompletionHandler(params:MTROperationalCredentialsClusterAddNOCParams, completionHandler:(Null<MTROperationalCredentialsClusterNOCResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("updateNOCWithParams:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function updateNOCWithParamsCompletionHandler(params:MTROperationalCredentialsClusterUpdateNOCParams, completionHandler:(Null<MTROperationalCredentialsClusterNOCResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("updateFabricLabelWithParams:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function updateFabricLabelWithParamsCompletionHandler(params:MTROperationalCredentialsClusterUpdateFabricLabelParams, completionHandler:(Null<MTROperationalCredentialsClusterNOCResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("removeFabricWithParams:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function removeFabricWithParamsCompletionHandler(params:MTROperationalCredentialsClusterRemoveFabricParams, completionHandler:(Null<MTROperationalCredentialsClusterNOCResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("addTrustedRootCertificateWithParams:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function addTrustedRootCertificateWithParamsCompletionHandler(params:MTROperationalCredentialsClusterAddTrustedRootCertificateParams, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("readAttributeNOCsWithParams:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeNOCsWithParamsCompletionHandler(params:Null<MTRReadParams>, completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeNOCsWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeNOCsWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:selector("readAttributeFabricsWithParams:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeFabricsWithParamsCompletionHandler(params:Null<MTRReadParams>, completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeFabricsWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeFabricsWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeSupportedFabricsWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeSupportedFabricsWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeSupportedFabricsWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeCommissionedFabricsWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeCommissionedFabricsWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeCommissionedFabricsWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTrustedRootCertificatesWithCompletionHandler(completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeTrustedRootCertificatesWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeTrustedRootCertificatesWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeCurrentFabricIndexWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeCurrentFabricIndexWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeCurrentFabricIndexWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeGeneratedCommandListWithCompletionHandler(completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeGeneratedCommandListWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeGeneratedCommandListWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcceptedCommandListWithCompletionHandler(completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeAcceptedCommandListWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeAcceptedCommandListWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAttributeListWithCompletionHandler(completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeAttributeListWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeAttributeListWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeFeatureMapWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeFeatureMapWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeFeatureMapWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeClusterRevisionWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeClusterRevisionWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeClusterRevisionWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 }

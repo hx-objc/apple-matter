@@ -7,20 +7,34 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRTemperatureControlClusterSetTemperatureParams extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4) extern class MTRTemperatureControlClusterSetTemperatureParams extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():MTRTemperatureControlClusterSetTemperatureParams;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var targetTemperature(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_targetTemperature():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_targetTemperature(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var targetTemperatureLevel(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_targetTemperatureLevel():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_targetTemperatureLevel(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var timedInvokeTimeoutMs(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_timedInvokeTimeoutMs():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_timedInvokeTimeoutMs(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var serverSideProcessingTimeout(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_serverSideProcessingTimeout():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_serverSideProcessingTimeout(v:Null<NSNumberArg>):Null<NSNumberArg>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	override function init():MTRTemperatureControlClusterSetTemperatureParams;
 }

@@ -9,32 +9,58 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRUnitTestingClusterTestFabricScoped extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4) extern class MTRUnitTestingClusterTestFabricScoped extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():MTRUnitTestingClusterTestFabricScoped;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var fabricSensitiveInt8u(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_fabricSensitiveInt8u():NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_fabricSensitiveInt8u(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var optionalFabricSensitiveInt8u(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_optionalFabricSensitiveInt8u():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_optionalFabricSensitiveInt8u(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var nullableFabricSensitiveInt8u(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_nullableFabricSensitiveInt8u():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_nullableFabricSensitiveInt8u(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var nullableOptionalFabricSensitiveInt8u(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_nullableOptionalFabricSensitiveInt8u():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_nullableOptionalFabricSensitiveInt8u(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var fabricSensitiveCharString(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_fabricSensitiveCharString():NSStringArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_fabricSensitiveCharString(v:NSStringArg):NSStringArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var fabricSensitiveStruct(get, set) : MTRUnitTestingClusterSimpleStruct;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_fabricSensitiveStruct():MTRUnitTestingClusterSimpleStruct;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_fabricSensitiveStruct(v:MTRUnitTestingClusterSimpleStruct):MTRUnitTestingClusterSimpleStruct;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var fabricSensitiveInt8uList(get, set) : NSArray;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_fabricSensitiveInt8uList():NSArray;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_fabricSensitiveInt8uList(v:NSArray):NSArray;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var fabricIndex(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_fabricIndex():NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_fabricIndex(v:NSNumberArg):NSNumberArg;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	override function init():MTRUnitTestingClusterTestFabricScoped;
 }

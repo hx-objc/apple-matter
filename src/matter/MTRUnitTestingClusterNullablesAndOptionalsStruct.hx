@@ -9,44 +9,82 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRUnitTestingClusterNullablesAndOptionalsStruct extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4) extern class MTRUnitTestingClusterNullablesAndOptionalsStruct extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():MTRUnitTestingClusterNullablesAndOptionalsStruct;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var nullableInt(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_nullableInt():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_nullableInt(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var optionalInt(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_optionalInt():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_optionalInt(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var nullableOptionalInt(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_nullableOptionalInt():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_nullableOptionalInt(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var nullableString(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_nullableString():Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_nullableString(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var optionalString(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_optionalString():Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_optionalString(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var nullableOptionalString(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_nullableOptionalString():Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_nullableOptionalString(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var nullableStruct(get, set) : Null<MTRUnitTestingClusterSimpleStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_nullableStruct():Null<MTRUnitTestingClusterSimpleStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_nullableStruct(v:Null<MTRUnitTestingClusterSimpleStruct>):Null<MTRUnitTestingClusterSimpleStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var optionalStruct(get, set) : Null<MTRUnitTestingClusterSimpleStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_optionalStruct():Null<MTRUnitTestingClusterSimpleStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_optionalStruct(v:Null<MTRUnitTestingClusterSimpleStruct>):Null<MTRUnitTestingClusterSimpleStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var nullableOptionalStruct(get, set) : Null<MTRUnitTestingClusterSimpleStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_nullableOptionalStruct():Null<MTRUnitTestingClusterSimpleStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_nullableOptionalStruct(v:Null<MTRUnitTestingClusterSimpleStruct>):Null<MTRUnitTestingClusterSimpleStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var nullableList(get, set) : Null<NSArray>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_nullableList():Null<NSArray>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_nullableList(v:Null<NSArray>):Null<NSArray>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var optionalList(get, set) : Null<NSArray>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_optionalList():Null<NSArray>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_optionalList(v:Null<NSArray>):Null<NSArray>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var nullableOptionalList(get, set) : Null<NSArray>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_nullableOptionalList():Null<NSArray>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_nullableOptionalList(v:Null<NSArray>):Null<NSArray>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	override function init():MTRUnitTestingClusterNullablesAndOptionalsStruct;
 }

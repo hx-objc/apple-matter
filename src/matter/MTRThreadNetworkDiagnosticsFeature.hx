@@ -2,9 +2,13 @@
 package matter;
 
 enum abstract MTRThreadNetworkDiagnosticsFeature(Int) to Int {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var PacketCounts = 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var ErrorCounts = 2;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MLECounts = 4;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MACCounts = 8;
 	inline function new(v:Int) this = v;
 	var None = 0;

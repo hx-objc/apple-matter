@@ -7,14 +7,22 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRPowerSourceClusterWiredFaultChangeEvent extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4) extern class MTRPowerSourceClusterWiredFaultChangeEvent extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():MTRPowerSourceClusterWiredFaultChangeEvent;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var current(get, set) : NSArray;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_current():NSArray;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_current(v:NSArray):NSArray;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var previous(get, set) : NSArray;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_previous():NSArray;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_previous(v:NSArray):NSArray;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	override function init():MTRPowerSourceClusterWiredFaultChangeEvent;
 }

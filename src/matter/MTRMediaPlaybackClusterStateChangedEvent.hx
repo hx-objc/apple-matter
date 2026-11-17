@@ -8,35 +8,64 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRMediaPlaybackClusterStateChangedEvent extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4) extern class MTRMediaPlaybackClusterStateChangedEvent extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():MTRMediaPlaybackClusterStateChangedEvent;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var currentState(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_currentState():NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_currentState(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var startTime(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_startTime():NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_startTime(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var duration(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_duration():NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_duration(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var sampledPosition(get, set) : MTRMediaPlaybackClusterPlaybackPositionStruct;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_sampledPosition():MTRMediaPlaybackClusterPlaybackPositionStruct;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_sampledPosition(v:MTRMediaPlaybackClusterPlaybackPositionStruct):MTRMediaPlaybackClusterPlaybackPositionStruct;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var playbackSpeed(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_playbackSpeed():NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_playbackSpeed(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var seekRangeEnd(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_seekRangeEnd():NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_seekRangeEnd(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var seekRangeStart(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_seekRangeStart():NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_seekRangeStart(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var data(get, set) : Null<NSData>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_data():Null<NSData>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_data(v:Null<NSData>):Null<NSData>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var audioAdvanceUnmuted(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_audioAdvanceUnmuted():NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_audioAdvanceUnmuted(v:NSNumberArg):NSNumberArg;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	override function init():MTRMediaPlaybackClusterStateChangedEvent;
 }

@@ -2,11 +2,17 @@
 package matter;
 
 enum abstract MTRFanControlFeature(Int) to Int {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MultiSpeed = 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Auto = 2;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Rocking = 4;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Wind = 8;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Step = 16;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var AirflowDirection = 32;
 	inline function new(v:Int) this = v;
 	var None = 0;

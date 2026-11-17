@@ -7,50 +7,95 @@ import foundation.NSNumber;
 import foundation.NSNumberArg;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRBaseClusterBooleanStateConfiguration extends MTRGenericBaseCluster {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6) extern class MTRBaseClusterBooleanStateConfiguration extends MTRGenericBaseCluster {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function alloc():MTRBaseClusterBooleanStateConfiguration;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function suppressAlarmWithParams(params:MTRBooleanStateConfigurationClusterSuppressAlarmParams, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function enableDisableAlarmWithParams(params:MTRBooleanStateConfigurationClusterEnableDisableAlarmParams, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function readAttributeCurrentSensitivityLevelWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	overload function writeAttributeCurrentSensitivityLevelWithValue(value:NSNumberArg, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	overload function writeAttributeCurrentSensitivityLevelWithValue(value:NSNumberArg, params:Null<MTRWriteParams>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function subscribeAttributeCurrentSensitivityLevelWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function readAttributeCurrentSensitivityLevelWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function readAttributeSupportedSensitivityLevelsWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function subscribeAttributeSupportedSensitivityLevelsWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function readAttributeSupportedSensitivityLevelsWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function readAttributeDefaultSensitivityLevelWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function subscribeAttributeDefaultSensitivityLevelWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function readAttributeDefaultSensitivityLevelWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function readAttributeAlarmsActiveWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function subscribeAttributeAlarmsActiveWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function readAttributeAlarmsActiveWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function readAttributeAlarmsSuppressedWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function subscribeAttributeAlarmsSuppressedWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function readAttributeAlarmsSuppressedWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function readAttributeAlarmsEnabledWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function subscribeAttributeAlarmsEnabledWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function readAttributeAlarmsEnabledWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function readAttributeAlarmsSupportedWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function subscribeAttributeAlarmsSupportedWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function readAttributeAlarmsSupportedWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function readAttributeSensorFaultWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function subscribeAttributeSensorFaultWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function readAttributeSensorFaultWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function readAttributeGeneratedCommandListWithCompletion(completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function subscribeAttributeGeneratedCommandListWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function readAttributeGeneratedCommandListWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function readAttributeAcceptedCommandListWithCompletion(completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function subscribeAttributeAcceptedCommandListWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function readAttributeAcceptedCommandListWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function readAttributeAttributeListWithCompletion(completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function subscribeAttributeAttributeListWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function readAttributeAttributeListWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function readAttributeFeatureMapWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function subscribeAttributeFeatureMapWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function readAttributeFeatureMapWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function readAttributeClusterRevisionWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function subscribeAttributeClusterRevisionWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function readAttributeClusterRevisionWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function initWithDevice(device:MTRBaseDevice, endpointID:NSNumberArg, queue:NSObject):Null<MTRBaseClusterBooleanStateConfiguration>;
 }

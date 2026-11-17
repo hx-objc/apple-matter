@@ -4,8 +4,12 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRServiceAreaOperationalStatus(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Pending = cast 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Operating = cast 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Skipped = cast 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Completed = cast 3;
 }

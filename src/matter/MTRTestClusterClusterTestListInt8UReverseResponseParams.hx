@@ -6,8 +6,11 @@ import foundation.NSString;
 import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 
-@:hxmc.framework("Matter") @:hxmc.objc @:deprecated extern class MTRTestClusterClusterTestListInt8UReverseResponseParams extends MTRUnitTestingClusterTestListInt8UReverseResponseParams {
+@:hxmc.framework("Matter") @:hxmc.objc @:deprecated @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRTestClusterClusterTestListInt8UReverseResponseParams extends MTRUnitTestingClusterTestListInt8UReverseResponseParams {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():MTRTestClusterClusterTestListInt8UReverseResponseParams;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	override function init():MTRTestClusterClusterTestListInt8UReverseResponseParams;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	override function initWithResponseValue(responseValue:NSDictionary<NSString, Id>, error:Ptr):Null<MTRTestClusterClusterTestListInt8UReverseResponseParams>;
 }

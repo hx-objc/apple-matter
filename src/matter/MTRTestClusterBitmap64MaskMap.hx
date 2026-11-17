@@ -5,12 +5,16 @@ import hxmc.I64;
 
 @:deprecated enum abstract MTRTestClusterBitmap64MaskMap(I64) to I64 {
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MaskVal1 = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MaskVal2 = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MaskVal3 = 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MaskVal4 : MTRTestClusterBitmap64MaskMap = new MTRTestClusterBitmap64MaskMap(0x4000000000000000i64);
 	inline function new(v:I64) this = v;
 	var None = 0;

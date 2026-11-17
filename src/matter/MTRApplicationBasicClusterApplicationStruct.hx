@@ -8,22 +8,36 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRApplicationBasicClusterApplicationStruct extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4) extern class MTRApplicationBasicClusterApplicationStruct extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():MTRApplicationBasicClusterApplicationStruct;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var catalogVendorID(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_catalogVendorID():NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_catalogVendorID(v:NSNumberArg):NSNumberArg;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var catalogVendorId(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_catalogVendorId():NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_catalogVendorId(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var applicationID(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_applicationID():NSStringArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_applicationID(v:NSStringArg):NSStringArg;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var applicationId(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_applicationId():NSStringArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_applicationId(v:NSStringArg):NSStringArg;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	override function init():MTRApplicationBasicClusterApplicationStruct;
 }

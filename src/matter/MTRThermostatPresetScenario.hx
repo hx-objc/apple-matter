@@ -4,11 +4,18 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRThermostatPresetScenario(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Occupied = cast 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Unoccupied = cast 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Sleep = cast 3;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Wake = cast 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Vacation = cast 5;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var GoingToSleep = cast 6;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var UserDefined = cast 254;
 }

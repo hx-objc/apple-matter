@@ -4,8 +4,12 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRThermostatACCompressorType(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Unknown = cast 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var T1 = cast 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var T2 = cast 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var T3 = cast 3;
 }

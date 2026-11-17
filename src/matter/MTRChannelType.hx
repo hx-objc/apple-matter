@@ -4,8 +4,12 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRChannelType(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Satellite = cast 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Cable = cast 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Terrestrial = cast 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var OTT = cast 3;
 }

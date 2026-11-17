@@ -7,14 +7,22 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTROTASoftwareUpdateRequestorClusterVersionAppliedEvent extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4) extern class MTROTASoftwareUpdateRequestorClusterVersionAppliedEvent extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():MTROTASoftwareUpdateRequestorClusterVersionAppliedEvent;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var softwareVersion(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_softwareVersion():NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_softwareVersion(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var productID(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_productID():NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_productID(v:NSNumberArg):NSNumberArg;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	override function init():MTROTASoftwareUpdateRequestorClusterVersionAppliedEvent;
 }

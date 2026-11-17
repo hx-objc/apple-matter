@@ -7,21 +7,35 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRContentLauncherClusterStyleInformationStruct extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4) extern class MTRContentLauncherClusterStyleInformationStruct extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():MTRContentLauncherClusterStyleInformationStruct;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var imageURL(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_imageURL():Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_imageURL(v:Null<NSStringArg>):Null<NSStringArg>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var imageUrl(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_imageUrl():Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_imageUrl(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var color(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_color():Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_color(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var size(get, set) : Null<MTRContentLauncherClusterDimensionStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_size():Null<MTRContentLauncherClusterDimensionStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_size(v:Null<MTRContentLauncherClusterDimensionStruct>):Null<MTRContentLauncherClusterDimensionStruct>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	override function init():MTRContentLauncherClusterStyleInformationStruct;
 }

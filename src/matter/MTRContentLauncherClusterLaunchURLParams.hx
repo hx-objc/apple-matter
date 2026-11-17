@@ -8,23 +8,40 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRContentLauncherClusterLaunchURLParams extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRContentLauncherClusterLaunchURLParams extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function alloc():MTRContentLauncherClusterLaunchURLParams;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var contentURL(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_contentURL():NSStringArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_contentURL(v:NSStringArg):NSStringArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var displayString(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_displayString():Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_displayString(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var brandingInformation(get, set) : Null<MTRContentLauncherClusterBrandingInformationStruct>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_brandingInformation():Null<MTRContentLauncherClusterBrandingInformationStruct>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_brandingInformation(v:Null<MTRContentLauncherClusterBrandingInformationStruct>):Null<MTRContentLauncherClusterBrandingInformationStruct>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var timedInvokeTimeoutMs(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_timedInvokeTimeoutMs():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_timedInvokeTimeoutMs(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var serverSideProcessingTimeout(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_serverSideProcessingTimeout():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_serverSideProcessingTimeout(v:Null<NSNumberArg>):Null<NSNumberArg>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	override function init():MTRContentLauncherClusterLaunchURLParams;
 }

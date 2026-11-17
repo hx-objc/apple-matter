@@ -10,323 +10,481 @@ import hxmc.objc.Id;
 import hxmc.unsafe.UInt16;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc @:deprecated extern class MTRClusterElectricalMeasurement extends MTRGenericCluster {
+@:hxmc.framework("Matter") @:hxmc.objc @:deprecated @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRClusterElectricalMeasurement extends MTRGenericCluster {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():MTRClusterElectricalMeasurement;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function getProfileInfoCommandWithParams(params:Null<MTRElectricalMeasurementClusterGetProfileInfoCommandParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function getProfileInfoCommandWithExpectedValues(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function getMeasurementProfileCommandWithParams(params:MTRElectricalMeasurementClusterGetMeasurementProfileCommandParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMeasurementTypeWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDcVoltageWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDcVoltageMinWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDcVoltageMaxWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDcCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDcCurrentMinWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDcCurrentMaxWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDcPowerWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDcPowerMinWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDcPowerMaxWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDcVoltageMultiplierWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDcVoltageDivisorWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDcCurrentMultiplierWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDcCurrentDivisorWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDcPowerMultiplierWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDcPowerDivisorWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcFrequencyWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcFrequencyMinWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcFrequencyMaxWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeNeutralCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTotalActivePowerWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTotalReactivePowerWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeTotalApparentPowerWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMeasured1stHarmonicCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMeasured3rdHarmonicCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMeasured5thHarmonicCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMeasured7thHarmonicCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMeasured9thHarmonicCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMeasured11thHarmonicCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMeasuredPhase1stHarmonicCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMeasuredPhase3rdHarmonicCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMeasuredPhase5thHarmonicCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMeasuredPhase7thHarmonicCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMeasuredPhase9thHarmonicCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMeasuredPhase11thHarmonicCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcFrequencyMultiplierWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcFrequencyDivisorWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributePowerMultiplierWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributePowerDivisorWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeHarmonicCurrentMultiplierWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributePhaseHarmonicCurrentMultiplierWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeInstantaneousVoltageWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeInstantaneousLineCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeInstantaneousActiveCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeInstantaneousReactiveCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeInstantaneousPowerWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltageWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltageMinWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltageMaxWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsCurrentWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsCurrentMinWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsCurrentMaxWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeActivePowerWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeActivePowerMinWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeActivePowerMaxWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeReactivePowerWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeApparentPowerWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributePowerFactorWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAverageRmsVoltageMeasurementPeriodWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeAverageRmsVoltageMeasurementPeriodWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeAverageRmsVoltageMeasurementPeriodWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAverageRmsUnderVoltageCounterWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeAverageRmsUnderVoltageCounterWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeAverageRmsUnderVoltageCounterWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsExtremeOverVoltagePeriodWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeRmsExtremeOverVoltagePeriodWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeRmsExtremeOverVoltagePeriodWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsExtremeUnderVoltagePeriodWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeRmsExtremeUnderVoltagePeriodWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeRmsExtremeUnderVoltagePeriodWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltageSagPeriodWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeRmsVoltageSagPeriodWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeRmsVoltageSagPeriodWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltageSwellPeriodWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeRmsVoltageSwellPeriodWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeRmsVoltageSwellPeriodWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcVoltageMultiplierWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcVoltageDivisorWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcCurrentMultiplierWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcCurrentDivisorWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcPowerMultiplierWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcPowerDivisorWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeOverloadAlarmsMaskWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeOverloadAlarmsMaskWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeOverloadAlarmsMaskWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeVoltageOverloadWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeCurrentOverloadWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcOverloadAlarmsMaskWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeAcOverloadAlarmsMaskWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeAcOverloadAlarmsMaskWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcVoltageOverloadWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcCurrentOverloadWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcActivePowerOverloadWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcReactivePowerOverloadWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAverageRmsOverVoltageWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAverageRmsUnderVoltageWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsExtremeOverVoltageWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsExtremeUnderVoltageWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltageSagWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltageSwellWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeLineCurrentPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeActiveCurrentPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeReactiveCurrentPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltagePhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltageMinPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltageMaxPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsCurrentPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsCurrentMinPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsCurrentMaxPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeActivePowerPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeActivePowerMinPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeActivePowerMaxPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeReactivePowerPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeApparentPowerPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributePowerFactorPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAverageRmsVoltageMeasurementPeriodPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAverageRmsOverVoltageCounterPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAverageRmsUnderVoltageCounterPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsExtremeOverVoltagePeriodPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsExtremeUnderVoltagePeriodPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltageSagPeriodPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltageSwellPeriodPhaseBWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeLineCurrentPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeActiveCurrentPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeReactiveCurrentPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltagePhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltageMinPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltageMaxPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsCurrentPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsCurrentMinPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsCurrentMaxPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeActivePowerPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeActivePowerMinPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeActivePowerMaxPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeReactivePowerPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeApparentPowerPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributePowerFactorPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAverageRmsVoltageMeasurementPeriodPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAverageRmsOverVoltageCounterPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAverageRmsUnderVoltageCounterPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsExtremeOverVoltagePeriodPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsExtremeUnderVoltagePeriodPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltageSagPeriodPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRmsVoltageSwellPeriodPhaseCWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeGeneratedCommandListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcceptedCommandListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAttributeListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeFeatureMapWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeClusterRevisionWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function initWithDevice(device:MTRDevice, endpointID:NSNumberArg, queue:NSObject):Null<MTRClusterElectricalMeasurement>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function initWithDevice(device:MTRDevice, endpoint:UInt16, queue:NSObject):Null<MTRClusterElectricalMeasurement>;
 	@:selector("getProfileInfoCommandWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function getProfileInfoCommandWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:Null<MTRElectricalMeasurementClusterGetProfileInfoCommandParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("getProfileInfoCommandWithExpectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function getProfileInfoCommandWithExpectedValuesExpectedValueIntervalCompletionHandler(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("getMeasurementProfileCommandWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function getMeasurementProfileCommandWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRElectricalMeasurementClusterGetMeasurementProfileCommandParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 }

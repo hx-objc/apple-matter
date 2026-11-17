@@ -4,16 +4,26 @@ package matter;
 import hxmc.unsafe.UInt16;
 
 enum abstract MTRPumpConfigurationAndControlPumpStatusBitmap(UInt16) to UInt16 {
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var DeviceFault = cast 1;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var SupplyFault = cast 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var Supplyfault = cast 2;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var SpeedLow = cast 4;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var SpeedHigh = cast 8;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var LocalOverride = cast 16;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var Running = cast 32;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var RemotePressure = cast 64;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var RemoteFlow = cast 128;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var RemoteTemperature = cast 256;
 	inline function new(v:UInt16) this = v;
 	var None = cast 0;

@@ -9,15 +9,24 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRChannelClusterProgramGuideResponseParams extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4) extern class MTRChannelClusterProgramGuideResponseParams extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():MTRChannelClusterProgramGuideResponseParams;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var paging(get, set) : MTRChannelClusterChannelPagingStruct;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_paging():MTRChannelClusterChannelPagingStruct;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_paging(v:MTRChannelClusterChannelPagingStruct):MTRChannelClusterChannelPagingStruct;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var programList(get, set) : NSArray;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_programList():NSArray;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_programList(v:NSArray):NSArray;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function initWithResponseValue(responseValue:NSDictionary<NSString, Id>, error:Ptr):Null<MTRChannelClusterProgramGuideResponseParams>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	override function init():MTRChannelClusterProgramGuideResponseParams;
 }

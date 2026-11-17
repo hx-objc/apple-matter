@@ -9,21 +9,37 @@ import foundation.NSString;
 import hxmc.objc.Id;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRClusterWaterHeaterManagement extends MTRGenericCluster {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4) extern class MTRClusterWaterHeaterManagement extends MTRGenericCluster {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():MTRClusterWaterHeaterManagement;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function boostWithParams(params:MTRWaterHeaterManagementClusterBoostParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function cancelBoostWithParams(params:Null<MTRWaterHeaterManagementClusterCancelBoostParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function cancelBoostWithExpectedValues(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeHeaterTypesWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeHeatDemandWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeTankVolumeWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeEstimatedHeatRequiredWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeTankPercentageWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeBoostStateWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeGeneratedCommandListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeAcceptedCommandListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeAttributeListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeFeatureMapWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeClusterRevisionWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function initWithDevice(device:MTRDevice, endpointID:NSNumberArg, queue:NSObject):Null<MTRClusterWaterHeaterManagement>;
 }

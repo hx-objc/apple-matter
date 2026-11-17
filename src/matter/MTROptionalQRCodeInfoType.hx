@@ -5,6 +5,7 @@ import hxmc.I64;
 
 enum abstract MTROptionalQRCodeInfoType(I64) to I64 {
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Unknown = 0;
 	var String = 1;
 	var Int32 = 2;

@@ -7,35 +7,64 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRColorControlClusterColorLoopSetParams extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRColorControlClusterColorLoopSetParams extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function alloc():MTRColorControlClusterColorLoopSetParams;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var updateFlags(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_updateFlags():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_updateFlags(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var action(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_action():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_action(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var direction(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_direction():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_direction(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var time(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_time():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_time(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var startHue(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_startHue():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_startHue(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var optionsMask(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_optionsMask():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_optionsMask(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var optionsOverride(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_optionsOverride():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_optionsOverride(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var timedInvokeTimeoutMs(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_timedInvokeTimeoutMs():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_timedInvokeTimeoutMs(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var serverSideProcessingTimeout(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_serverSideProcessingTimeout():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_serverSideProcessingTimeout(v:Null<NSNumberArg>):Null<NSNumberArg>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	override function init():MTRColorControlClusterColorLoopSetParams;
 }

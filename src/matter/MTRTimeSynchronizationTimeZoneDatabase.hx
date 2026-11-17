@@ -4,7 +4,10 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRTimeSynchronizationTimeZoneDatabase(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Full = cast 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Partial = cast 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var None = cast 2;
 }

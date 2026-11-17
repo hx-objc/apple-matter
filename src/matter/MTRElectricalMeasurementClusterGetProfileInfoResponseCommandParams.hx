@@ -10,30 +10,48 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc @:deprecated extern class MTRElectricalMeasurementClusterGetProfileInfoResponseCommandParams extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:deprecated @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRElectricalMeasurementClusterGetProfileInfoResponseCommandParams extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function alloc():MTRElectricalMeasurementClusterGetProfileInfoResponseCommandParams;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var profileCount(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_profileCount():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_profileCount(v:NSNumberArg):NSNumberArg;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var profileIntervalPeriod(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_profileIntervalPeriod():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_profileIntervalPeriod(v:NSNumberArg):NSNumberArg;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var maxNumberOfIntervals(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_maxNumberOfIntervals():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_maxNumberOfIntervals(v:NSNumberArg):NSNumberArg;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var listOfAttributes(get, set) : NSArray;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_listOfAttributes():NSArray;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_listOfAttributes(v:NSArray):NSArray;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var timedInvokeTimeoutMs(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_timedInvokeTimeoutMs():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_timedInvokeTimeoutMs(v:Null<NSNumberArg>):Null<NSNumberArg>;
 	@:deprecated
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function initWithResponseValue(responseValue:NSDictionary<NSString, Id>, error:Ptr):Null<MTRElectricalMeasurementClusterGetProfileInfoResponseCommandParams>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	override function init():MTRElectricalMeasurementClusterGetProfileInfoResponseCommandParams;
 }

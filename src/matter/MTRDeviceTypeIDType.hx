@@ -2,73 +2,142 @@
 package matter;
 
 enum abstract MTRDeviceTypeIDType(Int) to Int {
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var DoorLockID = 10;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var DoorLockControllerID = 11;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var AggregatorID = 14;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var GenericSwitchID = 15;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var PowerSourceID = 17;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var OTARequestorID = 18;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var BridgedNodeID = 19;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var OTAProviderID = 20;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var ContactSensorID = 21;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var RootNodeID = 22;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var SolarPowerID = 23;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var BatteryStorageID = 24;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var SecondaryNetworkInterfaceID = 25;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var SpeakerID = 34;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var CastingVideoPlayerID = 35;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var ContentAppID = 36;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var ModeSelectID = 39;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var BasicVideoPlayerID = 40;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var CastingVideoClientID = 41;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var VideoRemoteControlID = 42;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var FanID = 43;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var AirQualitySensorID = 44;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var AirPurifierID = 45;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var WaterFreezeDetectorID = 65;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var WaterValveID = 66;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var WaterLeakDetectorID = 67;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var RainSensorID = 68;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var RefrigeratorID = 112;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var TemperatureControlledCabinetID = 113;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var RoomAirConditionerID = 114;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var LaundryWasherID = 115;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var RoboticVacuumCleanerID = 116;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var DishwasherID = 117;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var SmokeCOAlarmID = 118;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var CookSurfaceID = 119;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var CooktopID = 120;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var MicrowaveOvenID = 121;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var ExtractorHoodID = 122;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var OvenID = 123;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var LaundryDryerID = 124;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var NetworkInfrastructureManagerID = 144;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var ThreadBorderRouterID = 145;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var OnOffLightID = 256;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var DimmableLightID = 257;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var OnOffLightSwitchID = 259;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var DimmerSwitchID = 260;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var ColorDimmerSwitchID = 261;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var LightSensorID = 262;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var OccupancySensorID = 263;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var OnOffPlugInUnitID = 266;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var DimmablePlugInUnitID = 267;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var ColorTemperatureLightID = 268;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var ExtendedColorLightID = 269;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var WindowCoveringID = 514;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var WindowCoveringControllerID = 515;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var ThermostatID = 769;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var TemperatureSensorID = 770;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var PumpID = 771;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var PumpControllerID = 772;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var PressureSensorID = 773;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var FlowSensorID = 774;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var HumiditySensorID = 775;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var HeatPumpID = 777;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var EVSEID = 1292;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var DeviceEnergyManagementID = 1293;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var WaterHeaterID = 1295;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var ElectricalSensorID = 1296;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var ControlBridgeID = 2112;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var OnOffSensorID = 2128;
 }

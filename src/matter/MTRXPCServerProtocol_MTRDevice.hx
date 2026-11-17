@@ -13,30 +13,42 @@ import foundation.NSUUID;
 import hxmc.objc.Id;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("MTRXPCServerProtocol_MTRDevice") extern interface MTRXPCServerProtocol_MTRDevice extends NSObjectProtocol {
+@:hxmc.objc("MTRXPCServerProtocol_MTRDevice") @:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2) extern interface MTRXPCServerProtocol_MTRDevice extends NSObjectProtocol {
 	@:selector("deviceController:nodeID:getStateWithReply:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function deviceControllerNodeIDGetStateWithReply(controller:NSUUID, nodeID:NSNumberArg, getStateWithReply:MTRDeviceState -> Void):Void;
 	@:selector("deviceController:nodeID:getDeviceCachePrimedWithReply:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function deviceControllerNodeIDGetDeviceCachePrimedWithReply(controller:NSUUID, nodeID:NSNumberArg, getDeviceCachePrimedWithReply:Bool -> Void):Void;
 	@:selector("deviceController:nodeID:getEstimatedStartTimeWithReply:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function deviceControllerNodeIDGetEstimatedStartTimeWithReply(controller:NSUUID, nodeID:NSNumberArg, getEstimatedStartTimeWithReply:Null<NSDate> -> Void):Void;
 	@:selector("deviceController:nodeID:getEstimatedSubscriptionLatencyWithReply:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function deviceControllerNodeIDGetEstimatedSubscriptionLatencyWithReply(controller:NSUUID, nodeID:NSNumberArg, getEstimatedSubscriptionLatencyWithReply:Null<NSNumber> -> Void):Void;
 	@:selector("deviceController:nodeID:readAttributeWithEndpointID:clusterID:attributeID:params:withReply:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function deviceControllerNodeIDReadAttributeWithEndpointIDClusterIDAttributeIDParamsWithReply(controller:NSUUID, nodeID:NSNumberArg, readAttributeWithEndpointID:NSNumberArg, clusterID:NSNumberArg, attributeID:NSNumberArg, params:Null<MTRReadParams>, withReply:Null<NSDictionary<NSString, Id>> -> Void):Void;
 	@:selector("deviceController:nodeID:writeAttributeWithEndpointID:clusterID:attributeID:value:expectedValueInterval:timedWriteTimeout:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function deviceControllerNodeIDWriteAttributeWithEndpointIDClusterIDAttributeIDValueExpectedValueIntervalTimedWriteTimeout(controller:NSUUID, nodeID:NSNumberArg, writeAttributeWithEndpointID:NSNumberArg, clusterID:NSNumberArg, attributeID:NSNumberArg, value:Id, expectedValueInterval:Null<NSNumberArg>, timedWriteTimeout:Null<NSNumberArg>):Void;
 	@:selector("deviceController:nodeID:readAttributePaths:withReply:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function deviceControllerNodeIDReadAttributePathsWithReply(controller:NSUUID, nodeID:NSNumberArg, readAttributePaths:NSArray<MTRAttributeRequestPath>, withReply:NSArray<NSDictionary<NSString, Id>> -> Void):Void;
 	@:selector("deviceController:nodeID:invokeCommandWithEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:timedInvokeTimeout:serverSideProcessingTimeout:completion:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function deviceControllerNodeIDInvokeCommandWithEndpointIDClusterIDCommandIDCommandFieldsExpectedValuesExpectedValueIntervalTimedInvokeTimeoutServerSideProcessingTimeoutCompletion(controller:NSUUID, nodeID:NSNumberArg, invokeCommandWithEndpointID:NSNumberArg, clusterID:NSNumberArg, commandID:NSNumberArg, commandFields:Id, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, timedInvokeTimeout:Null<NSNumberArg>, serverSideProcessingTimeout:Null<NSNumberArg>, completion:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void):Void;
 	@:selector("deviceController:nodeID:openCommissioningWindowWithSetupPasscode:discriminator:duration:completion:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function deviceControllerNodeIDOpenCommissioningWindowWithSetupPasscodeDiscriminatorDurationCompletion(controller:NSUUID, nodeID:NSNumberArg, openCommissioningWindowWithSetupPasscode:NSNumberArg, discriminator:NSNumberArg, duration:NSNumberArg, completion:(Null<MTRSetupPayload>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function downloadLogOfType(type:MTRDiagnosticLogType, nodeID:NSNumberArg, timeout:Float, completion:(Null<NSURL>, Null<NSError>) -> Void):Void;
 	@:selector("deviceController:nodeID:downloadLogOfType:timeout:completion:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	@:optional
 	function deviceControllerNodeIDDownloadLogOfTypeTimeoutCompletion(controller:NSUUID, nodeID:NSNumberArg, downloadLogOfType:MTRDiagnosticLogType, timeout:Float, completion:(Null<NSURL>, Null<NSError>) -> Void):Void;
 	@:selector("deviceController:nodeID:invokeCommands:completion:")
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function deviceControllerNodeIDInvokeCommandsCompletion(controller:NSUUID, nodeID:NSNumberArg, invokeCommands:NSArray<NSArray<MTRCommandWithRequiredResponse>>, completion:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void):Void;
 }

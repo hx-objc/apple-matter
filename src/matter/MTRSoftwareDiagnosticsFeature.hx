@@ -2,8 +2,10 @@
 package matter;
 
 enum abstract MTRSoftwareDiagnosticsFeature(Int) to Int {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var Watermarks = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var WaterMarks = 1;
 	inline function new(v:Int) this = v;
 	var None = 0;

@@ -7,50 +7,94 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRThreadNetworkDiagnosticsClusterNeighborTableStruct extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0) extern class MTRThreadNetworkDiagnosticsClusterNeighborTableStruct extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():MTRThreadNetworkDiagnosticsClusterNeighborTableStruct;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var extAddress(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_extAddress():NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_extAddress(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var age(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_age():NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_age(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var rloc16(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_rloc16():NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_rloc16(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var linkFrameCounter(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_linkFrameCounter():NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_linkFrameCounter(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var mleFrameCounter(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_mleFrameCounter():NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_mleFrameCounter(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var lqi(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_lqi():NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_lqi(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var averageRssi(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_averageRssi():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_averageRssi(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var lastRssi(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_lastRssi():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_lastRssi(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var frameErrorRate(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_frameErrorRate():NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_frameErrorRate(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var messageErrorRate(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_messageErrorRate():NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_messageErrorRate(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var rxOnWhenIdle(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_rxOnWhenIdle():NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_rxOnWhenIdle(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var fullThreadDevice(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_fullThreadDevice():NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_fullThreadDevice(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var fullNetworkData(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_fullNetworkData():NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_fullNetworkData(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var isChild(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_isChild():NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_isChild(v:NSNumberArg):NSNumberArg;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	override function init():MTRThreadNetworkDiagnosticsClusterNeighborTableStruct;
 }

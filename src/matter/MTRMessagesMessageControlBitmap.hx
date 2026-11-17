@@ -4,10 +4,15 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRMessagesMessageControlBitmap(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ConfirmationRequired = cast 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ResponseRequired = cast 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ReplyMessage = cast 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var MessageConfirmed = cast 8;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var MessageProtected = cast 16;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

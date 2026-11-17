@@ -11,26 +11,43 @@ import hxmc.unsafe.Ptr;
 import objc.NSObject;
 import security.SecKey;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRCertificates extends NSObject {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRCertificates extends NSObject {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function alloc():MTRCertificates;
+	@:hxmc.available(macos >= 13.5, ios >= 16.6, maccatalyst >= 16.6)
 	static overload function createRootCertificate(keypair:MTRKeypair, issuerID:Null<NSNumberArg>, fabricID:Null<NSNumberArg>, validityPeriod:NSDateInterval, error:Ptr):Null<NSData>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static overload function createRootCertificate(keypair:MTRKeypair, issuerID:Null<NSNumberArg>, fabricID:Null<NSNumberArg>, error:Ptr):Null<NSData>;
+	@:hxmc.available(macos >= 13.5, ios >= 16.6, maccatalyst >= 16.6)
 	static overload function createIntermediateCertificate(rootKeypair:MTRKeypair, rootCertificate:NSData, intermediatePublicKey:SecKey, issuerID:Null<NSNumberArg>, fabricID:Null<NSNumberArg>, validityPeriod:NSDateInterval, error:Ptr):Null<NSData>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static overload function createIntermediateCertificate(rootKeypair:MTRKeypair, rootCertificate:NSData, intermediatePublicKey:SecKey, issuerID:Null<NSNumberArg>, fabricID:Null<NSNumberArg>, error:Ptr):Null<NSData>;
+	@:hxmc.available(macos >= 13.5, ios >= 16.6, maccatalyst >= 16.6)
 	static overload function createOperationalCertificate(signingKeypair:MTRKeypair, signingCertificate:NSData, operationalPublicKey:SecKey, fabricID:NSNumberArg, nodeID:NSNumberArg, caseAuthenticatedTags:Null<NSSet<NSNumber>>, validityPeriod:NSDateInterval, error:Ptr):Null<NSData>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static overload function createOperationalCertificate(signingKeypair:MTRKeypair, signingCertificate:NSData, operationalPublicKey:SecKey, fabricID:NSNumberArg, nodeID:NSNumberArg, caseAuthenticatedTags:Null<NSSet<NSNumber>>, error:Ptr):Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function keypair(keypair:MTRKeypair, matchesCertificate:NSData):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function isCertificate(certificate1:NSData, equalTo:NSData):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function createCertificateSigningRequest(keypair:MTRKeypair, error:Ptr):Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function convertX509Certificate(x509Certificate:NSData):Null<NSData>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function convertMatterCertificate(matterCertificate:NSData):Null<NSData>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function publicKeyFromCSR(csr:NSData, error:Ptr):Null<NSData>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function generateRootCertificate(keypair:MTRKeypair, issuerId:Null<NSNumberArg>, fabricId:Null<NSNumberArg>, error:Ptr):Null<NSData>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function generateIntermediateCertificate(rootKeypair:MTRKeypair, rootCertificate:NSData, intermediatePublicKey:SecKey, issuerId:Null<NSNumberArg>, fabricId:Null<NSNumberArg>, error:Ptr):Null<NSData>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function generateOperationalCertificate(signingKeypair:MTRKeypair, signingCertificate:NSData, operationalPublicKey:SecKey, fabricId:NSNumberArg, nodeId:NSNumberArg, caseAuthenticatedTags:Null<NSArray<NSNumber>>, error:Ptr):Null<NSData>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function generateCertificateSigningRequest(keypair:MTRKeypair, error:Ptr):Null<NSData>;
 }

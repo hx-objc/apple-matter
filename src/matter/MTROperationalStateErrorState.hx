@@ -4,8 +4,12 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTROperationalStateErrorState(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var NoError = cast 0;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var UnableToStartOrResume = cast 1;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var UnableToCompleteOperation = cast 2;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var CommandInvalidInState = cast 3;
 }

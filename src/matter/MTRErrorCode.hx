@@ -4,24 +4,43 @@ package matter;
 import hxmc.I64;
 
 enum abstract MTRErrorCode(I64) to I64 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var GeneralError = 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var InvalidStringLength = 2;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var InvalidIntegerValue = 3;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var InvalidArgument = 4;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var InvalidMessageLength = 5;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var InvalidState = 6;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var WrongAddressType = 7;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var IntegrityCheckFailed = 8;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Timeout = 9;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var BufferTooSmall = 10;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var FabricExists = 11;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var UnknownSchema = 12;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var SchemaMismatch = 13;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var TLVDecodeFailed = 14;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	var DNSSDUnauthorized = 15;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Cancelled = 16;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var AccessDenied = 17;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Busy = 18;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var NotFound = 19;
 	inline function new(v:I64) this = v;
 }

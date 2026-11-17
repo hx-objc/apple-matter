@@ -2,9 +2,13 @@
 package matter;
 
 enum abstract MTRAirQualityFeature(Int) to Int {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Fair = 1;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Moderate = 2;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var VeryPoor = 4;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var ExtremelyPoor = 8;
 	inline function new(v:Int) this = v;
 	var None = 0;

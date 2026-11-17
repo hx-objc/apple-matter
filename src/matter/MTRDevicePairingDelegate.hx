@@ -4,13 +4,17 @@ package matter;
 import foundation.NSError;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("MTRDevicePairingDelegate") @:deprecated extern interface MTRDevicePairingDelegate extends NSObjectProtocol {
+@:hxmc.objc("MTRDevicePairingDelegate") @:deprecated @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern interface MTRDevicePairingDelegate extends NSObjectProtocol {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	@:optional
 	function onStatusUpdate(status:MTRPairingStatus):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	@:optional
 	function onPairingComplete(error:Null<NSError>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	@:optional
 	function onCommissioningComplete(error:Null<NSError>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	@:optional
 	function onPairingDeleted(error:Null<NSError>):Void;
 }

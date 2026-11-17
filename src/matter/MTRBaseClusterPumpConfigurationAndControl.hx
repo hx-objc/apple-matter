@@ -8,293 +8,480 @@ import foundation.NSNumberArg;
 import hxmc.unsafe.UInt16;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRBaseClusterPumpConfigurationAndControl extends MTRGenericBaseCluster {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRBaseClusterPumpConfigurationAndControl extends MTRGenericBaseCluster {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():MTRBaseClusterPumpConfigurationAndControl;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeMaxPressureWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeMaxPressureWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeMaxPressureWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeMaxSpeedWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeMaxSpeedWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeMaxSpeedWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeMaxFlowWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeMaxFlowWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeMaxFlowWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeMinConstPressureWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeMinConstPressureWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeMinConstPressureWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeMaxConstPressureWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeMaxConstPressureWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeMaxConstPressureWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeMinCompPressureWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeMinCompPressureWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeMinCompPressureWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeMaxCompPressureWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeMaxCompPressureWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeMaxCompPressureWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeMinConstSpeedWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeMinConstSpeedWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeMinConstSpeedWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeMaxConstSpeedWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeMaxConstSpeedWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeMaxConstSpeedWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeMinConstFlowWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeMinConstFlowWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeMinConstFlowWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeMaxConstFlowWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeMaxConstFlowWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeMaxConstFlowWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeMinConstTempWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeMinConstTempWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeMinConstTempWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeMaxConstTempWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeMaxConstTempWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeMaxConstTempWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributePumpStatusWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributePumpStatusWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributePumpStatusWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeEffectiveOperationModeWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeEffectiveOperationModeWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeEffectiveOperationModeWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeEffectiveControlModeWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeEffectiveControlModeWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeEffectiveControlModeWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeCapacityWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeCapacityWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeCapacityWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeSpeedWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeSpeedWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeSpeedWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeLifetimeRunningHoursWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function writeAttributeLifetimeRunningHoursWithValue(value:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function writeAttributeLifetimeRunningHoursWithValue(value:Null<NSNumberArg>, params:Null<MTRWriteParams>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeLifetimeRunningHoursWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeLifetimeRunningHoursWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributePowerWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributePowerWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributePowerWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeLifetimeEnergyConsumedWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function writeAttributeLifetimeEnergyConsumedWithValue(value:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function writeAttributeLifetimeEnergyConsumedWithValue(value:Null<NSNumberArg>, params:Null<MTRWriteParams>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeLifetimeEnergyConsumedWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeLifetimeEnergyConsumedWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeOperationModeWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function writeAttributeOperationModeWithValue(value:NSNumberArg, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function writeAttributeOperationModeWithValue(value:NSNumberArg, params:Null<MTRWriteParams>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeOperationModeWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeOperationModeWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeControlModeWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function writeAttributeControlModeWithValue(value:NSNumberArg, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function writeAttributeControlModeWithValue(value:NSNumberArg, params:Null<MTRWriteParams>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeControlModeWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeControlModeWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeGeneratedCommandListWithCompletion(completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeGeneratedCommandListWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeGeneratedCommandListWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeAcceptedCommandListWithCompletion(completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeAcceptedCommandListWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeAcceptedCommandListWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeAttributeListWithCompletion(completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeAttributeListWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeAttributeListWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSArray>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeFeatureMapWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeFeatureMapWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeFeatureMapWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributeClusterRevisionWithCompletion(completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeAttributeClusterRevisionWithParams(params:MTRSubscribeParams, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function readAttributeClusterRevisionWithClusterStateCache(clusterStateCacheContainer:MTRClusterStateCacheContainer, endpoint:NSNumberArg, queue:NSObject, completion:(Null<NSNumber>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function initWithDevice(device:MTRBaseDevice, endpointID:NSNumberArg, queue:NSObject):Null<MTRBaseClusterPumpConfigurationAndControl>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function initWithDevice(device:MTRBaseDevice, endpoint:UInt16, queue:NSObject):Null<MTRBaseClusterPumpConfigurationAndControl>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMaxPressureWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeMaxPressureWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeMaxPressureWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMaxSpeedWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeMaxSpeedWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeMaxSpeedWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMaxFlowWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeMaxFlowWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeMaxFlowWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMinConstPressureWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeMinConstPressureWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeMinConstPressureWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMaxConstPressureWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeMaxConstPressureWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeMaxConstPressureWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMinCompPressureWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeMinCompPressureWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeMinCompPressureWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMaxCompPressureWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeMaxCompPressureWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeMaxCompPressureWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMinConstSpeedWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeMinConstSpeedWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeMinConstSpeedWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMaxConstSpeedWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeMaxConstSpeedWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeMaxConstSpeedWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMinConstFlowWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeMinConstFlowWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeMinConstFlowWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMaxConstFlowWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeMaxConstFlowWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeMaxConstFlowWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMinConstTempWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeMinConstTempWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeMinConstTempWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMaxConstTempWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeMaxConstTempWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeMaxConstTempWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributePumpStatusWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributePumpStatusWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributePumpStatusWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeEffectiveOperationModeWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeEffectiveOperationModeWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeEffectiveOperationModeWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeEffectiveControlModeWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeEffectiveControlModeWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeEffectiveControlModeWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeCapacityWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeCapacityWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeCapacityWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeSpeedWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeSpeedWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeSpeedWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeLifetimeRunningHoursWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:selector("writeAttributeLifetimeRunningHoursWithValue:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function writeAttributeLifetimeRunningHoursWithValueCompletionHandler(value:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("writeAttributeLifetimeRunningHoursWithValue:params:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function writeAttributeLifetimeRunningHoursWithValueParamsCompletionHandler(value:Null<NSNumberArg>, params:Null<MTRWriteParams>, completionHandler:Null<NSError> -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeLifetimeRunningHoursWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeLifetimeRunningHoursWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributePowerWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributePowerWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributePowerWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeLifetimeEnergyConsumedWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:selector("writeAttributeLifetimeEnergyConsumedWithValue:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function writeAttributeLifetimeEnergyConsumedWithValueCompletionHandler(value:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("writeAttributeLifetimeEnergyConsumedWithValue:params:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function writeAttributeLifetimeEnergyConsumedWithValueParamsCompletionHandler(value:Null<NSNumberArg>, params:Null<MTRWriteParams>, completionHandler:Null<NSError> -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeLifetimeEnergyConsumedWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeLifetimeEnergyConsumedWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeOperationModeWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:selector("writeAttributeOperationModeWithValue:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function writeAttributeOperationModeWithValueCompletionHandler(value:NSNumberArg, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("writeAttributeOperationModeWithValue:params:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function writeAttributeOperationModeWithValueParamsCompletionHandler(value:NSNumberArg, params:Null<MTRWriteParams>, completionHandler:Null<NSError> -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeOperationModeWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeOperationModeWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeControlModeWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:selector("writeAttributeControlModeWithValue:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function writeAttributeControlModeWithValueCompletionHandler(value:NSNumberArg, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("writeAttributeControlModeWithValue:params:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function writeAttributeControlModeWithValueParamsCompletionHandler(value:NSNumberArg, params:Null<MTRWriteParams>, completionHandler:Null<NSError> -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeControlModeWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeControlModeWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeGeneratedCommandListWithCompletionHandler(completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeGeneratedCommandListWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeGeneratedCommandListWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcceptedCommandListWithCompletionHandler(completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeAcceptedCommandListWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeAcceptedCommandListWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAttributeListWithCompletionHandler(completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeAttributeListWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeAttributeListWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSArray>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeFeatureMapWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeFeatureMapWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeFeatureMapWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeClusterRevisionWithCompletionHandler(completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeClusterRevisionWithMinInterval(minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, subscriptionEstablished:Null<() -> Void>, reportHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function readAttributeClusterRevisionWithAttributeCache(attributeCacheContainer:MTRAttributeCacheContainer, endpoint:NSNumberArg, queue:NSObject, completionHandler:(Null<NSNumber>, Null<NSError>) -> Void):Void;
 }

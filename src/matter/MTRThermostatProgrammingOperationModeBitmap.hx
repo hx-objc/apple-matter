@@ -4,8 +4,11 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRThermostatProgrammingOperationModeBitmap(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ScheduleActive = cast 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var AutoRecovery = cast 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Economy = cast 4;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

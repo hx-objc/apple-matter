@@ -4,5 +4,6 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRTimeSynchronizationStatusCode(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var TimeNotAccepted = cast 2;
 }

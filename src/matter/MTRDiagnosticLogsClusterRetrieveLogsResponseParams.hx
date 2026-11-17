@@ -10,33 +10,57 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRDiagnosticLogsClusterRetrieveLogsResponseParams extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRDiagnosticLogsClusterRetrieveLogsResponseParams extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function alloc():MTRDiagnosticLogsClusterRetrieveLogsResponseParams;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var status(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_status():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_status(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var logContent(get, set) : NSData;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_logContent():NSData;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_logContent(v:NSData):NSData;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var utcTimeStamp(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_utcTimeStamp():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_utcTimeStamp(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var timeSinceBoot(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_timeSinceBoot():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_timeSinceBoot(v:Null<NSNumberArg>):Null<NSNumberArg>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var timedInvokeTimeoutMs(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_timedInvokeTimeoutMs():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_timedInvokeTimeoutMs(v:Null<NSNumberArg>):Null<NSNumberArg>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var content(get, set) : NSData;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_content():NSData;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_content(v:NSData):NSData;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var timeStamp(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_timeStamp():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_timeStamp(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function initWithResponseValue(responseValue:NSDictionary<NSString, Id>, error:Ptr):Null<MTRDiagnosticLogsClusterRetrieveLogsResponseParams>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	override function init():MTRDiagnosticLogsClusterRetrieveLogsResponseParams;
 }

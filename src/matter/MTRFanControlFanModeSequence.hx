@@ -4,14 +4,22 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRFanControlFanModeSequence(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var OffLowMedHigh = cast 0;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var OffLowHigh = cast 1;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var OffLowMedHighAuto = cast 2;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var OffLowHighAuto = cast 3;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var OffHighAuto = cast 4;
 	@:deprecated
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var OffOnAuto = cast 4;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var OffHigh = cast 5;
 	@:deprecated
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var OffOn = cast 5;
 }

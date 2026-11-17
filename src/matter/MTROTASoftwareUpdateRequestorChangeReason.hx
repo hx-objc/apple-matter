@@ -4,9 +4,14 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTROTASoftwareUpdateRequestorChangeReason(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	var Unknown = cast 0;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	var Success = cast 1;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	var Failure = cast 2;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	var TimeOut = cast 3;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	var DelayByProvider = cast 4;
 }

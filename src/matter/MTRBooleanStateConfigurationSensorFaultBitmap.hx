@@ -4,6 +4,7 @@ package matter;
 import hxmc.unsafe.UInt16;
 
 enum abstract MTRBooleanStateConfigurationSensorFaultBitmap(UInt16) to UInt16 {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var GeneralFault = cast 1;
 	inline function new(v:UInt16) this = v;
 	var None = cast 0;

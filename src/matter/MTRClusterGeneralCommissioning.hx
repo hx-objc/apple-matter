@@ -10,37 +10,60 @@ import hxmc.objc.Id;
 import hxmc.unsafe.UInt16;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRClusterGeneralCommissioning extends MTRGenericCluster {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRClusterGeneralCommissioning extends MTRGenericCluster {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():MTRClusterGeneralCommissioning;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function armFailSafeWithParams(params:MTRGeneralCommissioningClusterArmFailSafeParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:(Null<MTRGeneralCommissioningClusterArmFailSafeResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function setRegulatoryConfigWithParams(params:MTRGeneralCommissioningClusterSetRegulatoryConfigParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:(Null<MTRGeneralCommissioningClusterSetRegulatoryConfigResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function commissioningCompleteWithParams(params:Null<MTRGeneralCommissioningClusterCommissioningCompleteParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:(Null<MTRGeneralCommissioningClusterCommissioningCompleteResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function commissioningCompleteWithExpectedValues(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:(Null<MTRGeneralCommissioningClusterCommissioningCompleteResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeBreadcrumbWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeBreadcrumbWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeBreadcrumbWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeBasicCommissioningInfoWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRegulatoryConfigWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeLocationCapabilityWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeSupportsConcurrentConnectionWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeGeneratedCommandListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcceptedCommandListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAttributeListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeFeatureMapWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeClusterRevisionWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function initWithDevice(device:MTRDevice, endpointID:NSNumberArg, queue:NSObject):Null<MTRClusterGeneralCommissioning>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function initWithDevice(device:MTRDevice, endpoint:UInt16, queue:NSObject):Null<MTRClusterGeneralCommissioning>;
 	@:selector("armFailSafeWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function armFailSafeWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRGeneralCommissioningClusterArmFailSafeParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRGeneralCommissioningClusterArmFailSafeResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("setRegulatoryConfigWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function setRegulatoryConfigWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRGeneralCommissioningClusterSetRegulatoryConfigParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRGeneralCommissioningClusterSetRegulatoryConfigResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("commissioningCompleteWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function commissioningCompleteWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:Null<MTRGeneralCommissioningClusterCommissioningCompleteParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRGeneralCommissioningClusterCommissioningCompleteResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("commissioningCompleteWithExpectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function commissioningCompleteWithExpectedValuesExpectedValueIntervalCompletionHandler(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRGeneralCommissioningClusterCommissioningCompleteResponseParams>, Null<NSError>) -> Void):Void;
 }

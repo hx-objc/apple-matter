@@ -5,15 +5,21 @@ import hxmc.unsafe.UInt8;
 
 @:deprecated enum abstract MTRPumpConfigurationAndControlPumpControlMode(UInt8) to UInt8 {
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var ConstantSpeed = cast 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var ConstantPressure = cast 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var ProportionalPressure = cast 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var ConstantFlow = cast 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var ConstantTemperature = cast 5;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Automatic = cast 7;
 }

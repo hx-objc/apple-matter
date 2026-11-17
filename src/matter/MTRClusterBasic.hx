@@ -10,14 +10,19 @@ import hxmc.objc.Id;
 import hxmc.unsafe.UInt16;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc @:deprecated extern class MTRClusterBasic extends MTRClusterBasicInformation {
+@:hxmc.framework("Matter") @:hxmc.objc @:deprecated @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRClusterBasic extends MTRClusterBasicInformation {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():MTRClusterBasic;
 	@:selector("initWithDevice:endpoint:queue:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function initWithDeviceEndpointQueue(device:MTRDevice, endpoint:UInt16, queue:NSObject):Null<MTRClusterBasic>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function mfgSpecificPingWithParams(params:Null<MTRBasicClusterMfgSpecificPingParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function mfgSpecificPingWithExpectedValues(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	override function initWithDevice(device:MTRDevice, endpointID:NSNumberArg, queue:NSObject):Null<MTRClusterBasic>;
 }

@@ -7,17 +7,28 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRAccessControlClusterAccessControlTargetStruct extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0) extern class MTRAccessControlClusterAccessControlTargetStruct extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():MTRAccessControlClusterAccessControlTargetStruct;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var cluster(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_cluster():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_cluster(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var endpoint(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_endpoint():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_endpoint(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var deviceType(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_deviceType():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_deviceType(v:Null<NSNumberArg>):Null<NSNumberArg>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	override function init():MTRAccessControlClusterAccessControlTargetStruct;
 }

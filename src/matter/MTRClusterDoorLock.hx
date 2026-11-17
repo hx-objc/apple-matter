@@ -10,174 +10,306 @@ import hxmc.objc.Id;
 import hxmc.unsafe.UInt16;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRClusterDoorLock extends MTRGenericCluster {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRClusterDoorLock extends MTRGenericCluster {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():MTRClusterDoorLock;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function lockDoorWithParams(params:Null<MTRDoorLockClusterLockDoorParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function lockDoorWithExpectedValues(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function unlockDoorWithParams(params:Null<MTRDoorLockClusterUnlockDoorParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function unlockDoorWithExpectedValues(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function unlockWithTimeoutWithParams(params:MTRDoorLockClusterUnlockWithTimeoutParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function setWeekDayScheduleWithParams(params:MTRDoorLockClusterSetWeekDayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function getWeekDayScheduleWithParams(params:MTRDoorLockClusterGetWeekDayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:(Null<MTRDoorLockClusterGetWeekDayScheduleResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function clearWeekDayScheduleWithParams(params:MTRDoorLockClusterClearWeekDayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function setYearDayScheduleWithParams(params:MTRDoorLockClusterSetYearDayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function getYearDayScheduleWithParams(params:MTRDoorLockClusterGetYearDayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:(Null<MTRDoorLockClusterGetYearDayScheduleResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function clearYearDayScheduleWithParams(params:MTRDoorLockClusterClearYearDayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function setHolidayScheduleWithParams(params:MTRDoorLockClusterSetHolidayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function getHolidayScheduleWithParams(params:MTRDoorLockClusterGetHolidayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:(Null<MTRDoorLockClusterGetHolidayScheduleResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function clearHolidayScheduleWithParams(params:MTRDoorLockClusterClearHolidayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function setUserWithParams(params:MTRDoorLockClusterSetUserParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function getUserWithParams(params:MTRDoorLockClusterGetUserParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:(Null<MTRDoorLockClusterGetUserResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function clearUserWithParams(params:MTRDoorLockClusterClearUserParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function setCredentialWithParams(params:MTRDoorLockClusterSetCredentialParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:(Null<MTRDoorLockClusterSetCredentialResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function getCredentialStatusWithParams(params:MTRDoorLockClusterGetCredentialStatusParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:(Null<MTRDoorLockClusterGetCredentialStatusResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function clearCredentialWithParams(params:MTRDoorLockClusterClearCredentialParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function unboltDoorWithParams(params:Null<MTRDoorLockClusterUnboltDoorParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function unboltDoorWithExpectedValues(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function setAliroReaderConfigWithParams(params:MTRDoorLockClusterSetAliroReaderConfigParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function clearAliroReaderConfigWithParams(params:Null<MTRDoorLockClusterClearAliroReaderConfigParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function clearAliroReaderConfigWithExpectedValues(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeLockStateWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeLockTypeWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeActuatorEnabledWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDoorStateWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDoorOpenEventsWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeDoorOpenEventsWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeDoorOpenEventsWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDoorClosedEventsWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeDoorClosedEventsWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeDoorClosedEventsWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeOpenPeriodWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeOpenPeriodWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeOpenPeriodWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeNumberOfTotalUsersSupportedWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeNumberOfPINUsersSupportedWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeNumberOfRFIDUsersSupportedWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeNumberOfWeekDaySchedulesSupportedPerUserWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeNumberOfYearDaySchedulesSupportedPerUserWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeNumberOfHolidaySchedulesSupportedWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMaxPINCodeLengthWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMinPINCodeLengthWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMaxRFIDCodeLengthWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMinRFIDCodeLengthWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeCredentialRulesSupportWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeNumberOfCredentialsSupportedPerUserWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeLanguageWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeLanguageWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeLanguageWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeLEDSettingsWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeLEDSettingsWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeLEDSettingsWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAutoRelockTimeWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeAutoRelockTimeWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeAutoRelockTimeWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeSoundVolumeWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeSoundVolumeWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeSoundVolumeWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeOperatingModeWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeOperatingModeWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeOperatingModeWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeSupportedOperatingModesWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDefaultConfigurationRegisterWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeEnableLocalProgrammingWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeEnableLocalProgrammingWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeEnableLocalProgrammingWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeEnableOneTouchLockingWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeEnableOneTouchLockingWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeEnableOneTouchLockingWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeEnableInsideStatusLEDWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeEnableInsideStatusLEDWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeEnableInsideStatusLEDWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeEnablePrivacyModeButtonWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeEnablePrivacyModeButtonWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeEnablePrivacyModeButtonWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeLocalProgrammingFeaturesWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeLocalProgrammingFeaturesWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeLocalProgrammingFeaturesWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeWrongCodeEntryLimitWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeWrongCodeEntryLimitWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeWrongCodeEntryLimitWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeUserCodeTemporaryDisableTimeWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeUserCodeTemporaryDisableTimeWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeUserCodeTemporaryDisableTimeWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeSendPINOverTheAirWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeSendPINOverTheAirWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeSendPINOverTheAirWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRequirePINforRemoteOperationWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeRequirePINforRemoteOperationWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeRequirePINforRemoteOperationWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeExpiringUserTimeoutWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeExpiringUserTimeoutWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeExpiringUserTimeoutWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeAliroReaderVerificationKeyWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeAliroReaderGroupIdentifierWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeAliroReaderGroupSubIdentifierWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeAliroExpeditedTransactionSupportedProtocolVersionsWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeAliroGroupResolvingKeyWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeAliroSupportedBLEUWBProtocolVersionsWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeAliroBLEAdvertisingVersionWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeNumberOfAliroCredentialIssuerKeysSupportedWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function readAttributeNumberOfAliroEndpointKeysSupportedWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeGeneratedCommandListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcceptedCommandListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAttributeListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeFeatureMapWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeClusterRevisionWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function initWithDevice(device:MTRDevice, endpointID:NSNumberArg, queue:NSObject):Null<MTRClusterDoorLock>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function initWithDevice(device:MTRDevice, endpoint:UInt16, queue:NSObject):Null<MTRClusterDoorLock>;
 	@:selector("lockDoorWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function lockDoorWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:Null<MTRDoorLockClusterLockDoorParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("unlockDoorWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function unlockDoorWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:Null<MTRDoorLockClusterUnlockDoorParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("unlockWithTimeoutWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function unlockWithTimeoutWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRDoorLockClusterUnlockWithTimeoutParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("setWeekDayScheduleWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function setWeekDayScheduleWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRDoorLockClusterSetWeekDayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("getWeekDayScheduleWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function getWeekDayScheduleWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRDoorLockClusterGetWeekDayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRDoorLockClusterGetWeekDayScheduleResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("clearWeekDayScheduleWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function clearWeekDayScheduleWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRDoorLockClusterClearWeekDayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("setYearDayScheduleWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function setYearDayScheduleWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRDoorLockClusterSetYearDayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("getYearDayScheduleWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function getYearDayScheduleWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRDoorLockClusterGetYearDayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRDoorLockClusterGetYearDayScheduleResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("clearYearDayScheduleWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function clearYearDayScheduleWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRDoorLockClusterClearYearDayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("setHolidayScheduleWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function setHolidayScheduleWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRDoorLockClusterSetHolidayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("getHolidayScheduleWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function getHolidayScheduleWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRDoorLockClusterGetHolidayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRDoorLockClusterGetHolidayScheduleResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("clearHolidayScheduleWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function clearHolidayScheduleWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRDoorLockClusterClearHolidayScheduleParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("setUserWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function setUserWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRDoorLockClusterSetUserParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("getUserWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function getUserWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRDoorLockClusterGetUserParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRDoorLockClusterGetUserResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("clearUserWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function clearUserWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRDoorLockClusterClearUserParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("setCredentialWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function setCredentialWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRDoorLockClusterSetCredentialParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRDoorLockClusterSetCredentialResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("getCredentialStatusWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function getCredentialStatusWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRDoorLockClusterGetCredentialStatusParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRDoorLockClusterGetCredentialStatusResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("clearCredentialWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function clearCredentialWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRDoorLockClusterClearCredentialParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 }

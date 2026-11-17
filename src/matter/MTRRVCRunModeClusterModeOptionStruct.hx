@@ -9,17 +9,28 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRRVCRunModeClusterModeOptionStruct extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4) extern class MTRRVCRunModeClusterModeOptionStruct extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():MTRRVCRunModeClusterModeOptionStruct;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var label(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function get_label():NSStringArg;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function set_label(v:NSStringArg):NSStringArg;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var mode(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function get_mode():NSNumberArg;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function set_mode(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var modeTags(get, set) : NSArray;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function get_modeTags():NSArray;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function set_modeTags(v:NSArray):NSArray;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	override function init():MTRRVCRunModeClusterModeOptionStruct;
 }

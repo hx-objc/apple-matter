@@ -5,31 +5,56 @@ import foundation.NSData;
 import foundation.NSNumberArg;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRDeviceAttestationDeviceInfo extends NSObject {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRDeviceAttestationDeviceInfo extends NSObject {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function alloc():MTRDeviceAttestationDeviceInfo;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var vendorID(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_vendorID():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var productID(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_productID():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.5, ios >= 16.6, maccatalyst >= 16.6)
 	var basicInformationVendorID(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 13.5, ios >= 16.6, maccatalyst >= 16.6)
 	function get_basicInformationVendorID():NSNumberArg;
+	@:hxmc.available(macos >= 13.5, ios >= 16.6, maccatalyst >= 16.6)
 	var basicInformationProductID(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 13.5, ios >= 16.6, maccatalyst >= 16.6)
 	function get_basicInformationProductID():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var dacCertificate(get, never) : NSData;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_dacCertificate():NSData;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var dacPAICertificate(get, never) : NSData;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_dacPAICertificate():NSData;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var certificateDeclaration(get, never) : Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_certificateDeclaration():Null<NSData>;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	var attestationChallenge(get, never) : NSData;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	function get_attestationChallenge():NSData;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	var attestationNonce(get, never) : NSData;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	function get_attestationNonce():NSData;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	var elementsTLV(get, never) : NSData;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	function get_elementsTLV():NSData;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	var certificationDeclaration(get, never) : Null<NSData>;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	function get_certificationDeclaration():Null<NSData>;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	var elementsSignature(get, never) : NSData;
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	function get_elementsSignature():NSData;
 }

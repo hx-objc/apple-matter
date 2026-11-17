@@ -6,6 +6,7 @@ import hxmc.I64;
 enum abstract MTRDiscoveryCapabilities(I64) to I64 {
 	var Unknown = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var None = 0;
 	var SoftAP = 1;
 	var BLE = 2;

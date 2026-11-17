@@ -3,8 +3,11 @@ package matter;
 
 import foundation.NSError;
 
-@:hxmc.objc("MTROperationalCertificateIssuer") extern interface MTROperationalCertificateIssuer extends hxmc.objc.Id {
+@:hxmc.objc("MTROperationalCertificateIssuer") @:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4) extern interface MTROperationalCertificateIssuer extends hxmc.objc.Id {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var shouldSkipAttestationCertificateValidation(get, never) : Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_shouldSkipAttestationCertificateValidation():Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function issueOperationalCertificateForRequest(csrInfo:MTROperationalCSRInfo, attestationInfo:MTRDeviceAttestationInfo, controller:MTRDeviceController, completion:(Null<MTROperationalCertificateChain>, Null<NSError>) -> Void):Void;
 }

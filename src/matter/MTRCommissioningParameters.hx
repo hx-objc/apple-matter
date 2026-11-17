@@ -7,54 +7,101 @@ import foundation.NSNumberArg;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRCommissioningParameters extends NSObject {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRCommissioningParameters extends NSObject {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function alloc():MTRCommissioningParameters;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var csrNonce(get, set) : Null<NSData>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_csrNonce():Null<NSData>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_csrNonce(v:Null<NSData>):Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var attestationNonce(get, set) : Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_attestationNonce():Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_attestationNonce(v:Null<NSData>):Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var wifiSSID(get, set) : Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_wifiSSID():Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_wifiSSID(v:Null<NSData>):Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var wifiCredentials(get, set) : Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_wifiCredentials():Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_wifiCredentials(v:Null<NSData>):Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var threadOperationalDataset(get, set) : Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_threadOperationalDataset():Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_threadOperationalDataset(v:Null<NSData>):Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var deviceAttestationDelegate(get, set) : Null<MTRDeviceAttestationDelegate>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_deviceAttestationDelegate():Null<MTRDeviceAttestationDelegate>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_deviceAttestationDelegate(v:Null<MTRDeviceAttestationDelegate>):Null<MTRDeviceAttestationDelegate>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var failSafeTimeout(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_failSafeTimeout():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_failSafeTimeout(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var skipCommissioningComplete(get, set) : Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_skipCommissioningComplete():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_skipCommissioningComplete(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var countryCode(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_countryCode():Null<NSStringArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function set_countryCode(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var readEndpointInformation(get, set) : Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_readEndpointInformation():Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_readEndpointInformation(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	var extraAttributesToRead(get, set) : Null<NSArray<MTRAttributeRequestPath>>;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	function get_extraAttributesToRead():Null<NSArray<MTRAttributeRequestPath>>;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	function set_extraAttributesToRead(v:Null<NSArray<MTRAttributeRequestPath>>):Null<NSArray<MTRAttributeRequestPath>>;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	var forceWiFiScan(get, set) : Bool;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	function get_forceWiFiScan():Bool;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	function set_forceWiFiScan(v:Bool):Bool;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	var forceThreadScan(get, set) : Bool;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	function get_forceThreadScan():Bool;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	function set_forceThreadScan(v:Bool):Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var CSRNonce(get, set) : Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_CSRNonce():Null<NSData>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_CSRNonce(v:Null<NSData>):Null<NSData>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var failSafeExpiryTimeoutSecs(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_failSafeExpiryTimeoutSecs():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_failSafeExpiryTimeoutSecs(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	override function init():MTRCommissioningParameters;
 }

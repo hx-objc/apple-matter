@@ -4,7 +4,10 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTROTASoftwareUpdateRequestorAnnouncementReason(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	var SimpleAnnouncement = cast 0;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	var UpdateAvailable = cast 1;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	var UrgentUpdateAvailable = cast 2;
 }

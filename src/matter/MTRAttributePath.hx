@@ -4,14 +4,19 @@ package matter;
 import foundation.NSCoder;
 import foundation.NSNumberArg;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRAttributePath extends MTRClusterPath {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRAttributePath extends MTRClusterPath {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():MTRAttributePath;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var attribute(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_attribute():NSNumberArg;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function attributePathWithEndpointID(endpointID:NSNumberArg, clusterID:NSNumberArg, attributeID:NSNumberArg):MTRAttributePath;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function attributePathWithEndpointId(endpointId:NSNumberArg, clusterId:NSNumberArg, attributeId:NSNumberArg):MTRAttributePath;
 	override function initWithCoder(coder:NSCoder):Null<MTRAttributePath>;
 }

@@ -10,27 +10,48 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTREventReport extends NSObject {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTREventReport extends NSObject {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function alloc():MTREventReport;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var path(get, never) : MTREventPath;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_path():MTREventPath;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var eventNumber(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_eventNumber():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var priority(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_priority():NSNumberArg;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var eventTimeType(get, never) : MTREventTimeType;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	function get_eventTimeType():MTREventTimeType;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var systemUpTime(get, never) : Float;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	function get_systemUpTime():Float;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var timestampDate(get, never) : Null<NSDate>;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	function get_timestampDate():Null<NSDate>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var value(get, never) : Null<Id>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_value():Null<Id>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var error(get, never) : Null<NSError>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_error():Null<NSError>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var timestamp(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_timestamp():NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function initWithResponseValue(responseValue:NSDictionary<NSString, Id>, error:Ptr):Null<MTREventReport>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	override function init():MTREventReport;
 }

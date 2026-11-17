@@ -7,23 +7,40 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRElectricalEnergyMeasurementClusterEnergyMeasurementStruct extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6) extern class MTRElectricalEnergyMeasurementClusterEnergyMeasurementStruct extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function alloc():MTRElectricalEnergyMeasurementClusterEnergyMeasurementStruct;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var energy(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_energy():NSNumberArg;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_energy(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var startTimestamp(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_startTimestamp():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_startTimestamp(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var endTimestamp(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_endTimestamp():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_endTimestamp(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var startSystime(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_startSystime():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_startSystime(v:Null<NSNumberArg>):Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var endSystime(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_endSystime():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_endSystime(v:Null<NSNumberArg>):Null<NSNumberArg>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	override function init():MTRElectricalEnergyMeasurementClusterEnergyMeasurementStruct;
 }

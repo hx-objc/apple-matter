@@ -4,9 +4,13 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRDoorLockUserStatus(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Available = cast 0;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var OccupiedEnabled = cast 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var OccupiedDisabled = cast 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var NotSupported = cast 255;
 }

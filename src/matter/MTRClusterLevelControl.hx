@@ -10,78 +10,132 @@ import hxmc.objc.Id;
 import hxmc.unsafe.UInt16;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRClusterLevelControl extends MTRGenericCluster {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRClusterLevelControl extends MTRGenericCluster {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():MTRClusterLevelControl;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function moveToLevelWithParams(params:MTRLevelControlClusterMoveToLevelParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function moveWithParams(params:MTRLevelControlClusterMoveParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function stepWithParams(params:MTRLevelControlClusterStepParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function stopWithParams(params:MTRLevelControlClusterStopParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function moveToLevelWithOnOffWithParams(params:MTRLevelControlClusterMoveToLevelWithOnOffParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function moveWithOnOffWithParams(params:MTRLevelControlClusterMoveWithOnOffParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function stepWithOnOffWithParams(params:MTRLevelControlClusterStepWithOnOffParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function stopWithOnOffWithParams(params:MTRLevelControlClusterStopWithOnOffParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function moveToClosestFrequencyWithParams(params:MTRLevelControlClusterMoveToClosestFrequencyParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completion:Null<NSError> -> Void):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeCurrentLevelWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeRemainingTimeWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMinLevelWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMaxLevelWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeCurrentFrequencyWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMinFrequencyWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeMaxFrequencyWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeOptionsWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeOptionsWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeOptionsWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeOnOffTransitionTimeWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeOnOffTransitionTimeWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeOnOffTransitionTimeWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeOnLevelWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeOnLevelWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeOnLevelWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeOnTransitionTimeWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeOnTransitionTimeWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeOnTransitionTimeWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeOffTransitionTimeWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeOffTransitionTimeWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeOffTransitionTimeWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeDefaultMoveRateWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeDefaultMoveRateWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeDefaultMoveRateWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeStartUpCurrentLevelWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeStartUpCurrentLevelWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function writeAttributeStartUpCurrentLevelWithValue(dataValueDictionary:NSDictionary<NSString, Id>, expectedValueInterval:NSNumberArg, params:Null<MTRWriteParams>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeGeneratedCommandListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAcceptedCommandListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeAttributeListWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeFeatureMapWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeClusterRevisionWithParams(params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function initWithDevice(device:MTRDevice, endpointID:NSNumberArg, queue:NSObject):Null<MTRClusterLevelControl>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function initWithDevice(device:MTRDevice, endpoint:UInt16, queue:NSObject):Null<MTRClusterLevelControl>;
 	@:selector("moveToLevelWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function moveToLevelWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRLevelControlClusterMoveToLevelParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("moveWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function moveWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRLevelControlClusterMoveParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("stepWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function stepWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRLevelControlClusterStepParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("stopWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function stopWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRLevelControlClusterStopParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("moveToLevelWithOnOffWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function moveToLevelWithOnOffWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRLevelControlClusterMoveToLevelWithOnOffParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("moveWithOnOffWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function moveWithOnOffWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRLevelControlClusterMoveWithOnOffParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("stepWithOnOffWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function stepWithOnOffWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRLevelControlClusterStepWithOnOffParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("stopWithOnOffWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function stopWithOnOffWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRLevelControlClusterStopWithOnOffParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("moveToClosestFrequencyWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function moveToClosestFrequencyWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRLevelControlClusterMoveToClosestFrequencyParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 }

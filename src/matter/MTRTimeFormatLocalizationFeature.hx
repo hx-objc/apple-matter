@@ -2,6 +2,7 @@
 package matter;
 
 enum abstract MTRTimeFormatLocalizationFeature(Int) to Int {
+	@:hxmc.available(macos >= 14.1, ios >= 17.1, maccatalyst >= 17.1)
 	var CalendarFormat = 1;
 	inline function new(v:Int) this = v;
 	var None = 0;

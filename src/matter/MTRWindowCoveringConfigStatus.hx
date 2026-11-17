@@ -4,12 +4,19 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRWindowCoveringConfigStatus(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Operational = cast 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var OnlineReserved = cast 2;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var LiftMovementReversed = cast 4;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var LiftPositionAware = cast 8;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var TiltPositionAware = cast 16;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var LiftEncoderControlled = cast 32;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var TiltEncoderControlled = cast 64;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

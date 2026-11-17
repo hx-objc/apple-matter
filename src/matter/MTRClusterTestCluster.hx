@@ -10,97 +10,129 @@ import hxmc.objc.Id;
 import hxmc.unsafe.UInt16;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc @:deprecated extern class MTRClusterTestCluster extends MTRClusterUnitTesting {
+@:hxmc.framework("Matter") @:hxmc.objc @:deprecated @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRClusterTestCluster extends MTRClusterUnitTesting {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():MTRClusterTestCluster;
 	@:selector("initWithDevice:endpoint:queue:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function initWithDeviceEndpointQueue(device:MTRDevice, endpoint:UInt16, queue:NSObject):Null<MTRClusterTestCluster>;
 	@:selector("testWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:Null<MTRTestClusterClusterTestParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("testWithExpectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testWithExpectedValuesExpectedValueIntervalCompletionHandler(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("testNotHandledWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testNotHandledWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:Null<MTRTestClusterClusterTestNotHandledParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("testNotHandledWithExpectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testNotHandledWithExpectedValuesExpectedValueIntervalCompletionHandler(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("testSpecificWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testSpecificWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:Null<MTRTestClusterClusterTestSpecificParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterTestSpecificResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("testSpecificWithExpectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testSpecificWithExpectedValuesExpectedValueIntervalCompletionHandler(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterTestSpecificResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("testUnknownCommandWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testUnknownCommandWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:Null<MTRTestClusterClusterTestUnknownCommandParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("testUnknownCommandWithExpectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testUnknownCommandWithExpectedValuesExpectedValueIntervalCompletionHandler(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("testAddArgumentsWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testAddArgumentsWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRTestClusterClusterTestAddArgumentsParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterTestAddArgumentsResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("testSimpleArgumentRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testSimpleArgumentRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRTestClusterClusterTestSimpleArgumentRequestParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterTestSimpleArgumentResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("testStructArrayArgumentRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testStructArrayArgumentRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRTestClusterClusterTestStructArrayArgumentRequestParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterTestStructArrayArgumentResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("testStructArgumentRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testStructArgumentRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRTestClusterClusterTestStructArgumentRequestParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterBooleanResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("testNestedStructArgumentRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testNestedStructArgumentRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRTestClusterClusterTestNestedStructArgumentRequestParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterBooleanResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("testListStructArgumentRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testListStructArgumentRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRTestClusterClusterTestListStructArgumentRequestParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterBooleanResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("testListInt8UArgumentRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testListInt8UArgumentRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRTestClusterClusterTestListInt8UArgumentRequestParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterBooleanResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("testNestedStructListArgumentRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testNestedStructListArgumentRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRTestClusterClusterTestNestedStructListArgumentRequestParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterBooleanResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("testListNestedStructListArgumentRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testListNestedStructListArgumentRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRTestClusterClusterTestListNestedStructListArgumentRequestParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterBooleanResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("testListInt8UReverseRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testListInt8UReverseRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRTestClusterClusterTestListInt8UReverseRequestParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterTestListInt8UReverseResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("testEnumsRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testEnumsRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRTestClusterClusterTestEnumsRequestParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterTestEnumsResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("testNullableOptionalRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testNullableOptionalRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:Null<MTRTestClusterClusterTestNullableOptionalRequestParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterTestNullableOptionalResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("testNullableOptionalRequestWithExpectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testNullableOptionalRequestWithExpectedValuesExpectedValueIntervalCompletionHandler(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterTestNullableOptionalResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("testComplexNullableOptionalRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testComplexNullableOptionalRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRTestClusterClusterTestComplexNullableOptionalRequestParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterTestComplexNullableOptionalResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("simpleStructEchoRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function simpleStructEchoRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRTestClusterClusterSimpleStructEchoRequestParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterSimpleStructResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("timedInvokeRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function timedInvokeRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:Null<MTRTestClusterClusterTimedInvokeRequestParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("timedInvokeRequestWithExpectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function timedInvokeRequestWithExpectedValuesExpectedValueIntervalCompletionHandler(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("testSimpleOptionalArgumentRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testSimpleOptionalArgumentRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:Null<MTRTestClusterClusterTestSimpleOptionalArgumentRequestParams>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("testSimpleOptionalArgumentRequestWithExpectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testSimpleOptionalArgumentRequestWithExpectedValuesExpectedValueIntervalCompletionHandler(expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("testEmitTestEventRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testEmitTestEventRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRTestClusterClusterTestEmitTestEventRequestParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterTestEmitTestEventResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("testEmitTestFabricScopedEventRequestWithParams:expectedValues:expectedValueInterval:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function testEmitTestFabricScopedEventRequestWithParamsExpectedValuesExpectedValueIntervalCompletionHandler(params:MTRTestClusterClusterTestEmitTestFabricScopedEventRequestParams, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, completionHandler:(Null<MTRTestClusterClusterTestEmitTestFabricScopedEventResponseParams>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	override function initWithDevice(device:MTRDevice, endpointID:NSNumberArg, queue:NSObject):Null<MTRClusterTestCluster>;
 }

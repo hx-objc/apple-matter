@@ -12,46 +12,83 @@ import hxmc.I64;
 import hxmc.objc.Id;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRDevice extends NSObject {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRDevice extends NSObject {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function alloc():MTRDevice;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var state(get, never) : MTRDeviceState;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_state():MTRDeviceState;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var deviceCachePrimed(get, never) : Bool;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_deviceCachePrimed():Bool;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var estimatedStartTime(get, never) : Null<NSDate>;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	function get_estimatedStartTime():Null<NSDate>;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var deviceController(get, never) : Null<MTRDeviceController>;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function get_deviceController():Null<MTRDeviceController>;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var nodeID(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function get_nodeID():NSNumberArg;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var estimatedSubscriptionLatency(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_estimatedSubscriptionLatency():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3)
 	var vendorID(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3)
 	function get_vendorID():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3)
 	var productID(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3)
 	function get_productID():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var networkCommissioningFeatures(get, never) : MTRNetworkCommissioningFeature;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_networkCommissioningFeatures():MTRNetworkCommissioningFeature;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static overload function deviceWithNodeID(nodeID:NSNumberArg, controller:MTRDeviceController):MTRDevice;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function setDelegate(delegate:MTRDeviceDelegate, queue:NSObject):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	overload function addDelegate(delegate:MTRDeviceDelegate, queue:NSObject):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	overload function addDelegate(delegate:MTRDeviceDelegate, queue:NSObject, interestedPathsForAttributes:Null<NSArray>, interestedPathsForEvents:Null<NSArray>):Void;
+	@:hxmc.available(macos >= 15.0, ios >= 18.0, maccatalyst >= 18.0)
 	function removeDelegate(delegate:MTRDeviceDelegate):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeWithEndpointID(endpointID:NSNumberArg, clusterID:NSNumberArg, attributeID:NSNumberArg, params:Null<MTRReadParams>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function writeAttributeWithEndpointID(endpointID:NSNumberArg, clusterID:NSNumberArg, attributeID:NSNumberArg, value:Id, expectedValueInterval:NSNumberArg, timedWriteTimeout:Null<NSNumberArg>):Void;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function readAttributePaths(attributePaths:NSArray<MTRAttributeRequestPath>):NSArray<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function descriptorClusters():NSDictionary<MTRAttributePath, NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	overload function invokeCommandWithEndpointID(endpointID:NSNumberArg, clusterID:NSNumberArg, commandID:NSNumberArg, commandFields:Null<NSDictionary<NSString, Id>>, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, queue:NSObject, completion:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function invokeCommandWithEndpointID(endpointID:NSNumberArg, clusterID:NSNumberArg, commandID:NSNumberArg, commandFields:Id, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, timedInvokeTimeout:Null<NSNumberArg>, queue:NSObject, completion:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function invokeCommands(commands:NSArray<NSArray<MTRCommandWithRequiredResponse>>, queue:NSObject, completion:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	function openCommissioningWindowWithSetupPasscode(setupPasscode:NSNumberArg, discriminator:NSNumberArg, duration:NSNumberArg, queue:NSObject, completion:(Null<MTRSetupPayload>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function openCommissioningWindowWithDiscriminator(discriminator:NSNumberArg, duration:NSNumberArg, queue:NSObject, completion:(Null<MTRSetupPayload>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function downloadLogOfType(type:MTRDiagnosticLogType, timeout:Float, queue:NSObject, completion:(Null<NSURL>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3)
 	function waitForAttributeValues(values:NSDictionary<MTRAttributePath, NSDictionary<NSString, Id>>, timeout:Float, queue:NSObject, completion:Null<NSError> -> Void):MTRAttributeValueWaiter;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static overload function deviceWithNodeID(nodeID:I64, deviceController:MTRDeviceController):MTRDevice;
 	@:selector("invokeCommandWithEndpointID:clusterID:commandID:commandFields:expectedValues:expectedValueInterval:timedInvokeTimeout:clientQueue:completion:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function invokeCommandWithEndpointIDClusterIDCommandIDCommandFieldsExpectedValuesExpectedValueIntervalTimedInvokeTimeoutClientQueueCompletion(endpointID:NSNumberArg, clusterID:NSNumberArg, commandID:NSNumberArg, commandFields:Id, expectedValues:Null<NSArray<NSDictionary<NSString, Id>>>, expectedValueInterval:Null<NSNumberArg>, timedInvokeTimeout:Null<NSNumberArg>, clientQueue:NSObject, completion:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void):Void;
 }

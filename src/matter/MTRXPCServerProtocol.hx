@@ -5,8 +5,9 @@ import foundation.NSDictionary;
 import foundation.NSUUID;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("MTRXPCServerProtocol") extern interface MTRXPCServerProtocol extends NSObjectProtocol extends MTRXPCServerProtocol_MTRDevice extends MTRXPCServerProtocol_MTRDeviceController {
+@:hxmc.objc("MTRXPCServerProtocol") @:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3) extern interface MTRXPCServerProtocol extends NSObjectProtocol extends MTRXPCServerProtocol_MTRDevice extends MTRXPCServerProtocol_MTRDeviceController {
 	@:selector("deviceController:checkInWithContext:")
+	@:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3)
 	@:optional
 	function deviceControllerCheckInWithContext(controller:NSUUID, checkInWithContext:NSDictionary):Void;
 }

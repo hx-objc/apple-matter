@@ -4,8 +4,12 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRColorControlEnhancedColorMode(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var CurrentHueAndCurrentSaturation = cast 0;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var CurrentXAndCurrentY = cast 1;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var ColorTemperatureMireds = cast 2;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var EnhancedCurrentHueAndCurrentSaturation = cast 3;
 }

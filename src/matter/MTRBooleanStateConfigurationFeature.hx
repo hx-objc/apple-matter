@@ -2,9 +2,13 @@
 package matter;
 
 enum abstract MTRBooleanStateConfigurationFeature(Int) to Int {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Visual = 1;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Audible = 2;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var AlarmSuppress = 4;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var SensitivityLevel = 8;
 	inline function new(v:Int) this = v;
 	var None = 0;

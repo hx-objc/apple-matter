@@ -5,21 +5,30 @@ import hxmc.unsafe.UInt8;
 
 @:deprecated enum abstract MTROTASoftwareUpdateRequestorOTAUpdateState(UInt8) to UInt8 {
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Unknown = cast 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Idle = cast 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Querying = cast 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var DelayedOnQuery = cast 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Downloading = cast 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Applying = cast 5;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var DelayedOnApply = cast 6;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var RollingBack = cast 7;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var DelayedOnUserConsent = cast 8;
 }

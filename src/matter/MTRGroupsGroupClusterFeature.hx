@@ -3,6 +3,7 @@ package matter;
 
 @:deprecated enum abstract MTRGroupsGroupClusterFeature(Int) to Int {
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var GroupNames = 1;
 	inline function new(v:Int) this = v;
 	var None = 0;

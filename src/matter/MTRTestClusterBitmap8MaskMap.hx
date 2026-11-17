@@ -5,12 +5,16 @@ import hxmc.unsafe.UInt8;
 
 @:deprecated enum abstract MTRTestClusterBitmap8MaskMap(UInt8) to UInt8 {
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MaskVal1 = cast 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MaskVal2 = cast 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MaskVal3 = cast 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MaskVal4 = cast 64;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

@@ -4,9 +4,13 @@ package matter;
 import hxmc.unsafe.UInt16;
 
 enum abstract MTRUnitTestingBitmap16MaskMap(UInt16) to UInt16 {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var MaskVal1 = cast 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var MaskVal2 = cast 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var MaskVal3 = cast 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var MaskVal4 = cast 16384;
 	inline function new(v:UInt16) this = v;
 	var None = cast 0;

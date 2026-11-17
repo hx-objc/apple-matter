@@ -4,10 +4,16 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRWiFiNetworkDiagnosticsSecurityType(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Unspecified = cast 0;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var None = cast 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var WEP = cast 2;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var WPA = cast 3;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var WPA2 = cast 4;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var WPA3 = cast 5;
 }

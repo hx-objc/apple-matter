@@ -4,11 +4,17 @@ package matter;
 import hxmc.unsafe.UInt16;
 
 enum abstract MTRValveConfigurationAndControlValveFaultBitmap(UInt16) to UInt16 {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var GeneralFault = cast 1;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Blocked = cast 2;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Leaking = cast 4;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var NotConnected = cast 8;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var ShortCircuit = cast 16;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var CurrentExceeded = cast 32;
 	inline function new(v:UInt16) this = v;
 	var None = cast 0;

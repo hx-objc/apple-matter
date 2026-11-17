@@ -9,14 +9,20 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRClusterPath extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4) extern class MTRClusterPath extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():MTRClusterPath;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var endpoint(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_endpoint():NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var cluster(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_cluster():NSNumberArg;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function clusterPathWithEndpointID(endpointID:NSNumberArg, clusterID:NSNumberArg):MTRClusterPath;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

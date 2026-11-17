@@ -8,56 +8,107 @@ import hxmc.I64;
 import hxmc.objc.Block;
 
 @:hxmc.c @:hxmc.framework("Matter") extern class Matter {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	public static function MTRAttributeNameForID(clusterID:MTRClusterIDType, attributeID:MTRAttributeIDType):NSString;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	public static function MTRClusterNameForID(clusterID:MTRClusterIDType):NSString;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	public static function MTRDeviceControllerStorageClasses():NSSet;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	public static function MTREventNameForID(clusterID:MTRClusterIDType, eventID:MTREventIDType):NSString;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	public static function MTRRequestCommandNameForID(clusterID:MTRClusterIDType, commandID:MTRCommandIDType):NSString;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	public static function MTRResponseCommandNameForID(clusterID:MTRClusterIDType, commandID:MTRCommandIDType):NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static function MTRSetLogCallback(logTypeThreshold:MTRLogType, callback:Null<Block<(MTRLogType, NSString, NSString) -> Void>>):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	public static function MTRSetMessageReliabilityParameters(idleRetransmitMs:Null<NSNumberArg>, activeRetransmitMs:Null<NSNumberArg>, activeThresholdMs:Null<NSNumberArg>, additionalRetransmitDelayMs:Null<NSNumberArg>):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRArrayValueType : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRAttributePathKey : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRBooleanValueType : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRCommandPathKey : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final MTRCommissioningSessionTransportType : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRContextTagKey : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRDataKey : NSString;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	public static final MTRDataVersionKey : NSString;
+	@:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3)
 	public static final MTRDeviceControllerRegistrationControllerCompressedFabricIDKey : NSString;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	public static final MTRDeviceControllerRegistrationControllerContextKey : NSString;
+	@:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3)
 	public static final MTRDeviceControllerRegistrationControllerIsRunningKey : NSString;
+	@:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3)
 	public static final MTRDeviceControllerRegistrationControllerNodeIDKey : NSString;
+	@:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3)
 	public static final MTRDeviceControllerRegistrationDeviceInternalStateKey : NSString;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	public static final MTRDeviceControllerRegistrationNodeIDKey : NSString;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	public static final MTRDeviceControllerRegistrationNodeIDsKey : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRDoubleValueType : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRErrorDomain : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRErrorKey : NSString;
+	@:hxmc.available(macos >= 14.3, ios >= 17.3, maccatalyst >= 17.3)
 	public static final MTREventIsHistoricalKey : NSString;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	public static final MTREventNumberKey : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTREventPathKey : NSString;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	public static final MTREventPriorityKey : NSString;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	public static final MTREventSystemUpTimeKey : NSString;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	public static final MTREventTimeTypeKey : NSString;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	public static final MTREventTimestampDateKey : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRFloatValueType : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRInteractionErrorDomain : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRNullValueType : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTROctetStringValueType : NSString;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	public static final MTRPreviousDataKey : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRSignedIntegerValueType : NSString;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final MTRSizeThreadExtendedPANID : I64;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRSizeThreadExtendedPanId : I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRSizeThreadMasterKey : I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRSizeThreadNetworkName : I64;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final MTRSizeThreadPANID : I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRSizeThreadPSKc : I64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRStructureValueType : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRTypeKey : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRUTF8StringValueType : NSString;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	public static final MTRUnpoweredInitialPhase : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRUnsignedIntegerValueType : NSString;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	public static final MTRValueKey : NSString;
 }

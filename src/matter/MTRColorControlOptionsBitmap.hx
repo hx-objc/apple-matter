@@ -4,6 +4,7 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRColorControlOptionsBitmap(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var ExecuteIfOff = cast 1;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

@@ -8,14 +8,22 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTROperationalStateClusterOperationalStateStruct extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4) extern class MTROperationalStateClusterOperationalStateStruct extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():MTROperationalStateClusterOperationalStateStruct;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var operationalStateID(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function get_operationalStateID():NSNumberArg;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function set_operationalStateID(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var operationalStateLabel(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function get_operationalStateLabel():Null<NSStringArg>;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function set_operationalStateLabel(v:Null<NSStringArg>):Null<NSStringArg>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	override function init():MTROperationalStateClusterOperationalStateStruct;
 }

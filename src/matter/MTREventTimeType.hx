@@ -4,7 +4,9 @@ package matter;
 import hxmc.I64;
 
 enum abstract MTREventTimeType(I64) to I64 {
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var SystemUpTime = 0;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var TimestampDate = 1;
 	inline function new(v:I64) this = v;
 }

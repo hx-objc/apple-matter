@@ -4,7 +4,10 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRAdministratorCommissioningStatusCode(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Busy = cast 2;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var PAKEParameterError = cast 3;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var WindowNotOpen = cast 4;
 }

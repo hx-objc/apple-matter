@@ -4,12 +4,20 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRFormaldehydeConcentrationMeasurementMeasurementUnit(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var PPM = cast 0;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var PPB = cast 1;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var PPT = cast 2;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var MGM3 = cast 3;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var UGM3 = cast 4;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var NGM3 = cast 5;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var PM3 = cast 6;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var BQM3 = cast 7;
 }

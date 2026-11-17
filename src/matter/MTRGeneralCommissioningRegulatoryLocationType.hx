@@ -4,7 +4,10 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRGeneralCommissioningRegulatoryLocationType(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Indoor = cast 0;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Outdoor = cast 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var IndoorOutdoor = cast 2;
 }

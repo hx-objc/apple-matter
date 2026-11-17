@@ -2,8 +2,11 @@
 package matter;
 
 enum abstract MTRNetworkCommissioningFeature(Int) to Int {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var WiFiNetworkInterface = 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var ThreadNetworkInterface = 2;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var EthernetNetworkInterface = 4;
 	inline function new(v:Int) this = v;
 	var None = 0;

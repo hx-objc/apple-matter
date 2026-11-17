@@ -5,13 +5,18 @@ import hxmc.unsafe.UInt8;
 
 @:deprecated enum abstract MTROTASoftwareUpdateRequestorOTAChangeReason(UInt8) to UInt8 {
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Unknown = cast 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Success = cast 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Failure = cast 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var TimeOut = cast 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var DelayByProvider = cast 4;
 }

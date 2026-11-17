@@ -4,7 +4,10 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRDoorLockDataOperationType(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Add = cast 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Clear = cast 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Modify = cast 2;
 }

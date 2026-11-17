@@ -5,9 +5,12 @@ import hxmc.unsafe.UInt8;
 
 @:deprecated enum abstract MTROTASoftwareUpdateRequestorOTAAnnouncementReason(UInt8) to UInt8 {
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var SimpleAnnouncement = cast 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var UpdateAvailable = cast 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var UrgentUpdateAvailable = cast 2;
 }

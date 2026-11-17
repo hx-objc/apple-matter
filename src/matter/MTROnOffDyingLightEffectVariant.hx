@@ -4,7 +4,9 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTROnOffDyingLightEffectVariant(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	var MTROnOffDyingLightEffectVariantDyingLightFadeOff = cast 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTROnOffDyingLightEffectVariant20PercenterDimUpIn0p5SecondsThenFadeToOffIn1Second = cast 0;
 }

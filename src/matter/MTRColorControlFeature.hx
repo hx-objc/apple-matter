@@ -2,10 +2,15 @@
 package matter;
 
 enum abstract MTRColorControlFeature(Int) to Int {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var HueAndSaturation = 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var EnhancedHue = 2;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var ColorLoop = 4;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var XY = 8;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var ColorTemperature = 16;
 	inline function new(v:Int) this = v;
 	var None = 0;

@@ -4,10 +4,14 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRColorControlColorLoopDirection(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var Decrement = cast 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var DecrementHue = cast 0;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var Increment = cast 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var IncrementHue = cast 1;
 }

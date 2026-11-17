@@ -5,18 +5,31 @@ import foundation.NSArray;
 import foundation.NSNumberArg;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRServerEndpoint extends NSObject {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6) extern class MTRServerEndpoint extends NSObject {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function alloc():MTRServerEndpoint;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var endpointID(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_endpointID():NSNumberArg;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var deviceTypes(get, never) : NSArray<MTRDeviceTypeRevision>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_deviceTypes():NSArray<MTRDeviceTypeRevision>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var accessGrants(get, never) : NSArray<MTRAccessGrant>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_accessGrants():NSArray<MTRAccessGrant>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var serverClusters(get, never) : NSArray<MTRServerCluster>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_serverClusters():NSArray<MTRServerCluster>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function initWithEndpointID(endpointID:NSNumberArg, deviceTypes:NSArray<MTRDeviceTypeRevision>):Null<MTRServerEndpoint>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function addAccessGrant(accessGrant:MTRAccessGrant):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function removeAccessGrant(accessGrant:MTRAccessGrant):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function addServerCluster(serverCluster:MTRServerCluster):Bool;
 }

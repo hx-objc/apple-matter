@@ -4,11 +4,18 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRGeneralDiagnosticsBootReason(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Unspecified = cast 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var PowerOnReboot = cast 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var BrownOutReset = cast 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var SoftwareWatchdogReset = cast 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var HardwareWatchdogReset = cast 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var SoftwareUpdateCompleted = cast 5;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var SoftwareReset = cast 6;
 }

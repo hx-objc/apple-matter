@@ -5,8 +5,10 @@ import hxmc.unsafe.UInt8;
 
 @:deprecated enum abstract MTRLevelControlOptions(UInt8) to UInt8 {
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ExecuteIfOff = cast 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var CoupleColorTempToLevel = cast 2;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

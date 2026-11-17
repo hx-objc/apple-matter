@@ -14,10 +14,13 @@ import objc.NSObjectProtocol;
 	function deviceReceivedAttributeReport(device:MTRDevice, receivedAttributeReport:NSArray<NSDictionary<NSString, Id>>):Void;
 	@:selector("device:receivedEventReport:")
 	function deviceReceivedEventReport(device:MTRDevice, receivedEventReport:NSArray<NSDictionary<NSString, Id>>):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	@:optional
 	function deviceBecameActive(device:MTRDevice):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	@:optional
 	function deviceCachePrimed(device:MTRDevice):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	@:optional
 	function deviceConfigurationChanged(device:MTRDevice):Void;
 }

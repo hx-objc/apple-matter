@@ -4,10 +4,15 @@ package matter;
 import hxmc.unsafe.UInt16;
 
 enum abstract MTRDoorLockDlSupportedOperatingModes(UInt16) to UInt16 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Normal = cast 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Vacation = cast 2;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Privacy = cast 4;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var NoRemoteLockUnlock = cast 8;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Passage = cast 16;
 	inline function new(v:UInt16) this = v;
 	var None = cast 0;

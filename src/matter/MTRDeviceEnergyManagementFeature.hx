@@ -2,12 +2,19 @@
 package matter;
 
 enum abstract MTRDeviceEnergyManagementFeature(Int) to Int {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var PowerAdjustment = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var PowerForecastReporting = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var StateForecastReporting = 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var StartTimeAdjustment = 8;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Pausable = 16;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ForecastAdjustment = 32;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ConstraintBasedAdjustment = 64;
 	inline function new(v:Int) this = v;
 	var None = 0;

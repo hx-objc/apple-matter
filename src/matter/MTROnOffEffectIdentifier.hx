@@ -4,6 +4,8 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTROnOffEffectIdentifier(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var DelayedAllOff = cast 0;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var DyingLight = cast 1;
 }

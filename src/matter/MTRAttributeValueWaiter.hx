@@ -4,9 +4,13 @@ package matter;
 import foundation.NSUUID;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRAttributeValueWaiter extends NSObject {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3) extern class MTRAttributeValueWaiter extends NSObject {
+	@:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3)
 	static function alloc():MTRAttributeValueWaiter;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var UUID(get, never) : NSUUID;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_UUID():NSUUID;
+	@:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3)
 	function cancel():Void;
 }

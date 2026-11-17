@@ -4,10 +4,16 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRBasicInformationProductFinish(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var Other = cast 0;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var Matte = cast 1;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var Satin = cast 2;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var Polished = cast 3;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var Rugged = cast 4;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var Fabric = cast 5;
 }

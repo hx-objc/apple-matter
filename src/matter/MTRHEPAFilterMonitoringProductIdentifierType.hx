@@ -4,9 +4,14 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRHEPAFilterMonitoringProductIdentifierType(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var UPC = cast 0;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var GTIN8 = cast 1;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var EAN = cast 2;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var GTIN14 = cast 3;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var OEM = cast 4;
 }

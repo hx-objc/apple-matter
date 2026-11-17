@@ -4,8 +4,11 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTROccupancySensingOccupancySensorTypeBitmap(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var PIR = cast 1;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var Ultrasonic = cast 2;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var PhysicalContact = cast 4;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

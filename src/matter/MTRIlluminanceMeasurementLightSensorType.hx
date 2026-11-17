@@ -4,6 +4,8 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRIlluminanceMeasurementLightSensorType(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Photodiode = cast 0;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var CMOS = cast 1;
 }

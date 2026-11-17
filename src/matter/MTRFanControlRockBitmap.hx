@@ -4,8 +4,11 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRFanControlRockBitmap(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var RockLeftRight = cast 1;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var RockUpDown = cast 2;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var RockRound = cast 4;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

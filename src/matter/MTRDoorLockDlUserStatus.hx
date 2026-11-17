@@ -5,9 +5,12 @@ import hxmc.unsafe.UInt8;
 
 @:deprecated enum abstract MTRDoorLockDlUserStatus(UInt8) to UInt8 {
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Available = cast 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var OccupiedEnabled = cast 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var OccupiedDisabled = cast 3;
 }

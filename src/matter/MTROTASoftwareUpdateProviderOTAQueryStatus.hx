@@ -5,11 +5,15 @@ import hxmc.unsafe.UInt8;
 
 @:deprecated enum abstract MTROTASoftwareUpdateProviderOTAQueryStatus(UInt8) to UInt8 {
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var UpdateAvailable = cast 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Busy = cast 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var NotAvailable = cast 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var DownloadProtocolNotSupported = cast 3;
 }

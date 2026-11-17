@@ -4,7 +4,9 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRFanControlWindBitmap(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var SleepWind = cast 1;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var NaturalWind = cast 2;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

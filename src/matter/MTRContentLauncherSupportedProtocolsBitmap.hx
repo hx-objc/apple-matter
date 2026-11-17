@@ -2,7 +2,9 @@
 package matter;
 
 enum abstract MTRContentLauncherSupportedProtocolsBitmap(Int) to Int {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var DASH = 1;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var HLS = 2;
 	inline function new(v:Int) this = v;
 	var None = 0;

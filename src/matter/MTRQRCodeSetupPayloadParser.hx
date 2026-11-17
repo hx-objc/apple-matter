@@ -5,9 +5,13 @@ import foundation.NSStringArg;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc @:deprecated extern class MTRQRCodeSetupPayloadParser extends NSObject {
+@:hxmc.framework("Matter") @:hxmc.objc @:deprecated @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRQRCodeSetupPayloadParser extends NSObject {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function alloc():MTRQRCodeSetupPayloadParser;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function initWithBase38Representation(base38Representation:NSStringArg):MTRQRCodeSetupPayloadParser;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function populatePayload(error:Ptr):Null<MTRSetupPayload>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	override function init():MTRQRCodeSetupPayloadParser;
 }

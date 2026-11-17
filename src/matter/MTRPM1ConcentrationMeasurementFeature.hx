@@ -2,11 +2,17 @@
 package matter;
 
 enum abstract MTRPM1ConcentrationMeasurementFeature(Int) to Int {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var NumericMeasurement = 1;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var LevelIndication = 2;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var MediumLevel = 4;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var CriticalLevel = 8;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var PeakMeasurement = 16;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var AverageMeasurement = 32;
 	inline function new(v:Int) this = v;
 	var None = 0;

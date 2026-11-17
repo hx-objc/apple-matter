@@ -3,794 +3,1355 @@ package matter;
 
 enum abstract MTRCommandIDType(Int) to Int {
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterIdentifyCommandIdentifyID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterIdentifyCommandTriggerEffectID = 64;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterIdentifyCommandIdentifyID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterIdentifyCommandTriggerEffectID = 64;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGroupsCommandAddGroupID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGroupsCommandAddGroupResponseID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGroupsCommandViewGroupID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGroupsCommandViewGroupResponseID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGroupsCommandGetGroupMembershipID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGroupsCommandGetGroupMembershipResponseID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGroupsCommandRemoveGroupID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGroupsCommandRemoveGroupResponseID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGroupsCommandRemoveAllGroupsID = 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGroupsCommandAddGroupIfIdentifyingID = 5;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGroupsCommandAddGroupID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGroupsCommandAddGroupResponseID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGroupsCommandViewGroupID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGroupsCommandViewGroupResponseID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGroupsCommandGetGroupMembershipID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGroupsCommandGetGroupMembershipResponseID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGroupsCommandRemoveGroupID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGroupsCommandRemoveGroupResponseID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGroupsCommandRemoveAllGroupsID = 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGroupsCommandAddGroupIfIdentifyingID = 5;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOnOffCommandOffID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOnOffCommandOnID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOnOffCommandToggleID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOnOffCommandOffWithEffectID = 64;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOnOffCommandOnWithRecallGlobalSceneID = 65;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOnOffCommandOnWithTimedOffID = 66;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOnOffCommandOffID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOnOffCommandOnID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOnOffCommandToggleID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOnOffCommandOffWithEffectID = 64;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOnOffCommandOnWithRecallGlobalSceneID = 65;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOnOffCommandOnWithTimedOffID = 66;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterLevelControlCommandMoveToLevelID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterLevelControlCommandMoveID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterLevelControlCommandStepID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterLevelControlCommandStopID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterLevelControlCommandMoveToLevelWithOnOffID = 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterLevelControlCommandMoveWithOnOffID = 5;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterLevelControlCommandStepWithOnOffID = 6;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterLevelControlCommandStopWithOnOffID = 7;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterLevelControlCommandMoveToClosestFrequencyID = 8;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterLevelControlCommandMoveToLevelID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterLevelControlCommandMoveID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterLevelControlCommandStepID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterLevelControlCommandStopID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterLevelControlCommandMoveToLevelWithOnOffID = 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterLevelControlCommandMoveWithOnOffID = 5;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterLevelControlCommandStepWithOnOffID = 6;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterLevelControlCommandStopWithOnOffID = 7;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterLevelControlCommandMoveToClosestFrequencyID = 8;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterAccessControlCommandReviewFabricRestrictionsID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterAccessControlCommandReviewFabricRestrictionsResponseID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterActionsCommandInstantActionID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterActionsCommandInstantActionWithTransitionID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterActionsCommandStartActionID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterActionsCommandStartActionWithDurationID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterActionsCommandStopActionID = 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterActionsCommandPauseActionID = 5;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterActionsCommandPauseActionWithDurationID = 6;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterActionsCommandResumeActionID = 7;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterActionsCommandEnableActionID = 8;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterActionsCommandEnableActionWithDurationID = 9;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterActionsCommandDisableActionID = 10;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterActionsCommandDisableActionWithDurationID = 11;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterActionsCommandInstantActionID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterActionsCommandInstantActionWithTransitionID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterActionsCommandStartActionID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterActionsCommandStartActionWithDurationID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterActionsCommandStopActionID = 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterActionsCommandPauseActionID = 5;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterActionsCommandPauseActionWithDurationID = 6;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterActionsCommandResumeActionID = 7;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterActionsCommandEnableActionID = 8;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterActionsCommandEnableActionWithDurationID = 9;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterActionsCommandDisableActionID = 10;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterActionsCommandDisableActionWithDurationID = 11;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterBasicCommandMfgSpecificPingID = 268566528;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOtaSoftwareUpdateProviderCommandQueryImageID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOtaSoftwareUpdateProviderCommandQueryImageResponseID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOtaSoftwareUpdateProviderCommandApplyUpdateRequestID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOtaSoftwareUpdateProviderCommandApplyUpdateResponseID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOtaSoftwareUpdateProviderCommandNotifyUpdateAppliedID = 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOTASoftwareUpdateProviderCommandQueryImageID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOTASoftwareUpdateProviderCommandQueryImageResponseID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOTASoftwareUpdateProviderCommandApplyUpdateRequestID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOTASoftwareUpdateProviderCommandApplyUpdateResponseID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOTASoftwareUpdateProviderCommandNotifyUpdateAppliedID = 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOtaSoftwareUpdateRequestorCommandAnnounceOtaProviderID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOTASoftwareUpdateRequestorCommandAnnounceOTAProviderID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGeneralCommissioningCommandArmFailSafeID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGeneralCommissioningCommandArmFailSafeResponseID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGeneralCommissioningCommandSetRegulatoryConfigID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGeneralCommissioningCommandSetRegulatoryConfigResponseID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGeneralCommissioningCommandCommissioningCompleteID = 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGeneralCommissioningCommandCommissioningCompleteResponseID = 5;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGeneralCommissioningCommandArmFailSafeID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGeneralCommissioningCommandArmFailSafeResponseID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGeneralCommissioningCommandSetRegulatoryConfigID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGeneralCommissioningCommandSetRegulatoryConfigResponseID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGeneralCommissioningCommandCommissioningCompleteID = 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGeneralCommissioningCommandCommissioningCompleteResponseID = 5;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterNetworkCommissioningCommandScanNetworksID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterNetworkCommissioningCommandScanNetworksResponseID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterNetworkCommissioningCommandAddOrUpdateWiFiNetworkID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterNetworkCommissioningCommandAddOrUpdateThreadNetworkID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterNetworkCommissioningCommandRemoveNetworkID = 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterNetworkCommissioningCommandNetworkConfigResponseID = 5;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterNetworkCommissioningCommandConnectNetworkID = 6;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterNetworkCommissioningCommandConnectNetworkResponseID = 7;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterNetworkCommissioningCommandReorderNetworkID = 8;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterNetworkCommissioningCommandScanNetworksID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterNetworkCommissioningCommandScanNetworksResponseID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterNetworkCommissioningCommandAddOrUpdateWiFiNetworkID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterNetworkCommissioningCommandAddOrUpdateThreadNetworkID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterNetworkCommissioningCommandRemoveNetworkID = 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterNetworkCommissioningCommandNetworkConfigResponseID = 5;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterNetworkCommissioningCommandConnectNetworkID = 6;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterNetworkCommissioningCommandConnectNetworkResponseID = 7;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterNetworkCommissioningCommandReorderNetworkID = 8;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDiagnosticLogsCommandRetrieveLogsRequestID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDiagnosticLogsCommandRetrieveLogsResponseID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDiagnosticLogsCommandRetrieveLogsRequestID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDiagnosticLogsCommandRetrieveLogsResponseID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGeneralDiagnosticsCommandTestEventTriggerID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGeneralDiagnosticsCommandTestEventTriggerID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterGeneralDiagnosticsCommandTimeSnapshotID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterGeneralDiagnosticsCommandTimeSnapshotResponseID = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterGeneralDiagnosticsCommandPayloadTestRequestID = 3;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterGeneralDiagnosticsCommandPayloadTestResponseID = 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterSoftwareDiagnosticsCommandResetWatermarksID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterSoftwareDiagnosticsCommandResetWatermarksID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterThreadNetworkDiagnosticsCommandResetCountsID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterThreadNetworkDiagnosticsCommandResetCountsID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterWiFiNetworkDiagnosticsCommandResetCountsID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterWiFiNetworkDiagnosticsCommandResetCountsID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterEthernetNetworkDiagnosticsCommandResetCountsID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterEthernetNetworkDiagnosticsCommandResetCountsID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTimeSynchronizationCommandSetUtcTimeID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterTimeSynchronizationCommandSetUTCTimeID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterTimeSynchronizationCommandSetUtcTimeID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterTimeSynchronizationCommandSetTrustedTimeSourceID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterTimeSynchronizationCommandSetTimeZoneID = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterTimeSynchronizationCommandSetTimeZoneResponseID = 3;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterTimeSynchronizationCommandSetDSTOffsetID = 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterTimeSynchronizationCommandSetDefaultNTPID = 5;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterBridgedDeviceBasicInformationCommandKeepActiveID = 128;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterAdministratorCommissioningCommandOpenCommissioningWindowID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterAdministratorCommissioningCommandOpenBasicCommissioningWindowID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterAdministratorCommissioningCommandRevokeCommissioningID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterAdministratorCommissioningCommandOpenCommissioningWindowID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterAdministratorCommissioningCommandOpenBasicCommissioningWindowID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterAdministratorCommissioningCommandRevokeCommissioningID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOperationalCredentialsCommandAttestationRequestID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOperationalCredentialsCommandAttestationResponseID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOperationalCredentialsCommandCertificateChainRequestID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOperationalCredentialsCommandCertificateChainResponseID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOperationalCredentialsCommandCSRRequestID = 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOperationalCredentialsCommandCSRResponseID = 5;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOperationalCredentialsCommandAddNOCID = 6;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOperationalCredentialsCommandUpdateNOCID = 7;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOperationalCredentialsCommandNOCResponseID = 8;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOperationalCredentialsCommandUpdateFabricLabelID = 9;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOperationalCredentialsCommandRemoveFabricID = 10;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterOperationalCredentialsCommandAddTrustedRootCertificateID = 11;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOperationalCredentialsCommandAttestationRequestID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOperationalCredentialsCommandAttestationResponseID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOperationalCredentialsCommandCertificateChainRequestID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOperationalCredentialsCommandCertificateChainResponseID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOperationalCredentialsCommandCSRRequestID = 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOperationalCredentialsCommandCSRResponseID = 5;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOperationalCredentialsCommandAddNOCID = 6;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOperationalCredentialsCommandUpdateNOCID = 7;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOperationalCredentialsCommandNOCResponseID = 8;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOperationalCredentialsCommandUpdateFabricLabelID = 9;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOperationalCredentialsCommandRemoveFabricID = 10;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterOperationalCredentialsCommandAddTrustedRootCertificateID = 11;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGroupKeyManagementCommandKeySetWriteID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGroupKeyManagementCommandKeySetReadID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGroupKeyManagementCommandKeySetReadResponseID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGroupKeyManagementCommandKeySetRemoveID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGroupKeyManagementCommandKeySetReadAllIndicesID = 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterGroupKeyManagementCommandKeySetReadAllIndicesResponseID = 5;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGroupKeyManagementCommandKeySetWriteID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGroupKeyManagementCommandKeySetReadID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGroupKeyManagementCommandKeySetReadResponseID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGroupKeyManagementCommandKeySetRemoveID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGroupKeyManagementCommandKeySetReadAllIndicesID = 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterGroupKeyManagementCommandKeySetReadAllIndicesResponseID = 5;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterICDManagementCommandRegisterClientID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterICDManagementCommandRegisterClientResponseID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterICDManagementCommandUnregisterClientID = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterICDManagementCommandStayActiveRequestID = 3;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterICDManagementCommandStayActiveResponseID = 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterOvenCavityOperationalStateCommandStopID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterOvenCavityOperationalStateCommandStartID = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterOvenCavityOperationalStateCommandOperationalCommandResponseID = 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterOvenModeCommandChangeToModeID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterOvenModeCommandChangeToModeResponseID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterModeSelectCommandChangeToModeID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterModeSelectCommandChangeToModeID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterLaundryWasherModeCommandChangeToModeID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterLaundryWasherModeCommandChangeToModeResponseID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterRefrigeratorAndTemperatureControlledCabinetModeCommandChangeToModeID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterRefrigeratorAndTemperatureControlledCabinetModeCommandChangeToModeResponseID = 1;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var ClusterRVCRunModeCommandChangeToModeID = 0;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var ClusterRVCRunModeCommandChangeToModeResponseID = 1;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var ClusterRVCCleanModeCommandChangeToModeID = 0;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var ClusterRVCCleanModeCommandChangeToModeResponseID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterTemperatureControlCommandSetTemperatureID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDishwasherModeCommandChangeToModeID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDishwasherModeCommandChangeToModeResponseID = 1;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var ClusterSmokeCOAlarmCommandSelfTestRequestID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDishwasherAlarmCommandResetID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDishwasherAlarmCommandModifyEnabledAlarmsID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterMicrowaveOvenControlCommandSetCookingParametersID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterMicrowaveOvenControlCommandAddMoreTimeID = 1;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var ClusterOperationalStateCommandPauseID = 0;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var ClusterOperationalStateCommandStopID = 1;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var ClusterOperationalStateCommandStartID = 2;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var ClusterOperationalStateCommandResumeID = 3;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var ClusterOperationalStateCommandOperationalCommandResponseID = 4;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var ClusterRVCOperationalStateCommandPauseID = 0;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var ClusterRVCOperationalStateCommandResumeID = 3;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var ClusterRVCOperationalStateCommandOperationalCommandResponseID = 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterRVCOperationalStateCommandGoHomeID = 128;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var ClusterHEPAFilterMonitoringCommandResetConditionID = 0;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var ClusterActivatedCarbonFilterMonitoringCommandResetConditionID = 0;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var ClusterBooleanStateConfigurationCommandSuppressAlarmID = 0;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var ClusterBooleanStateConfigurationCommandEnableDisableAlarmID = 1;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var ClusterValveConfigurationAndControlCommandOpenID = 0;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var ClusterValveConfigurationAndControlCommandCloseID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterWaterHeaterManagementCommandBoostID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterWaterHeaterManagementCommandCancelBoostID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterMessagesCommandPresentMessagesRequestID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterMessagesCommandCancelMessagesRequestID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDeviceEnergyManagementCommandPowerAdjustRequestID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDeviceEnergyManagementCommandCancelPowerAdjustRequestID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDeviceEnergyManagementCommandStartTimeAdjustRequestID = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDeviceEnergyManagementCommandPauseRequestID = 3;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDeviceEnergyManagementCommandResumeRequestID = 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDeviceEnergyManagementCommandModifyForecastRequestID = 5;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDeviceEnergyManagementCommandRequestConstraintBasedForecastID = 6;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDeviceEnergyManagementCommandCancelRequestID = 7;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterEnergyEVSECommandGetTargetsResponseID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterEnergyEVSECommandDisableID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterEnergyEVSECommandEnableChargingID = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterEnergyEVSECommandStartDiagnosticsID = 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterEnergyEVSECommandSetTargetsID = 5;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterEnergyEVSECommandGetTargetsID = 6;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterEnergyEVSECommandClearTargetsID = 7;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterEnergyEVSEModeCommandChangeToModeID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterEnergyEVSEModeCommandChangeToModeResponseID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterWaterHeaterModeCommandChangeToModeID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterWaterHeaterModeCommandChangeToModeResponseID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDeviceEnergyManagementModeCommandChangeToModeID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDeviceEnergyManagementModeCommandChangeToModeResponseID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandLockDoorID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandUnlockDoorID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandUnlockWithTimeoutID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandSetWeekDayScheduleID = 11;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandGetWeekDayScheduleID = 12;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandGetWeekDayScheduleResponseID = 12;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandClearWeekDayScheduleID = 13;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandSetYearDayScheduleID = 14;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandGetYearDayScheduleID = 15;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandGetYearDayScheduleResponseID = 15;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandClearYearDayScheduleID = 16;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandSetHolidayScheduleID = 17;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandGetHolidayScheduleID = 18;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandGetHolidayScheduleResponseID = 18;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandClearHolidayScheduleID = 19;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandSetUserID = 26;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandGetUserID = 27;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandGetUserResponseID = 28;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandClearUserID = 29;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandSetCredentialID = 34;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandSetCredentialResponseID = 35;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandGetCredentialStatusID = 36;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandGetCredentialStatusResponseID = 37;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterDoorLockCommandClearCredentialID = 38;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandLockDoorID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandUnlockDoorID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandUnlockWithTimeoutID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandSetWeekDayScheduleID = 11;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandGetWeekDayScheduleID = 12;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandGetWeekDayScheduleResponseID = 12;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandClearWeekDayScheduleID = 13;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandSetYearDayScheduleID = 14;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandGetYearDayScheduleID = 15;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandGetYearDayScheduleResponseID = 15;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandClearYearDayScheduleID = 16;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandSetHolidayScheduleID = 17;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandGetHolidayScheduleID = 18;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandGetHolidayScheduleResponseID = 18;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandClearHolidayScheduleID = 19;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandSetUserID = 26;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandGetUserID = 27;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandGetUserResponseID = 28;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandClearUserID = 29;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandSetCredentialID = 34;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandSetCredentialResponseID = 35;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandGetCredentialStatusID = 36;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandGetCredentialStatusResponseID = 37;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterDoorLockCommandClearCredentialID = 38;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDoorLockCommandUnboltDoorID = 39;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDoorLockCommandSetAliroReaderConfigID = 40;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterDoorLockCommandClearAliroReaderConfigID = 41;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterWindowCoveringCommandUpOrOpenID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterWindowCoveringCommandDownOrCloseID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterWindowCoveringCommandStopMotionID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterWindowCoveringCommandGoToLiftValueID = 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterWindowCoveringCommandGoToLiftPercentageID = 5;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterWindowCoveringCommandGoToTiltValueID = 7;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterWindowCoveringCommandGoToTiltPercentageID = 8;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterWindowCoveringCommandUpOrOpenID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterWindowCoveringCommandDownOrCloseID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterWindowCoveringCommandStopMotionID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterWindowCoveringCommandGoToLiftValueID = 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterWindowCoveringCommandGoToLiftPercentageID = 5;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterWindowCoveringCommandGoToTiltValueID = 7;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterWindowCoveringCommandGoToTiltPercentageID = 8;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterServiceAreaCommandSelectAreasID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterServiceAreaCommandSelectAreasResponseID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterServiceAreaCommandSkipAreaID = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterServiceAreaCommandSkipAreaResponseID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterThermostatCommandSetpointRaiseLowerID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterThermostatCommandGetWeeklyScheduleResponseID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterThermostatCommandSetWeeklyScheduleID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterThermostatCommandGetWeeklyScheduleID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterThermostatCommandClearWeeklyScheduleID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterThermostatCommandSetpointRaiseLowerID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterThermostatCommandGetWeeklyScheduleResponseID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterThermostatCommandSetWeeklyScheduleID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterThermostatCommandGetWeeklyScheduleID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterThermostatCommandClearWeeklyScheduleID = 3;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterThermostatCommandSetActiveScheduleRequestID = 5;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterThermostatCommandSetActivePresetRequestID = 6;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterThermostatCommandAtomicResponseID = 253;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterThermostatCommandAtomicRequestID = 254;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var ClusterFanControlCommandStepID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandMoveToHueID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandMoveHueID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandStepHueID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandMoveToSaturationID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandMoveSaturationID = 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandStepSaturationID = 5;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandMoveToHueAndSaturationID = 6;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandMoveToColorID = 7;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandMoveColorID = 8;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandStepColorID = 9;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandMoveToColorTemperatureID = 10;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandEnhancedMoveToHueID = 64;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandEnhancedMoveHueID = 65;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandEnhancedStepHueID = 66;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandEnhancedMoveToHueAndSaturationID = 67;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandColorLoopSetID = 68;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandStopMoveStepID = 71;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandMoveColorTemperatureID = 75;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterColorControlCommandStepColorTemperatureID = 76;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandMoveToHueID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandMoveHueID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandStepHueID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandMoveToSaturationID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandMoveSaturationID = 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandStepSaturationID = 5;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandMoveToHueAndSaturationID = 6;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandMoveToColorID = 7;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandMoveColorID = 8;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandStepColorID = 9;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandMoveToColorTemperatureID = 10;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandEnhancedMoveToHueID = 64;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandEnhancedMoveHueID = 65;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandEnhancedStepHueID = 66;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandEnhancedMoveToHueAndSaturationID = 67;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandColorLoopSetID = 68;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandStopMoveStepID = 71;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandMoveColorTemperatureID = 75;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterColorControlCommandStepColorTemperatureID = 76;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterWiFiNetworkManagementCommandNetworkPassphraseRequestID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterWiFiNetworkManagementCommandNetworkPassphraseResponseID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterThreadBorderRouterManagementCommandGetActiveDatasetRequestID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterThreadBorderRouterManagementCommandGetPendingDatasetRequestID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterThreadBorderRouterManagementCommandDatasetResponseID = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterThreadBorderRouterManagementCommandSetActiveDatasetRequestID = 3;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterThreadBorderRouterManagementCommandSetPendingDatasetRequestID = 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterThreadNetworkDirectoryCommandAddNetworkID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterThreadNetworkDirectoryCommandRemoveNetworkID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterThreadNetworkDirectoryCommandGetOperationalDatasetID = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterThreadNetworkDirectoryCommandOperationalDatasetResponseID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterChannelCommandChangeChannelID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterChannelCommandChangeChannelResponseID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterChannelCommandChangeChannelByNumberID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterChannelCommandSkipChannelID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterChannelCommandChangeChannelID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterChannelCommandChangeChannelResponseID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterChannelCommandChangeChannelByNumberID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterChannelCommandSkipChannelID = 3;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterChannelCommandGetProgramGuideID = 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterChannelCommandProgramGuideResponseID = 5;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterChannelCommandRecordProgramID = 6;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterChannelCommandCancelRecordProgramID = 7;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTargetNavigatorCommandNavigateTargetID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTargetNavigatorCommandNavigateTargetResponseID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterTargetNavigatorCommandNavigateTargetID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterTargetNavigatorCommandNavigateTargetResponseID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterMediaPlaybackCommandPlayID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterMediaPlaybackCommandPauseID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterMediaPlaybackCommandStopPlaybackID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterMediaPlaybackCommandStartOverID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterMediaPlaybackCommandPreviousID = 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterMediaPlaybackCommandNextID = 5;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterMediaPlaybackCommandRewindID = 6;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterMediaPlaybackCommandFastForwardID = 7;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterMediaPlaybackCommandSkipForwardID = 8;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterMediaPlaybackCommandSkipBackwardID = 9;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterMediaPlaybackCommandPlaybackResponseID = 10;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterMediaPlaybackCommandSeekID = 11;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterMediaPlaybackCommandPlayID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterMediaPlaybackCommandPauseID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterMediaPlaybackCommandStopID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterMediaPlaybackCommandStartOverID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterMediaPlaybackCommandPreviousID = 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterMediaPlaybackCommandNextID = 5;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterMediaPlaybackCommandRewindID = 6;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterMediaPlaybackCommandFastForwardID = 7;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterMediaPlaybackCommandSkipForwardID = 8;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterMediaPlaybackCommandSkipBackwardID = 9;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterMediaPlaybackCommandPlaybackResponseID = 10;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterMediaPlaybackCommandSeekID = 11;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterMediaPlaybackCommandActivateAudioTrackID = 12;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterMediaPlaybackCommandActivateTextTrackID = 13;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterMediaPlaybackCommandDeactivateTextTrackID = 14;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterMediaInputCommandSelectInputID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterMediaInputCommandShowInputStatusID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterMediaInputCommandHideInputStatusID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterMediaInputCommandRenameInputID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterMediaInputCommandSelectInputID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterMediaInputCommandShowInputStatusID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterMediaInputCommandHideInputStatusID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterMediaInputCommandRenameInputID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterLowPowerCommandSleepID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterLowPowerCommandSleepID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterKeypadInputCommandSendKeyID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterKeypadInputCommandSendKeyResponseID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterKeypadInputCommandSendKeyID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterKeypadInputCommandSendKeyResponseID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterContentLauncherCommandLaunchContentID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterContentLauncherCommandLaunchURLID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterContentLauncherCommandLaunchResponseID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterContentLauncherCommandLaunchContentID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterContentLauncherCommandLaunchURLID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterContentLauncherCommandLauncherResponseID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterAudioOutputCommandSelectOutputID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterAudioOutputCommandRenameOutputID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterAudioOutputCommandSelectOutputID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterAudioOutputCommandRenameOutputID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterApplicationLauncherCommandLaunchAppID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterApplicationLauncherCommandStopAppID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterApplicationLauncherCommandHideAppID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterApplicationLauncherCommandLauncherResponseID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterApplicationLauncherCommandLaunchAppID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterApplicationLauncherCommandStopAppID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterApplicationLauncherCommandHideAppID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterApplicationLauncherCommandLauncherResponseID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterAccountLoginCommandGetSetupPINID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterAccountLoginCommandGetSetupPINResponseID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterAccountLoginCommandLoginID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterAccountLoginCommandLogoutID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterAccountLoginCommandGetSetupPINID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterAccountLoginCommandGetSetupPINResponseID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterAccountLoginCommandLoginID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterAccountLoginCommandLogoutID = 3;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterContentAppObserverCommandContentAppMessageID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterContentAppObserverCommandContentAppMessageResponseID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterCommissionerControlCommandRequestCommissioningApprovalID = 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterCommissionerControlCommandCommissionNodeID = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ClusterCommissionerControlCommandReverseOpenCommissioningWindowID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestSpecificResponseID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestNotHandledID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestAddArgumentsResponseID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestSpecificID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestSimpleArgumentResponseID = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestUnknownCommandID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestStructArrayArgumentResponseID = 3;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestAddArgumentsID = 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestListInt8UReverseResponseID = 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestSimpleArgumentRequestID = 5;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestEnumsResponseID = 5;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestStructArrayArgumentRequestID = 6;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestNullableOptionalResponseID = 6;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestStructArgumentRequestID = 7;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestComplexNullableOptionalResponseID = 7;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestNestedStructArgumentRequestID = 8;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandBooleanResponseID = 8;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestListStructArgumentRequestID = 9;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandSimpleStructResponseID = 9;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestListInt8UArgumentRequestID = 10;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestEmitTestEventResponseID = 10;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestNestedStructListArgumentRequestID = 11;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestEmitTestFabricScopedEventResponseID = 11;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestListNestedStructListArgumentRequestID = 12;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestListInt8UReverseRequestID = 13;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestEnumsRequestID = 14;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestNullableOptionalRequestID = 15;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestComplexNullableOptionalRequestID = 16;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandSimpleStructEchoRequestID = 17;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTimedInvokeRequestID = 18;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestSimpleOptionalArgumentRequestID = 19;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestEmitTestEventRequestID = 20;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterTestClusterCommandTestEmitTestFabricScopedEventRequestID = 21;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestSpecificResponseID = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestNotHandledID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestAddArgumentsResponseID = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestSpecificID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestSimpleArgumentResponseID = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestUnknownCommandID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestStructArrayArgumentResponseID = 3;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestAddArgumentsID = 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestListInt8UReverseResponseID = 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestSimpleArgumentRequestID = 5;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestEnumsResponseID = 5;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestStructArrayArgumentRequestID = 6;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestNullableOptionalResponseID = 6;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestStructArgumentRequestID = 7;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestComplexNullableOptionalResponseID = 7;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestNestedStructArgumentRequestID = 8;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandBooleanResponseID = 8;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestListStructArgumentRequestID = 9;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandSimpleStructResponseID = 9;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestListInt8UArgumentRequestID = 10;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestEmitTestEventResponseID = 10;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestNestedStructListArgumentRequestID = 11;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestEmitTestFabricScopedEventResponseID = 11;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestListNestedStructListArgumentRequestID = 12;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestListInt8UReverseRequestID = 13;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestEnumsRequestID = 14;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestNullableOptionalRequestID = 15;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestComplexNullableOptionalRequestID = 16;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandSimpleStructEchoRequestID = 17;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTimedInvokeRequestID = 18;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestSimpleOptionalArgumentRequestID = 19;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestEmitTestEventRequestID = 20;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterUnitTestingCommandTestEmitTestFabricScopedEventRequestID = 21;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterBarrierControlCommandBarrierControlGoToPercentID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterBarrierControlCommandBarrierControlStopID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterBarrierControlCommandBarrierControlGoToPercentID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterBarrierControlCommandBarrierControlStopID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterElectricalMeasurementCommandGetProfileInfoResponseCommandID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterElectricalMeasurementCommandGetProfileInfoCommandID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterElectricalMeasurementCommandGetMeasurementProfileResponseCommandID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTRClusterElectricalMeasurementCommandGetMeasurementProfileCommandID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterElectricalMeasurementCommandGetProfileInfoResponseCommandID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterElectricalMeasurementCommandGetProfileInfoCommandID = 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterElectricalMeasurementCommandGetMeasurementProfileResponseCommandID = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ClusterElectricalMeasurementCommandGetMeasurementProfileCommandID = 1;
 }

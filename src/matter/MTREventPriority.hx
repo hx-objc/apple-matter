@@ -4,8 +4,11 @@ package matter;
 import hxmc.I64;
 
 enum abstract MTREventPriority(I64) to I64 {
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var Debug = 0;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var Info = 1;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var Critical = 2;
 	inline function new(v:I64) this = v;
 }

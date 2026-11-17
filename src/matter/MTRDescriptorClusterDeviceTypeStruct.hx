@@ -7,18 +7,29 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRDescriptorClusterDeviceTypeStruct extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2) extern class MTRDescriptorClusterDeviceTypeStruct extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	static function alloc():MTRDescriptorClusterDeviceTypeStruct;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var deviceType(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_deviceType():NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_deviceType(v:NSNumberArg):NSNumberArg;
 	@:deprecated
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	var type(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	function get_type():NSNumberArg;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	function set_type(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	var revision(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	function get_revision():NSNumberArg;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	function set_revision(v:NSNumberArg):NSNumberArg;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	override function init():MTRDescriptorClusterDeviceTypeStruct;
 }

@@ -2,8 +2,11 @@
 package matter;
 
 enum abstract MTRServiceAreaFeature(Int) to Int {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var SelectWhileRunning = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ProgressReporting = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Maps = 4;
 	inline function new(v:Int) this = v;
 	var None = 0;

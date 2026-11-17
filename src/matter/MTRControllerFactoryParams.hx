@@ -4,22 +4,35 @@ package matter;
 import foundation.NSArray;
 import foundation.NSData;
 
-@:hxmc.framework("Matter") @:hxmc.objc @:deprecated extern class MTRControllerFactoryParams extends MTRDeviceControllerFactoryParams {
+@:hxmc.framework("Matter") @:hxmc.objc @:deprecated @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRControllerFactoryParams extends MTRDeviceControllerFactoryParams {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():MTRControllerFactoryParams;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var storageDelegate(get, never) : MTRPersistentStorageDelegate;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_storageDelegate():MTRPersistentStorageDelegate;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var startServer(get, set) : Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_startServer():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_startServer(v:Bool):Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var paaCerts(get, set) : Null<NSArray<NSData>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_paaCerts():Null<NSArray<NSData>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_paaCerts(v:Null<NSArray<NSData>>):Null<NSArray<NSData>>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var cdCerts(get, set) : Null<NSArray<NSData>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_cdCerts():Null<NSArray<NSData>>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_cdCerts(v:Null<NSArray<NSData>>):Null<NSArray<NSData>>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	override function initWithStorage(storage:MTRStorage):MTRControllerFactoryParams;
 }

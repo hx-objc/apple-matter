@@ -6,14 +6,22 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRElectricalEnergyMeasurementClusterPeriodicEnergyMeasuredEvent extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6) extern class MTRElectricalEnergyMeasurementClusterPeriodicEnergyMeasuredEvent extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function alloc():MTRElectricalEnergyMeasurementClusterPeriodicEnergyMeasuredEvent;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var energyImported(get, set) : Null<MTRElectricalEnergyMeasurementClusterEnergyMeasurementStruct>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_energyImported():Null<MTRElectricalEnergyMeasurementClusterEnergyMeasurementStruct>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_energyImported(v:Null<MTRElectricalEnergyMeasurementClusterEnergyMeasurementStruct>):Null<MTRElectricalEnergyMeasurementClusterEnergyMeasurementStruct>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var energyExported(get, set) : Null<MTRElectricalEnergyMeasurementClusterEnergyMeasurementStruct>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_energyExported():Null<MTRElectricalEnergyMeasurementClusterEnergyMeasurementStruct>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_energyExported(v:Null<MTRElectricalEnergyMeasurementClusterEnergyMeasurementStruct>):Null<MTRElectricalEnergyMeasurementClusterEnergyMeasurementStruct>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	override function init():MTRElectricalEnergyMeasurementClusterPeriodicEnergyMeasuredEvent;
 }

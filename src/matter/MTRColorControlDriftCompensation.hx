@@ -4,9 +4,14 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRColorControlDriftCompensation(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var None = cast 0;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var OtherOrUnknown = cast 1;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var TemperatureMonitoring = cast 2;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var OpticalLuminanceMonitoringAndFeedback = cast 3;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var OpticalColorMonitoringAndFeedback = cast 4;
 }

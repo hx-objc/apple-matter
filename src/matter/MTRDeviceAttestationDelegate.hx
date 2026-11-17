@@ -6,16 +6,20 @@ import hxmc.unsafe.Ptr;
 import objc.NSObjectProtocol;
 
 @:hxmc.objc("MTRDeviceAttestationDelegate") extern interface MTRDeviceAttestationDelegate extends NSObjectProtocol {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	@:optional
 	function deviceAttestationCompletedForController(controller:MTRDeviceController, opaqueDeviceHandle:Ptr, attestationDeviceInfo:MTRDeviceAttestationDeviceInfo, error:Null<NSError>):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	@:optional
 	function deviceAttestationFailedForController(controller:MTRDeviceController, opaqueDeviceHandle:Ptr, error:NSError):Void;
 	@:selector("deviceAttestation:completedForDevice:attestationDeviceInfo:error:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	@:optional
 	function deviceAttestationCompletedForDeviceAttestationDeviceInfoError(controller:MTRDeviceController, completedForDevice:Ptr, attestationDeviceInfo:MTRDeviceAttestationDeviceInfo, error:Null<NSError>):Void;
 	@:selector("deviceAttestation:failedForDevice:error:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	@:optional
 	function deviceAttestationFailedForDeviceError(controller:MTRDeviceController, failedForDevice:Ptr, error:NSError):Void;
 }

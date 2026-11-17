@@ -3,8 +3,10 @@ package matter;
 
 @:deprecated enum abstract MTRPressureMeasurementPressureFeature(Int) to Int {
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Extended = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var EXT = 1;
 	inline function new(v:Int) this = v;
 	var None = 0;

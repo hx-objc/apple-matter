@@ -8,16 +8,23 @@ import foundation.NSString;
 import hxmc.objc.Id;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("MTRXPCClientProtocol_MTRDevice") extern interface MTRXPCClientProtocol_MTRDevice extends NSObjectProtocol {
+@:hxmc.objc("MTRXPCClientProtocol_MTRDevice") @:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2) extern interface MTRXPCClientProtocol_MTRDevice extends NSObjectProtocol {
 	@:selector("device:stateChanged:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function deviceStateChanged(nodeID:NSNumberArg, stateChanged:MTRDeviceState):Void;
 	@:selector("device:receivedAttributeReport:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function deviceReceivedAttributeReport(nodeID:NSNumberArg, receivedAttributeReport:NSArray<NSDictionary<NSString, Id>>):Void;
 	@:selector("device:receivedEventReport:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function deviceReceivedEventReport(nodeID:NSNumberArg, receivedEventReport:NSArray<NSDictionary<NSString, Id>>):Void;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function deviceBecameActive(nodeID:NSNumberArg):Void;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function deviceCachePrimed(nodeID:NSNumberArg):Void;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function deviceConfigurationChanged(nodeID:NSNumberArg):Void;
 	@:selector("device:internalStateUpdated:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function deviceInternalStateUpdated(nodeID:NSNumberArg, internalStateUpdated:NSDictionary):Void;
 }

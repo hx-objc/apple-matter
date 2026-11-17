@@ -6,8 +6,11 @@ import foundation.NSString;
 import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 
-@:hxmc.framework("Matter") @:hxmc.objc @:deprecated extern class MTRTestClusterClusterSimpleStructResponseParams extends MTRUnitTestingClusterSimpleStructResponseParams {
+@:hxmc.framework("Matter") @:hxmc.objc @:deprecated @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRTestClusterClusterSimpleStructResponseParams extends MTRUnitTestingClusterSimpleStructResponseParams {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():MTRTestClusterClusterSimpleStructResponseParams;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	override function init():MTRTestClusterClusterSimpleStructResponseParams;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	override function initWithResponseValue(responseValue:NSDictionary<NSString, Id>, error:Ptr):Null<MTRTestClusterClusterSimpleStructResponseParams>;
 }

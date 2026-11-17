@@ -5,17 +5,28 @@ import foundation.NSArray;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRDeviceControllerFactory extends NSObject {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4) extern class MTRDeviceControllerFactory extends NSObject {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():MTRDeviceControllerFactory;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var running(get, never) : Bool;
 	@:selector("isRunning")
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_running():Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var knownFabrics(get, never) : Null<NSArray<MTRFabricInfo>>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_knownFabrics():Null<NSArray<MTRFabricInfo>>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function sharedInstance():MTRDeviceControllerFactory;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function startControllerFactory(startupParams:MTRDeviceControllerFactoryParams, error:Ptr):Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function stopControllerFactory():Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function createControllerOnExistingFabric(startupParams:MTRDeviceControllerStartupParams, error:Ptr):Null<MTRDeviceController>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function createControllerOnNewFabric(startupParams:MTRDeviceControllerStartupParams, error:Ptr):Null<MTRDeviceController>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function preWarmCommissioningSession():Void;
 }

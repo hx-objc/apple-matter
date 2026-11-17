@@ -5,14 +5,18 @@ import foundation.NSData;
 import objc.NSObjectProtocol;
 import security.SecKey;
 
-@:hxmc.objc("MTRKeypair") extern interface MTRKeypair extends NSObjectProtocol {
+@:hxmc.objc("MTRKeypair") @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern interface MTRKeypair extends NSObjectProtocol {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function copyPublicKey():SecKey;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	@:optional
 	function publicKey():SecKey;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	@:optional
 	function signMessageECDSA_RAW(message:NSData):NSData;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	@:optional
 	function signMessageECDSA_DER(message:NSData):NSData;
 }

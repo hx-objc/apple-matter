@@ -7,17 +7,28 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRAccessGrant extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6) extern class MTRAccessGrant extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function alloc():MTRAccessGrant;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var subjectID(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_subjectID():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var grantedPrivilege(get, never) : MTRAccessControlEntryPrivilege;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_grantedPrivilege():MTRAccessControlEntryPrivilege;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var authenticationMode(get, never) : MTRAccessControlEntryAuthMode;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_authenticationMode():MTRAccessControlEntryAuthMode;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function accessGrantForNodeID(nodeID:NSNumberArg, privilege:MTRAccessControlEntryPrivilege):Null<MTRAccessGrant>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function accessGrantForCASEAuthenticatedTag(caseAuthenticatedTag:NSNumberArg, privilege:MTRAccessControlEntryPrivilege):Null<MTRAccessGrant>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function accessGrantForGroupID(groupID:NSNumberArg, privilege:MTRAccessControlEntryPrivilege):Null<MTRAccessGrant>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function accessGrantForAllNodesWithPrivilege(privilege:MTRAccessControlEntryPrivilege):MTRAccessGrant;
 	function copyWithZone(zone:Ptr):Id;
 }

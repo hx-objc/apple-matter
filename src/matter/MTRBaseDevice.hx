@@ -12,34 +12,57 @@ import hxmc.objc.Id;
 import hxmc.unsafe.UInt16;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRBaseDevice extends NSObject {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRBaseDevice extends NSObject {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function alloc():MTRBaseDevice;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var sessionTransportType(get, never) : MTRTransportType;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_sessionTransportType():MTRTransportType;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function deviceWithNodeID(nodeID:NSNumberArg, controller:MTRDeviceController):MTRBaseDevice;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	overload function subscribeWithQueue(queue:NSObject, params:MTRSubscribeParams, clusterStateCacheContainer:Null<MTRClusterStateCacheContainer>, attributeReportHandler:Null<NSArray -> Void>, eventReportHandler:Null<NSArray -> Void>, errorHandler:NSError -> Void, subscriptionEstablished:Null<() -> Void>, resubscriptionScheduled:Null<(NSError, NSNumber) -> Void>):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readAttributesWithEndpointID(endpointID:Null<NSNumberArg>, clusterID:Null<NSNumberArg>, attributeID:Null<NSNumberArg>, params:Null<MTRReadParams>, queue:NSObject, completion:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function readAttributePaths(attributePaths:Null<NSArray<MTRAttributeRequestPath>>, eventPaths:Null<NSArray<MTREventRequestPath>>, params:Null<MTRReadParams>, queue:NSObject, completion:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function writeAttributeWithEndpointID(endpointID:NSNumberArg, clusterID:NSNumberArg, attributeID:NSNumberArg, value:Id, timedWriteTimeout:Null<NSNumberArg>, queue:NSObject, completion:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function invokeCommandWithEndpointID(endpointID:NSNumberArg, clusterID:NSNumberArg, commandID:NSNumberArg, commandFields:Id, timedInvokeTimeout:Null<NSNumberArg>, queue:NSObject, completion:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeToAttributesWithEndpointID(endpointID:Null<NSNumberArg>, clusterID:Null<NSNumberArg>, attributeID:Null<NSNumberArg>, params:Null<MTRSubscribeParams>, queue:NSObject, reportHandler:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void, subscriptionEstablished:Null<() -> Void>):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function subscribeToAttributePaths(attributePaths:Null<NSArray<MTRAttributeRequestPath>>, eventPaths:Null<NSArray<MTREventRequestPath>>, params:Null<MTRSubscribeParams>, queue:NSObject, reportHandler:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void, subscriptionEstablished:Null<() -> Void>, resubscriptionScheduled:Null<(NSError, NSNumber) -> Void>):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function deregisterReportHandlersWithQueue(queue:NSObject, completion:() -> Void):Void;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	function openCommissioningWindowWithSetupPasscode(setupPasscode:NSNumberArg, discriminator:NSNumberArg, duration:NSNumberArg, queue:NSObject, completion:(Null<MTRSetupPayload>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function openCommissioningWindowWithDiscriminator(discriminator:NSNumberArg, duration:NSNumberArg, queue:NSObject, completion:(Null<MTRSetupPayload>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function readEventsWithEndpointID(endpointID:Null<NSNumberArg>, clusterID:Null<NSNumberArg>, eventID:Null<NSNumberArg>, params:Null<MTRReadParams>, queue:NSObject, completion:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function subscribeToEventsWithEndpointID(endpointID:Null<NSNumberArg>, clusterID:Null<NSNumberArg>, eventID:Null<NSNumberArg>, params:Null<MTRSubscribeParams>, queue:NSObject, reportHandler:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void, subscriptionEstablished:Null<() -> Void>):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function downloadLogOfType(type:MTRDiagnosticLogType, timeout:Float, queue:NSObject, completion:(Null<NSURL>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function subscribeWithQueue(queue:NSObject, minInterval:UInt16, maxInterval:UInt16, params:Null<MTRSubscribeParams>, cacheContainer:Null<MTRAttributeCacheContainer>, attributeReportHandler:Null<NSArray -> Void>, eventReportHandler:Null<NSArray -> Void>, errorHandler:NSError -> Void, subscriptionEstablished:Null<() -> Void>, resubscriptionScheduled:Null<(NSError, NSNumber) -> Void>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeWithEndpointId(endpointId:Null<NSNumberArg>, clusterId:Null<NSNumberArg>, attributeId:Null<NSNumberArg>, params:Null<MTRReadParams>, clientQueue:NSObject, completion:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function writeAttributeWithEndpointId(endpointId:NSNumberArg, clusterId:NSNumberArg, attributeId:NSNumberArg, value:Id, timedWriteTimeout:Null<NSNumberArg>, clientQueue:NSObject, completion:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function invokeCommandWithEndpointId(endpointId:NSNumberArg, clusterId:NSNumberArg, commandId:NSNumberArg, commandFields:Id, timedInvokeTimeout:Null<NSNumberArg>, clientQueue:NSObject, completion:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function subscribeAttributeWithEndpointId(endpointId:Null<NSNumberArg>, clusterId:Null<NSNumberArg>, attributeId:Null<NSNumberArg>, minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<MTRSubscribeParams>, clientQueue:NSObject, reportHandler:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void, subscriptionEstablished:Null<() -> Void>):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function deregisterReportHandlersWithClientQueue(queue:NSObject, completion:() -> Void):Void;
 }

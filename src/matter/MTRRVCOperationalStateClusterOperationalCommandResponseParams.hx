@@ -8,12 +8,18 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRRVCOperationalStateClusterOperationalCommandResponseParams extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4) extern class MTRRVCOperationalStateClusterOperationalCommandResponseParams extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():MTRRVCOperationalStateClusterOperationalCommandResponseParams;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var commandResponseState(get, set) : MTRRVCOperationalStateClusterErrorStateStruct;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function get_commandResponseState():MTRRVCOperationalStateClusterErrorStateStruct;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function set_commandResponseState(v:MTRRVCOperationalStateClusterErrorStateStruct):MTRRVCOperationalStateClusterErrorStateStruct;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function initWithResponseValue(responseValue:NSDictionary<NSString, Id>, error:Ptr):Null<MTRRVCOperationalStateClusterOperationalCommandResponseParams>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	override function init():MTRRVCOperationalStateClusterOperationalCommandResponseParams;
 }

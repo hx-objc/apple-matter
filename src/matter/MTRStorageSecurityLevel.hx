@@ -4,7 +4,9 @@ package matter;
 import hxmc.I64;
 
 enum abstract MTRStorageSecurityLevel(I64) to I64 {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Secure = 0;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var NotSecure = 1;
 	inline function new(v:I64) this = v;
 }

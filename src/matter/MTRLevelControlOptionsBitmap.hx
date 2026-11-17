@@ -4,7 +4,9 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRLevelControlOptionsBitmap(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var ExecuteIfOff = cast 1;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var CoupleColorTempToLevel = cast 2;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

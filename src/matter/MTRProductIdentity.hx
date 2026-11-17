@@ -9,14 +9,20 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRProductIdentity extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0) extern class MTRProductIdentity extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():MTRProductIdentity;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var vendorID(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_vendorID():NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var productID(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_productID():NSNumberArg;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function initWithVendorID(vendorID:NSNumberArg, productID:NSNumberArg):MTRProductIdentity;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

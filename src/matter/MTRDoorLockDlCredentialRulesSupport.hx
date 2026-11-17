@@ -4,8 +4,11 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRDoorLockDlCredentialRulesSupport(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Single = cast 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Dual = cast 2;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Tri = cast 4;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

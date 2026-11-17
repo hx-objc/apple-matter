@@ -4,6 +4,8 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRActionsActionError(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Unknown = cast 0;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Interrupted = cast 1;
 }

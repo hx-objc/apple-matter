@@ -2,6 +2,7 @@
 package matter;
 
 enum abstract MTRCommissionerControlSupportedDeviceCategoryBitmap(Int) to Int {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var FabricSynchronization = 1;
 	inline function new(v:Int) this = v;
 	var None = 0;

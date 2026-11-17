@@ -2,9 +2,13 @@
 package matter;
 
 enum abstract MTRUnitTestingBitmap32MaskMap(Int) to Int {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var MaskVal1 = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var MaskVal2 = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var MaskVal3 = 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var MaskVal4 = 1073741824;
 	inline function new(v:Int) this = v;
 	var None = 0;

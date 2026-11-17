@@ -4,6 +4,7 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTROnOffControlBitmap(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	var AcceptOnlyWhenOn = cast 1;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

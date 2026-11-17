@@ -5,12 +5,16 @@ import hxmc.unsafe.UInt8;
 
 @:deprecated enum abstract MTRColorControlColorLoopUpdateFlags(UInt8) to UInt8 {
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var UpdateAction = cast 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var UpdateDirection = cast 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var UpdateTime = cast 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var UpdateStartHue = cast 8;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

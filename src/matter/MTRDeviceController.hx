@@ -19,74 +19,125 @@ import hxmc.unsafe.Ptr;
 import hxmc.unsafe.UInt16;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRDeviceController extends NSObject {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRDeviceController extends NSObject {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function alloc():MTRDeviceController;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var running(get, never) : Bool;
 	@:selector("isRunning")
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_running():Bool;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var suspended(get, never) : Bool;
 	@:selector("isSuspended")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function get_suspended():Bool;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var uniqueIdentifier(get, never) : NSUUID;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_uniqueIdentifier():NSUUID;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var controllerNodeID(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_controllerNodeID():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var devices(get, never) : NSArray<MTRDevice>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_devices():NSArray<MTRDevice>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var nodesWithStoredData(get, never) : NSArray<NSNumber>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_nodesWithStoredData():NSArray<NSNumber>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var controllerNodeId(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_controllerNodeId():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function initWithParameters(parameters:MTRDeviceControllerAbstractParameters, error:Ptr):Null<MTRDeviceController>;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	function setupCommissioningSessionWithPayload(payload:MTRSetupPayload, newNodeID:NSNumberArg, error:Ptr):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function setupCommissioningSessionWithDiscoveredDevice(discoveredDevice:MTRCommissionableBrowserResult, payload:MTRSetupPayload, newNodeID:NSNumberArg, error:Ptr):Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function commissionNodeWithID(nodeID:NSNumberArg, commissioningParams:MTRCommissioningParameters, error:Ptr):Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function continueCommissioningDevice(opaqueDeviceHandle:Ptr, ignoreAttestationFailure:Bool, error:Ptr):Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function cancelCommissioningForNodeID(nodeID:NSNumberArg, error:Ptr):Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function deviceBeingCommissionedWithNodeID(nodeID:NSNumberArg, error:Ptr):Null<MTRBaseDevice>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function preWarmCommissioningSession():Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function setDeviceControllerDelegate(delegate:MTRDeviceControllerDelegate, queue:NSObject):Void;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function addDeviceControllerDelegate(delegate:MTRDeviceControllerDelegate, queue:NSObject):Void;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function removeDeviceControllerDelegate(delegate:MTRDeviceControllerDelegate):Void;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function startBrowseForCommissionables(delegate:MTRCommissionableBrowserDelegate, queue:NSObject):Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function stopBrowseForCommissionables():Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function attestationChallengeForDeviceID(deviceID:NSNumberArg):Null<NSData>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function addServerEndpoint(endpoint:MTRServerEndpoint):Bool;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	overload function removeServerEndpoint(endpoint:MTRServerEndpoint, queue:NSObject, completion:() -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	overload function removeServerEndpoint(endpoint:MTRServerEndpoint):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function forgetDeviceWithNodeID(nodeID:NSNumberArg):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function computePASEVerifierForSetupPasscode(setupPasscode:NSNumberArg, iterations:NSNumberArg, salt:NSData, error:Ptr):Null<NSData>;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function suspend():Void;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function resume():Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function shutdown():Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function fetchAttestationChallengeForDeviceId(deviceId:I64):Null<NSData>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function getBaseDevice(deviceID:I64, queue:NSObject, completionHandler:(Null<MTRBaseDevice>, Null<NSError>) -> Void):Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function pairDevice(deviceID:I64, discriminator:UInt16, setupPINCode:Int, error:Ptr):Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function pairDevice(deviceID:I64, address:NSStringArg, port:UInt16, setupPINCode:Int, error:Ptr):Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	overload function pairDevice(deviceID:I64, onboardingPayload:NSStringArg, error:Ptr):Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function commissionDevice(deviceId:I64, commissioningParams:MTRCommissioningParameters, error:Ptr):Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function stopDevicePairing(deviceID:I64, error:Ptr):Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function getDeviceBeingCommissioned(deviceId:I64, error:Ptr):Null<MTRBaseDevice>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function openPairingWindow(deviceID:I64, duration:I64, error:Ptr):Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function openPairingWindowWithPIN(deviceID:I64, duration:I64, discriminator:I64, setupPIN:I64, error:Ptr):Null<NSString>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function computePaseVerifier(setupPincode:Int, iterations:Int, salt:NSData):Null<NSData>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function setPairingDelegate(delegate:MTRDevicePairingDelegate, queue:NSObject):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function setNocChainIssuer(nocChainIssuer:MTRNOCChainIssuer, queue:NSObject):Void;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function sharedControllerWithID(controllerID:Null<NSCopying>, xpcConnectBlock:() -> NSXPCConnection):MTRDeviceController;
 	static function encodeXPCResponseValues(values:Null<NSArray<NSDictionary<NSString, Id>>>):Null<NSArray<NSDictionary<NSString, Id>>>;
 	static function decodeXPCResponseValues(values:Null<NSArray<NSDictionary<NSString, Id>>>):Null<NSArray<NSDictionary<NSString, Id>>>;
@@ -94,8 +145,11 @@ import objc.NSObject;
 	static function decodeXPCReadParams(params:Null<NSDictionary<NSString, Id>>):Null<MTRReadParams>;
 	static function encodeXPCSubscribeParams(params:Null<MTRSubscribeParams>):Null<NSDictionary<NSString, Id>>;
 	static function decodeXPCSubscribeParams(params:Null<NSDictionary<NSString, Id>>):Null<MTRSubscribeParams>;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	static function xpcInterfaceForServerProtocol():NSXPCInterface;
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	static function xpcInterfaceForClientProtocol():NSXPCInterface;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function sharedControllerWithId(controllerID:Null<NSCopying>, xpcConnectBlock:() -> NSXPCConnection):MTRDeviceController;
 }

@@ -2,9 +2,13 @@
 package matter;
 
 enum abstract MTRTimeSynchronizationFeature(Int) to Int {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var TimeZone = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var NTPClient = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var NTPServer = 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var TimeSyncClient = 8;
 	inline function new(v:Int) this = v;
 	var None = 0;

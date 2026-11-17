@@ -4,8 +4,11 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRWindowCoveringOperationalStatus(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Global = cast 3;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Lift = cast 12;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Tilt = cast 48;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

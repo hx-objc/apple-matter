@@ -2,8 +2,11 @@
 package matter;
 
 enum abstract MTRHEPAFilterMonitoringFeature(Int) to Int {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Condition = 1;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Warning = 2;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var ReplacementProductList = 4;
 	inline function new(v:Int) this = v;
 	var None = 0;

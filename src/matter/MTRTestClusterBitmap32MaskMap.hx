@@ -3,12 +3,16 @@ package matter;
 
 @:deprecated enum abstract MTRTestClusterBitmap32MaskMap(Int) to Int {
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MaskVal1 = 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MaskVal2 = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MaskVal3 = 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MaskVal4 = 1073741824;
 	inline function new(v:Int) this = v;
 	var None = 0;

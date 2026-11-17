@@ -5,10 +5,13 @@ import foundation.NSNumberArg;
 import hxmc.unsafe.UInt16;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc @:deprecated extern class MTRClusterBridgedDeviceBasic extends MTRClusterBridgedDeviceBasicInformation {
+@:hxmc.framework("Matter") @:hxmc.objc @:deprecated @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRClusterBridgedDeviceBasic extends MTRClusterBridgedDeviceBasicInformation {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():MTRClusterBridgedDeviceBasic;
 	@:selector("initWithDevice:endpoint:queue:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function initWithDeviceEndpointQueue(device:MTRDevice, endpoint:UInt16, queue:NSObject):Null<MTRClusterBridgedDeviceBasic>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	override function initWithDevice(device:MTRDevice, endpointID:NSNumberArg, queue:NSObject):Null<MTRClusterBridgedDeviceBasic>;
 }

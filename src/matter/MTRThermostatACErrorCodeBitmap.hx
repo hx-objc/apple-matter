@@ -2,10 +2,15 @@
 package matter;
 
 enum abstract MTRThermostatACErrorCodeBitmap(Int) to Int {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var CompressorFail = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var RoomSensorFail = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var OutdoorSensorFail = 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var CoilSensorFail = 8;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var FanFail = 16;
 	inline function new(v:Int) this = v;
 	var None = 0;

@@ -2,7 +2,9 @@
 package matter;
 
 enum abstract MTRValveConfigurationAndControlFeature(Int) to Int {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var TimeSync = 1;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Level = 2;
 	inline function new(v:Int) this = v;
 	var None = 0;

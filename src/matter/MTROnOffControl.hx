@@ -5,6 +5,7 @@ import hxmc.unsafe.UInt8;
 
 @:deprecated enum abstract MTROnOffControl(UInt8) to UInt8 {
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var AcceptOnlyWhenOn = cast 1;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

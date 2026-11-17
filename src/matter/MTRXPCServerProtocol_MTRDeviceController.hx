@@ -8,20 +8,25 @@ import foundation.NSNumberArg;
 import foundation.NSUUID;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("MTRXPCServerProtocol_MTRDeviceController") extern interface MTRXPCServerProtocol_MTRDeviceController extends NSObjectProtocol {
+@:hxmc.objc("MTRXPCServerProtocol_MTRDeviceController") @:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3) extern interface MTRXPCServerProtocol_MTRDeviceController extends NSObjectProtocol {
 	@:selector("deviceController:deleteNodeID:")
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function deviceControllerDeleteNodeID(controller:NSUUID, deleteNodeID:NSNumberArg):Void;
 	@:selector("deviceController:registerNodeID:")
+	@:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3)
 	@:optional
 	function deviceControllerRegisterNodeID(controller:NSUUID, registerNodeID:NSNumberArg):Void;
 	@:selector("deviceController:unregisterNodeID:")
+	@:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3)
 	@:optional
 	function deviceControllerUnregisterNodeID(controller:NSUUID, unregisterNodeID:NSNumberArg):Void;
 	@:selector("deviceController:updateControllerConfiguration:")
+	@:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3)
 	@:optional
 	function deviceControllerUpdateControllerConfiguration(controller:NSUUID, updateControllerConfiguration:NSDictionary):Void;
 	@:selector("deviceController:getNodesWithStoredDataWithReply:")
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function deviceControllerGetNodesWithStoredDataWithReply(controller:NSUUID, getNodesWithStoredDataWithReply:NSArray<NSNumber> -> Void):Void;
 }

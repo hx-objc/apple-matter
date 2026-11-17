@@ -9,45 +9,57 @@ import objc.NSObjectProtocol;
 
 @:hxmc.objc("MTROTAProviderDelegate") extern interface MTROTAProviderDelegate extends NSObjectProtocol {
 	@:selector("handleQueryImageForNodeID:controller:params:completion:")
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	@:optional
 	function handleQueryImageForNodeIDControllerParamsCompletion(nodeID:NSNumberArg, controller:MTRDeviceController, params:MTROTASoftwareUpdateProviderClusterQueryImageParams, completion:(Null<MTROTASoftwareUpdateProviderClusterQueryImageResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("handleQueryImageForNodeID:controller:params:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	@:optional
 	function handleQueryImageForNodeIDControllerParamsCompletionHandler(nodeID:NSNumberArg, controller:MTRDeviceController, params:MTROTASoftwareUpdateProviderClusterQueryImageParams, completionHandler:(Null<MTROTASoftwareUpdateProviderClusterQueryImageResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("handleApplyUpdateRequestForNodeID:controller:params:completion:")
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	@:optional
 	function handleApplyUpdateRequestForNodeIDControllerParamsCompletion(nodeID:NSNumberArg, controller:MTRDeviceController, params:MTROTASoftwareUpdateProviderClusterApplyUpdateRequestParams, completion:(Null<MTROTASoftwareUpdateProviderClusterApplyUpdateResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("handleApplyUpdateRequestForNodeID:controller:params:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	@:optional
 	function handleApplyUpdateRequestForNodeIDControllerParamsCompletionHandler(nodeID:NSNumberArg, controller:MTRDeviceController, params:MTROTASoftwareUpdateProviderClusterApplyUpdateRequestParams, completionHandler:(Null<MTROTASoftwareUpdateProviderClusterApplyUpdateResponseParams>, Null<NSError>) -> Void):Void;
 	@:selector("handleNotifyUpdateAppliedForNodeID:controller:params:completion:")
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	@:optional
 	function handleNotifyUpdateAppliedForNodeIDControllerParamsCompletion(nodeID:NSNumberArg, controller:MTRDeviceController, params:MTROTASoftwareUpdateProviderClusterNotifyUpdateAppliedParams, completion:Null<NSError> -> Void):Void;
 	@:selector("handleNotifyUpdateAppliedForNodeID:controller:params:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	@:optional
 	function handleNotifyUpdateAppliedForNodeIDControllerParamsCompletionHandler(nodeID:NSNumberArg, controller:MTRDeviceController, params:MTROTASoftwareUpdateProviderClusterNotifyUpdateAppliedParams, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("handleBDXTransferSessionBeginForNodeID:controller:fileDesignator:offset:completion:")
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	@:optional
 	function handleBDXTransferSessionBeginForNodeIDControllerFileDesignatorOffsetCompletion(nodeID:NSNumberArg, controller:MTRDeviceController, fileDesignator:NSStringArg, offset:NSNumberArg, completion:Null<NSError> -> Void):Void;
 	@:selector("handleBDXTransferSessionBeginForNodeID:controller:fileDesignator:offset:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	@:optional
 	function handleBDXTransferSessionBeginForNodeIDControllerFileDesignatorOffsetCompletionHandler(nodeID:NSNumberArg, controller:MTRDeviceController, fileDesignator:NSStringArg, offset:NSNumberArg, completionHandler:Null<NSError> -> Void):Void;
 	@:selector("handleBDXTransferSessionEndForNodeID:controller:metrics:error:")
+	@:hxmc.available(macos >= 26.1, ios >= 26.1, maccatalyst >= 26.1)
 	@:optional
 	function handleBDXTransferSessionEndForNodeIDControllerMetricsError(nodeID:NSNumberArg, controller:MTRDeviceController, metrics:MTRMetrics, error:Null<NSError>):Void;
 	@:selector("handleBDXTransferSessionEndForNodeID:controller:error:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	@:optional
 	function handleBDXTransferSessionEndForNodeIDControllerError(nodeID:NSNumberArg, controller:MTRDeviceController, error:Null<NSError>):Void;
 	@:selector("handleBDXQueryForNodeID:controller:blockSize:blockIndex:bytesToSkip:completion:")
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	@:optional
 	function handleBDXQueryForNodeIDControllerBlockSizeBlockIndexBytesToSkipCompletion(nodeID:NSNumberArg, controller:MTRDeviceController, blockSize:NSNumberArg, blockIndex:NSNumberArg, bytesToSkip:NSNumberArg, completion:(Null<NSData>, Bool) -> Void):Void;
 	@:selector("handleBDXQueryForNodeID:controller:blockSize:blockIndex:bytesToSkip:completionHandler:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	@:optional
 	function handleBDXQueryForNodeIDControllerBlockSizeBlockIndexBytesToSkipCompletionHandler(nodeID:NSNumberArg, controller:MTRDeviceController, blockSize:NSNumberArg, blockIndex:NSNumberArg, bytesToSkip:NSNumberArg, completionHandler:(Null<NSData>, Bool) -> Void):Void;
 }

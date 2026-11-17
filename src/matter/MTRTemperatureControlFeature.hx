@@ -2,8 +2,11 @@
 package matter;
 
 enum abstract MTRTemperatureControlFeature(Int) to Int {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var TemperatureNumber = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var TemperatureLevel = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var TemperatureStep = 4;
 	inline function new(v:Int) this = v;
 	var None = 0;

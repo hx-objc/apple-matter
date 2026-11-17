@@ -9,19 +9,28 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRAttributeRequestPath extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0) extern class MTRAttributeRequestPath extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function alloc():MTRAttributeRequestPath;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var endpoint(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_endpoint():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var cluster(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_cluster():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var attribute(get, never) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function get_attribute():Null<NSNumberArg>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	static function requestPathWithEndpointID(endpointID:Null<NSNumberArg>, clusterID:Null<NSNumberArg>, attributeID:Null<NSNumberArg>):MTRAttributeRequestPath;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<MTRAttributeRequestPath>;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	override function init():MTRAttributeRequestPath;
 }

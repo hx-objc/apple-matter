@@ -4,9 +4,13 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRPowerSourceWiredFault(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var Unspecified = cast 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Unspecfied = cast 0;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var OverVoltage = cast 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var UnderVoltage = cast 2;
 }

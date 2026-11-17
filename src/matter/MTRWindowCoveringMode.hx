@@ -4,9 +4,13 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRWindowCoveringMode(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MotorDirectionReversed = cast 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var CalibrationMode = cast 2;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MaintenanceMode = cast 4;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var LedFeedback = cast 8;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

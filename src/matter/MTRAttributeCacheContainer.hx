@@ -9,8 +9,11 @@ import foundation.NSString;
 import hxmc.objc.Id;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc @:deprecated extern class MTRAttributeCacheContainer extends NSObject {
+@:hxmc.framework("Matter") @:hxmc.objc @:deprecated @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRAttributeCacheContainer extends NSObject {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function alloc():MTRAttributeCacheContainer;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function readAttributeWithEndpointId(endpointId:Null<NSNumberArg>, clusterId:Null<NSNumberArg>, attributeId:Null<NSNumberArg>, clientQueue:NSObject, completion:(Null<NSArray<NSDictionary<NSString, Id>>>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	override function init():MTRAttributeCacheContainer;
 }

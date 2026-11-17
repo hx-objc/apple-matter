@@ -14,74 +14,130 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRSetupPayload extends NSObject implements NSSecureCoding implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTRSetupPayload extends NSObject implements NSSecureCoding implements NSCopying {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function alloc():MTRSetupPayload;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	var concatenated(get, never) : Bool;
 	@:selector("isConcatenated")
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	function get_concatenated():Bool;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	var subPayloads(get, set) : NSArray<MTRSetupPayload>;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	function get_subPayloads():NSArray<MTRSetupPayload>;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	function set_subPayloads(v:NSArray<MTRSetupPayload>):NSArray<MTRSetupPayload>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var version(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_version():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_version(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var vendorID(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_vendorID():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_vendorID(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var productID(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_productID():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_productID(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var commissioningFlow(get, set) : MTRCommissioningFlow;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_commissioningFlow():MTRCommissioningFlow;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_commissioningFlow(v:MTRCommissioningFlow):MTRCommissioningFlow;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var discoveryCapabilities(get, set) : MTRDiscoveryCapabilities;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_discoveryCapabilities():MTRDiscoveryCapabilities;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_discoveryCapabilities(v:MTRDiscoveryCapabilities):MTRDiscoveryCapabilities;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var discriminator(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_discriminator():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_discriminator(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var hasShortDiscriminator(get, set) : Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_hasShortDiscriminator():Bool;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_hasShortDiscriminator(v:Bool):Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var setupPasscode(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_setupPasscode():NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_setupPasscode(v:NSNumberArg):NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var serialNumber(get, set) : Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_serialNumber():Null<NSStringArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_serialNumber(v:Null<NSStringArg>):Null<NSStringArg>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var vendorElements(get, never) : NSArray<MTROptionalQRCodeInfo>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_vendorElements():NSArray<MTROptionalQRCodeInfo>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var rendezvousInformation(get, set) : Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_rendezvousInformation():Null<NSNumberArg>;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_rendezvousInformation(v:Null<NSNumberArg>):Null<NSNumberArg>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var setUpPINCode(get, set) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_setUpPINCode():NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function set_setUpPINCode(v:NSNumberArg):NSNumberArg;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function initWithPayload(payload:NSStringArg):Null<MTRSetupPayload>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function vendorElementWithTag(tag:NSNumberArg):Null<MTROptionalQRCodeInfo>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function removeVendorElementWithTag(tag:NSNumberArg):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function addOrReplaceVendorElement(element:MTROptionalQRCodeInfo):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function generateRandomPIN():I64;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	static function generateRandomSetupPasscode():NSNumber;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	function initWithSetupPasscode(setupPasscode:NSNumberArg, discriminator:NSNumberArg):MTRSetupPayload;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function manualEntryCode():Null<NSString>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	overload function qrCodeString():Null<NSString>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function isValidSetupPasscode(setupPasscode:NSNumberArg):Bool;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	override function init():MTRSetupPayload;
 	@:selector("new")
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function new_():MTRSetupPayload;
 	@:deprecated
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	static function setupPayloadWithOnboardingPayload(onboardingPayload:NSStringArg, error:Ptr):Null<MTRSetupPayload>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	overload function qrCodeString(error:Ptr):Null<NSString>;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function getAllOptionalVendorData(error:Ptr):Null<NSArray<MTROptionalQRCodeInfo>>;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<MTRSetupPayload>;

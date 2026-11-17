@@ -2,10 +2,15 @@
 package matter;
 
 enum abstract MTRElectricalPowerMeasurementFeature(Int) to Int {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var DirectCurrent = 1;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var AlternatingCurrent = 2;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var PolyphasePower = 4;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Harmonics = 8;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var PowerQuality = 16;
 	inline function new(v:Int) this = v;
 	var None = 0;

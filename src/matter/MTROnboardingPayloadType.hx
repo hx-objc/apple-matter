@@ -4,8 +4,11 @@ package matter;
 import hxmc.I64;
 
 @:deprecated enum abstract MTROnboardingPayloadType(I64) to I64 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var QRCode = 0;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var ManualCode = 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var NFC = 2;
 	inline function new(v:I64) this = v;
 }

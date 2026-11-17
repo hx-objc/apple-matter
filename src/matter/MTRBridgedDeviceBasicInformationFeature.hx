@@ -2,6 +2,7 @@
 package matter;
 
 enum abstract MTRBridgedDeviceBasicInformationFeature(Int) to Int {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var BridgedICDSupport = 1048576;
 	inline function new(v:Int) this = v;
 	var None = 0;

@@ -4,8 +4,11 @@ package matter;
 import hxmc.unsafe.UInt16;
 
 enum abstract MTRDoorLockDlRFIDProgrammingEventMask(UInt16) to UInt16 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Unknown = cast 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var RFIDCodeAdded = cast 32;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var RFIDCodeCleared = cast 64;
 	inline function new(v:UInt16) this = v;
 	var None = cast 0;

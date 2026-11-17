@@ -4,6 +4,8 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRSmokeCOAlarmMuteState(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var NotMuted = cast 0;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Muted = cast 1;
 }

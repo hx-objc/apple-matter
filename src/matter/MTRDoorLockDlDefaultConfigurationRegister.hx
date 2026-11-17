@@ -4,11 +4,17 @@ package matter;
 import hxmc.unsafe.UInt16;
 
 enum abstract MTRDoorLockDlDefaultConfigurationRegister(UInt16) to UInt16 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var EnableLocalProgrammingEnabled = cast 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var KeypadInterfaceDefaultAccessEnabled = cast 2;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var RemoteInterfaceDefaultAccessIsEnabled = cast 4;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var SoundEnabled = cast 32;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var AutoRelockTimeSet = cast 64;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var LEDSettingsSet = cast 128;
 	inline function new(v:UInt16) this = v;
 	var None = cast 0;

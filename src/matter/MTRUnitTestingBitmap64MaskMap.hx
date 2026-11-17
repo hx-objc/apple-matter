@@ -4,9 +4,13 @@ package matter;
 import hxmc.I64;
 
 enum abstract MTRUnitTestingBitmap64MaskMap(I64) to I64 {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var MaskVal1 = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var MaskVal2 = 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var MaskVal3 = 4;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	public static final MaskVal4 : MTRUnitTestingBitmap64MaskMap = new MTRUnitTestingBitmap64MaskMap(0x4000000000000000i64);
 	inline function new(v:I64) this = v;
 	var None = 0;

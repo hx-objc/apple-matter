@@ -4,6 +4,8 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRWaterHeaterManagementBoostState(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Inactive = cast 0;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Active = cast 1;
 }

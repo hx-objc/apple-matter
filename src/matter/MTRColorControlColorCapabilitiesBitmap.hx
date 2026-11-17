@@ -4,10 +4,15 @@ package matter;
 import hxmc.unsafe.UInt16;
 
 enum abstract MTRColorControlColorCapabilitiesBitmap(UInt16) to UInt16 {
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var HueSaturation = cast 1;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var EnhancedHue = cast 2;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var ColorLoop = cast 4;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var XY = cast 8;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var ColorTemperature = cast 16;
 	inline function new(v:UInt16) this = v;
 	var None = cast 0;

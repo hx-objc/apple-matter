@@ -2,11 +2,17 @@
 package matter;
 
 enum abstract MTRSwitchFeature(Int) to Int {
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	var LatchingSwitch = 1;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	var MomentarySwitch = 2;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	var MomentarySwitchRelease = 4;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	var MomentarySwitchLongPress = 8;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	var MomentarySwitchMultiPress = 16;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ActionSwitch = 32;
 	inline function new(v:Int) this = v;
 	var None = 0;

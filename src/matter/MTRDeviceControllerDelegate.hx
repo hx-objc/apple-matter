@@ -8,40 +8,51 @@ import foundation.NSString;
 import hxmc.objc.Id;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("MTRDeviceControllerDelegate") extern interface MTRDeviceControllerDelegate extends NSObjectProtocol {
+@:hxmc.objc("MTRDeviceControllerDelegate") @:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4) extern interface MTRDeviceControllerDelegate extends NSObjectProtocol {
 	@:selector("controller:statusUpdate:")
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	@:optional
 	function controllerStatusUpdate(controller:MTRDeviceController, statusUpdate:MTRCommissioningStatus):Void;
 	@:selector("controller:commissioningSessionEstablishmentDone:")
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	@:optional
 	function controllerCommissioningSessionEstablishmentDone(controller:MTRDeviceController, commissioningSessionEstablishmentDone:Null<NSError>):Void;
 	@:selector("controller:commissioningComplete:")
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	@:optional
 	function controllerCommissioningComplete(controller:MTRDeviceController, commissioningComplete:Null<NSError>):Void;
 	@:selector("controller:commissioningComplete:nodeID:")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	@:optional
 	function controllerCommissioningCompleteNodeID(controller:MTRDeviceController, commissioningComplete:Null<NSError>, nodeID:Null<NSNumberArg>):Void;
 	@:selector("controller:commissioningComplete:nodeID:metrics:")
 	@:deprecated
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	@:optional
 	function controllerCommissioningCompleteNodeIDMetrics(controller:MTRDeviceController, commissioningComplete:Null<NSError>, nodeID:Null<NSNumberArg>, metrics:MTRMetrics):Void;
 	@:selector("controller:commissioningComplete:nodeID:metrics:context:")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function controllerCommissioningCompleteNodeIDMetricsContext(controller:MTRDeviceController, commissioningComplete:Null<NSError>, nodeID:Null<NSNumberArg>, metrics:MTRMetrics, context:NSDictionary<NSString, Id>):Void;
 	@:selector("controller:readCommissioneeInfo:")
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function controllerReadCommissioneeInfo(controller:MTRDeviceController, readCommissioneeInfo:MTRCommissioneeInfo):Void;
 	@:selector("controller:readCommissioningInfo:")
 	@:deprecated
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	@:optional
 	function controllerReadCommissioningInfo(controller:MTRDeviceController, readCommissioningInfo:MTRProductIdentity):Void;
 	@:selector("controller:suspendedChangedTo:")
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	@:optional
 	function controllerSuspendedChangedTo(controller:MTRDeviceController, suspendedChangedTo:Bool):Void;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	@:optional
 	function devicesChangedForController(controller:MTRDeviceController):Void;
 	@:selector("controller:commissioneeHasReceivedNetworkCredentials:")
+	@:hxmc.available(macos >= 15.5, ios >= 18.5, maccatalyst >= 18.5)
 	@:optional
 	function controllerCommissioneeHasReceivedNetworkCredentials(controller:MTRDeviceController, commissioneeHasReceivedNetworkCredentials:NSNumberArg):Void;
 }

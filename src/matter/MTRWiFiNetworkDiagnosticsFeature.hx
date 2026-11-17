@@ -2,7 +2,9 @@
 package matter;
 
 enum abstract MTRWiFiNetworkDiagnosticsFeature(Int) to Int {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var PacketCounts = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var ErrorCounts = 2;
 	inline function new(v:Int) this = v;
 	var None = 0;

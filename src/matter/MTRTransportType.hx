@@ -4,12 +4,20 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRTransportType(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Undefined = cast 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var UDP = cast 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var BLE = cast 2;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var TCP = cast 3;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var WiFiPAF = cast 4;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var NFC = cast 5;
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	var ThreadMeshcop = cast 6;
+	@:hxmc.available(macos >= 27.2, ios >= 27.2, maccatalyst >= 27.2)
 	var Proxy = cast 7;
 }

@@ -4,6 +4,7 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTROccupancySensingOccupancyBitmap(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.4, ios >= 16.5, maccatalyst >= 16.5)
 	var Occupied = cast 1;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

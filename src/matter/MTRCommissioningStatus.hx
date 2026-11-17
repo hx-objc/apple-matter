@@ -4,10 +4,14 @@ package matter;
 import hxmc.I64;
 
 enum abstract MTRCommissioningStatus(I64) to I64 {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Unknown = 0;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Success = 1;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var Failed = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var DiscoveringMoreDevices = 3;
 	inline function new(v:I64) this = v;
 }

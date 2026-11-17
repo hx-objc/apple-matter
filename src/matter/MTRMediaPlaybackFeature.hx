@@ -2,10 +2,15 @@
 package matter;
 
 enum abstract MTRMediaPlaybackFeature(Int) to Int {
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	var AdvancedSeek = 1;
+	@:hxmc.available(macos >= 13.1, ios >= 16.2, maccatalyst >= 16.2)
 	var VariableSpeed = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var TextTracks = 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var AudioTracks = 8;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var AudioAdvance = 16;
 	inline function new(v:Int) this = v;
 	var None = 0;

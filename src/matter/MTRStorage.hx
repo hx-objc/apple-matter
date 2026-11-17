@@ -5,8 +5,11 @@ import foundation.NSData;
 import foundation.NSStringArg;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("MTRStorage") extern interface MTRStorage extends NSObjectProtocol {
+@:hxmc.objc("MTRStorage") @:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4) extern interface MTRStorage extends NSObjectProtocol {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function storageDataForKey(key:NSStringArg):Null<NSData>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function setStorageData(value:NSData, forKey:NSStringArg):Bool;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function removeStorageDataForKey(key:NSStringArg):Bool;
 }

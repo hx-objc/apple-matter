@@ -2,12 +2,19 @@
 package matter;
 
 enum abstract MTRPumpConfigurationAndControlFeature(Int) to Int {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var ConstantPressure = 1;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var CompensatedPressure = 2;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var ConstantFlow = 4;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var ConstantSpeed = 8;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var ConstantTemperature = 16;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var Automatic = 32;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var LocalOperation = 64;
 	inline function new(v:Int) this = v;
 	var None = 0;

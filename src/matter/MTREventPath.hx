@@ -4,12 +4,18 @@ package matter;
 import foundation.NSCoder;
 import foundation.NSNumberArg;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTREventPath extends MTRClusterPath {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern class MTREventPath extends MTRClusterPath {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():MTREventPath;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var event(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function get_event():NSNumberArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function eventPathWithEndpointID(endpointID:NSNumberArg, clusterID:NSNumberArg, eventID:NSNumberArg):MTREventPath;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	static function eventPathWithEndpointId(endpointId:NSNumberArg, clusterId:NSNumberArg, eventId:NSNumberArg):MTREventPath;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	override function initWithCoder(coder:NSCoder):Null<MTREventPath>;
 }

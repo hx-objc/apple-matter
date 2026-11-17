@@ -2,10 +2,14 @@
 package matter;
 
 enum abstract MTROnOffFeature(Int) to Int {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Lighting = 1;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	var DeadFrontBehavior = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 14.1, ios >= 17.1, maccatalyst >= 17.1)
 	var DeadFront = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var OffOnly = 4;
 	inline function new(v:Int) this = v;
 	var None = 0;

@@ -4,8 +4,11 @@ package matter;
 import hxmc.I64;
 
 enum abstract MTRDiagnosticLogType(I64) to I64 {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var EndUserSupport = 0;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var NetworkDiagnostics = 1;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Crash = 2;
 	inline function new(v:I64) this = v;
 }

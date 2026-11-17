@@ -5,7 +5,9 @@ import hxmc.unsafe.UInt8;
 
 @:deprecated enum abstract MTRDiagnosticLogsLogsTransferProtocol(UInt8) to UInt8 {
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var ResponsePayload = cast 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var BDX = cast 1;
 }

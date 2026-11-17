@@ -19,8 +19,10 @@ import objc.NSObjectProtocol;
 	function subscribeWithController(controller:Null<Id>, nodeId:I64, minInterval:NSNumberArg, maxInterval:NSNumberArg, params:Null<NSDictionary<NSString, Id>>, shouldCache:Bool, completion:Null<NSError> -> Void):Void;
 	function readAttributeCacheWithController(controller:Null<Id>, nodeId:I64, endpointId:Null<NSNumberArg>, clusterId:Null<NSNumberArg>, attributeId:Null<NSNumberArg>, completion:(Null<Id>, Null<NSError>) -> Void):Void;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	@:optional
 	function getDeviceControllerWithFabricId(fabricId:I64, completion:(Null<Id>, Null<NSError>) -> Void):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	@:optional
 	function downloadLogWithController(controller:Null<Id>, nodeId:NSNumberArg, type:MTRDiagnosticLogType, timeout:Float, completion:(Null<NSString>, Null<NSError>) -> Void):Void;
 }

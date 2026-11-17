@@ -4,10 +4,14 @@ package matter;
 import hxmc.I64;
 
 enum abstract MTRCommissioningFlow(I64) to I64 {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Standard = 0;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var UserActionRequired = 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Custom = 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Invalid = 3;
 	inline function new(v:I64) this = v;
 }

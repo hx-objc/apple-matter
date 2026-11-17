@@ -7,26 +7,46 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRContentLauncherClusterBrandingInformationStruct extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4) extern class MTRContentLauncherClusterBrandingInformationStruct extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	static function alloc():MTRContentLauncherClusterBrandingInformationStruct;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var providerName(get, set) : NSStringArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_providerName():NSStringArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_providerName(v:NSStringArg):NSStringArg;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var background(get, set) : Null<MTRContentLauncherClusterStyleInformationStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_background():Null<MTRContentLauncherClusterStyleInformationStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_background(v:Null<MTRContentLauncherClusterStyleInformationStruct>):Null<MTRContentLauncherClusterStyleInformationStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var logo(get, set) : Null<MTRContentLauncherClusterStyleInformationStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_logo():Null<MTRContentLauncherClusterStyleInformationStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_logo(v:Null<MTRContentLauncherClusterStyleInformationStruct>):Null<MTRContentLauncherClusterStyleInformationStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var progressBar(get, set) : Null<MTRContentLauncherClusterStyleInformationStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_progressBar():Null<MTRContentLauncherClusterStyleInformationStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_progressBar(v:Null<MTRContentLauncherClusterStyleInformationStruct>):Null<MTRContentLauncherClusterStyleInformationStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var splash(get, set) : Null<MTRContentLauncherClusterStyleInformationStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_splash():Null<MTRContentLauncherClusterStyleInformationStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_splash(v:Null<MTRContentLauncherClusterStyleInformationStruct>):Null<MTRContentLauncherClusterStyleInformationStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var waterMark(get, set) : Null<MTRContentLauncherClusterStyleInformationStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function get_waterMark():Null<MTRContentLauncherClusterStyleInformationStruct>;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	function set_waterMark(v:Null<MTRContentLauncherClusterStyleInformationStruct>):Null<MTRContentLauncherClusterStyleInformationStruct>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	override function init():MTRContentLauncherClusterBrandingInformationStruct;
 }

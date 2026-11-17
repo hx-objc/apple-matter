@@ -4,7 +4,9 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRBooleanStateConfigurationAlarmModeBitmap(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Visual = cast 1;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var Audible = cast 2;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

@@ -6,11 +6,16 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRRVCOperationalStateClusterOperationalErrorEvent extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4) extern class MTRRVCOperationalStateClusterOperationalErrorEvent extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	static function alloc():MTRRVCOperationalStateClusterOperationalErrorEvent;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var errorState(get, set) : MTRRVCOperationalStateClusterErrorStateStruct;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function get_errorState():MTRRVCOperationalStateClusterErrorStateStruct;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	function set_errorState(v:MTRRVCOperationalStateClusterErrorStateStruct):MTRRVCOperationalStateClusterErrorStateStruct;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	override function init():MTRRVCOperationalStateClusterOperationalErrorEvent;
 }

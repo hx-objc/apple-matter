@@ -9,17 +9,26 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRDeviceTypeRevision extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6) extern class MTRDeviceTypeRevision extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function alloc():MTRDeviceTypeRevision;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var deviceTypeID(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_deviceTypeID():NSNumberArg;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var deviceTypeRevision(get, never) : NSNumberArg;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_deviceTypeRevision():NSNumberArg;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var typeInformation(get, never) : Null<MTRDeviceType>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_typeInformation():Null<MTRDeviceType>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function initWithDeviceTypeID(deviceTypeID:NSNumberArg, revision:NSNumberArg):Null<MTRDeviceTypeRevision>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function initWithDeviceTypeStruct(deviceTypeStruct:MTRDescriptorClusterDeviceTypeStruct):Null<MTRDeviceTypeRevision>;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;

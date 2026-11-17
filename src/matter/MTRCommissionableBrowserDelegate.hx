@@ -3,9 +3,11 @@ package matter;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("MTRCommissionableBrowserDelegate") extern interface MTRCommissionableBrowserDelegate extends NSObjectProtocol {
+@:hxmc.objc("MTRCommissionableBrowserDelegate") @:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0) extern interface MTRCommissionableBrowserDelegate extends NSObjectProtocol {
 	@:selector("controller:didFindCommissionableDevice:")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function controllerDidFindCommissionableDevice(controller:MTRDeviceController, didFindCommissionableDevice:MTRCommissionableBrowserResult):Void;
 	@:selector("controller:didRemoveCommissionableDevice:")
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	function controllerDidRemoveCommissionableDevice(controller:MTRDeviceController, didRemoveCommissionableDevice:MTRCommissionableBrowserResult):Void;
 }

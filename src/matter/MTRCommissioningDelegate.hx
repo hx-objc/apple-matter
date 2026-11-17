@@ -10,29 +10,38 @@ import foundation.NSString;
 import hxmc.objc.Id;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("MTRCommissioningDelegate") extern interface MTRCommissioningDelegate extends NSObjectProtocol {
+@:hxmc.objc("MTRCommissioningDelegate") @:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2) extern interface MTRCommissioningDelegate extends NSObjectProtocol {
 	@:selector("commissioning:readCommissioneeInfo:")
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	@:optional
 	function commissioningReadCommissioneeInfo(commissioning:MTRCommissioningOperation, readCommissioneeInfo:MTRCommissioneeInfo):Void;
 	@:selector("commissioning:completedDeviceAttestation:error:completion:")
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	function commissioningCompletedDeviceAttestationErrorCompletion(commissioning:MTRCommissioningOperation, completedDeviceAttestation:MTRDeviceAttestationDeviceInfo, error:Null<NSError>, completion:() -> Void):Void;
 	@:selector("commissioning:needsWiFiCredentialsWithScanResults:error:completion:")
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	@:optional
 	function commissioningNeedsWiFiCredentialsWithScanResultsErrorCompletion(commissioning:MTRCommissioningOperation, needsWiFiCredentialsWithScanResults:Null<NSArray<MTRNetworkCommissioningClusterWiFiInterfaceScanResultStruct>>, error:Null<NSError>, completion:(NSData, Null<NSData>) -> Void):Void;
 	@:selector("commissioning:needsThreadCredentialsWithScanResults:error:completion:")
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	@:optional
 	function commissioningNeedsThreadCredentialsWithScanResultsErrorCompletion(commissioning:MTRCommissioningOperation, needsThreadCredentialsWithScanResults:Null<NSArray<MTRNetworkCommissioningClusterThreadInterfaceScanResultStruct>>, error:Null<NSError>, completion:NSData -> Void):Void;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	@:optional
 	function commissioningStartingNetworkScan(commissioning:MTRCommissioningOperation):Void;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	@:optional
 	function commissioningProvisionedNetworkCredentials(commissioning:MTRCommissioningOperation):Void;
 	@:selector("commissioning:failedWithError:metrics:")
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	@:optional
 	function commissioningFailedWithErrorMetrics(commissioning:MTRCommissioningOperation, failedWithError:NSError, metrics:MTRMetrics):Void;
 	@:selector("commissioning:succeededForNodeID:metrics:")
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	@:optional
 	function commissioningSucceededForNodeIDMetrics(commissioning:MTRCommissioningOperation, succeededForNodeID:NSNumberArg, metrics:MTRMetrics):Void;
 	@:selector("commissioning:succeededForNodeID:metrics:context:")
+	@:hxmc.available(macos >= 27.0, ios >= 27.0, maccatalyst >= 27.0)
 	@:optional
 	function commissioningSucceededForNodeIDMetricsContext(commissioning:MTRCommissioningOperation, succeededForNodeID:NSNumberArg, metrics:MTRMetrics, context:NSDictionary<NSString, Id>):Void;
 }

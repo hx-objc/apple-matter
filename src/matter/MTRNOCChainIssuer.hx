@@ -6,6 +6,7 @@ import foundation.NSNumber;
 import hxmc.unsafe.Ptr;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("MTRNOCChainIssuer") @:deprecated extern interface MTRNOCChainIssuer extends NSObjectProtocol {
+@:hxmc.objc("MTRNOCChainIssuer") @:deprecated @:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1) extern interface MTRNOCChainIssuer extends NSObjectProtocol {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	function onNOCChainGenerationNeeded(csrInfo:CSRInfo, attestationInfo:AttestationInfo, onNOCChainGenerationComplete:(NSData, NSData, NSData, Null<NSData>, Null<NSNumber>, Ptr) -> Void):Void;
 }

@@ -4,10 +4,15 @@ package matter;
 import hxmc.unsafe.UInt16;
 
 enum abstract MTRNetworkCommissioningThreadCapabilitiesBitmap(UInt16) to UInt16 {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var IsBorderRouterCapable = cast 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var IsRouterCapable = cast 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var IsSleepyEndDeviceCapable = cast 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var IsFullThreadDevice = cast 8;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var IsSynchronizedSleepyEndDeviceCapable = cast 16;
 	inline function new(v:UInt16) this = v;
 	var None = cast 0;

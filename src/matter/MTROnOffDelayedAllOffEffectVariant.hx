@@ -4,11 +4,16 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTROnOffDelayedAllOffEffectVariant(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	var MTROnOffDelayedAllOffEffectVariantDelayedOffFastFade = cast 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTROnOffDelayedAllOffEffectVariantFadeToOffIn0p8Seconds = cast 0;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTROnOffDelayedAllOffEffectVariantNoFade = cast 1;
+	@:hxmc.available(macos >= 14.2, ios >= 17.2, maccatalyst >= 17.2)
 	var MTROnOffDelayedAllOffEffectVariantDelayedOffSlowFade = cast 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var MTROnOffDelayedAllOffEffectVariant50PercentDimDownIn0p8SecondsThenFadeToOffIn12Seconds = cast 2;
 }

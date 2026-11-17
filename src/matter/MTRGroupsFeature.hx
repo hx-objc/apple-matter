@@ -2,6 +2,7 @@
 package matter;
 
 enum abstract MTRGroupsFeature(Int) to Int {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var GroupNames = 1;
 	inline function new(v:Int) this = v;
 	var None = 0;

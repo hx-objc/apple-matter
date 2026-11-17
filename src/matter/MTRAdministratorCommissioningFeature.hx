@@ -2,6 +2,7 @@
 package matter;
 
 enum abstract MTRAdministratorCommissioningFeature(Int) to Int {
+	@:hxmc.available(macos >= 14.4, ios >= 17.4, maccatalyst >= 17.4)
 	var Basic = 1;
 	inline function new(v:Int) this = v;
 	var None = 0;

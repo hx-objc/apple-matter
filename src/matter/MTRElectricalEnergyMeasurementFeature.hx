@@ -2,9 +2,13 @@
 package matter;
 
 enum abstract MTRElectricalEnergyMeasurementFeature(Int) to Int {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var ImportedEnergy = 1;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var ExportedEnergy = 2;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var CumulativeEnergy = 4;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var PeriodicEnergy = 8;
 	inline function new(v:Int) this = v;
 	var None = 0;

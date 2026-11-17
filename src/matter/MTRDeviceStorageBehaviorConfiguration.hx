@@ -7,35 +7,64 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRDeviceStorageBehaviorConfiguration extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6) extern class MTRDeviceStorageBehaviorConfiguration extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function alloc():MTRDeviceStorageBehaviorConfiguration;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var disableStorageBehaviorOptimization(get, set) : Bool;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_disableStorageBehaviorOptimization():Bool;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_disableStorageBehaviorOptimization(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var reportToPersistenceDelayTime(get, set) : Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_reportToPersistenceDelayTime():Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_reportToPersistenceDelayTime(v:Float):Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var reportToPersistenceDelayTimeMax(get, set) : Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_reportToPersistenceDelayTimeMax():Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_reportToPersistenceDelayTimeMax(v:Float):Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var recentReportTimesMaxCount(get, set) : I64;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_recentReportTimesMaxCount():I64;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_recentReportTimesMaxCount(v:I64):I64;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var timeBetweenReportsTooShortThreshold(get, set) : Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_timeBetweenReportsTooShortThreshold():Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_timeBetweenReportsTooShortThreshold(v:Float):Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var timeBetweenReportsTooShortMinThreshold(get, set) : Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_timeBetweenReportsTooShortMinThreshold():Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_timeBetweenReportsTooShortMinThreshold(v:Float):Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var reportToPersistenceDelayMaxMultiplier(get, set) : Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_reportToPersistenceDelayMaxMultiplier():Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_reportToPersistenceDelayMaxMultiplier(v:Float):Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var deviceReportingExcessivelyIntervalThreshold(get, set) : Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_deviceReportingExcessivelyIntervalThreshold():Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_deviceReportingExcessivelyIntervalThreshold(v:Float):Float;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function configurationWithDefaultStorageBehavior():MTRDeviceStorageBehaviorConfiguration;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function configurationWithStorageBehaviorOptimizationDisabled():MTRDeviceStorageBehaviorConfiguration;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function configurationWithReportToPersistenceDelayTime(reportToPersistenceDelayTime:Float, reportToPersistenceDelayTimeMax:Float, recentReportTimesMaxCount:I64, timeBetweenReportsTooShortThreshold:Float, timeBetweenReportsTooShortMinThreshold:Float, reportToPersistenceDelayMaxMultiplier:Float, deviceReportingExcessivelyIntervalThreshold:Float):MTRDeviceStorageBehaviorConfiguration;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	override function init():MTRDeviceStorageBehaviorConfiguration;
 }

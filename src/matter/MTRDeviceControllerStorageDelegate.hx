@@ -7,16 +7,21 @@ import foundation.NSString;
 import foundation.NSStringArg;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("MTRDeviceControllerStorageDelegate") extern interface MTRDeviceControllerStorageDelegate extends NSObjectProtocol {
+@:hxmc.objc("MTRDeviceControllerStorageDelegate") @:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6) extern interface MTRDeviceControllerStorageDelegate extends NSObjectProtocol {
 	@:selector("controller:valueForKey:securityLevel:sharingType:")
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function controllerValueForKeySecurityLevelSharingType(controller:MTRDeviceController, valueForKey:NSStringArg, securityLevel:MTRStorageSecurityLevel, sharingType:MTRStorageSharingType):Null<NSSecureCoding>;
 	@:selector("controller:storeValue:forKey:securityLevel:sharingType:")
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function controllerStoreValueForKeySecurityLevelSharingType(controller:MTRDeviceController, storeValue:NSSecureCoding, forKey:NSStringArg, securityLevel:MTRStorageSecurityLevel, sharingType:MTRStorageSharingType):Bool;
 	@:selector("controller:removeValueForKey:securityLevel:sharingType:")
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function controllerRemoveValueForKeySecurityLevelSharingType(controller:MTRDeviceController, removeValueForKey:NSStringArg, securityLevel:MTRStorageSecurityLevel, sharingType:MTRStorageSharingType):Bool;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	@:optional
 	function valuesForController(controller:MTRDeviceController, securityLevel:MTRStorageSecurityLevel, sharingType:MTRStorageSharingType):Null<NSDictionary<NSString, NSSecureCoding>>;
 	@:selector("controller:storeValues:securityLevel:sharingType:")
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	@:optional
 	function controllerStoreValuesSecurityLevelSharingType(controller:MTRDeviceController, storeValues:NSDictionary<NSString, NSSecureCoding>, securityLevel:MTRStorageSecurityLevel, sharingType:MTRStorageSharingType):Bool;
 }

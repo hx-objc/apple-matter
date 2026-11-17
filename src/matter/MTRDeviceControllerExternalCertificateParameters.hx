@@ -6,9 +6,13 @@ import foundation.NSNumberArg;
 import foundation.NSUUID;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRDeviceControllerExternalCertificateParameters extends MTRDeviceControllerParameters {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6) extern class MTRDeviceControllerExternalCertificateParameters extends MTRDeviceControllerParameters {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function alloc():MTRDeviceControllerExternalCertificateParameters;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var rootCertificate(get, never) : NSData;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function get_rootCertificate():NSData;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function initWithStorageDelegate(storageDelegate:MTRDeviceControllerStorageDelegate, storageDelegateQueue:NSObject, uniqueIdentifier:NSUUID, ipk:NSData, vendorID:NSNumberArg, operationalKeypair:MTRKeypair, operationalCertificate:NSData, intermediateCertificate:Null<NSData>, rootCertificate:NSData):MTRDeviceControllerExternalCertificateParameters;
 }

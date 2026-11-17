@@ -6,11 +6,16 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRWaterHeaterManagementClusterBoostStartedEvent extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4) extern class MTRWaterHeaterManagementClusterBoostStartedEvent extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():MTRWaterHeaterManagementClusterBoostStartedEvent;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var boostInfo(get, set) : MTRWaterHeaterManagementClusterWaterHeaterBoostInfoStruct;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_boostInfo():MTRWaterHeaterManagementClusterWaterHeaterBoostInfoStruct;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_boostInfo(v:MTRWaterHeaterManagementClusterWaterHeaterBoostInfoStruct):MTRWaterHeaterManagementClusterWaterHeaterBoostInfoStruct;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	override function init():MTRWaterHeaterManagementClusterBoostStartedEvent;
 }

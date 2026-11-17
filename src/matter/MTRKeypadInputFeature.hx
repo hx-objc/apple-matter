@@ -2,8 +2,11 @@
 package matter;
 
 enum abstract MTRKeypadInputFeature(Int) to Int {
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var NavigationKeyCodes = 1;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var LocationKeys = 2;
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var NumberKeys = 4;
 	inline function new(v:Int) this = v;
 	var None = 0;

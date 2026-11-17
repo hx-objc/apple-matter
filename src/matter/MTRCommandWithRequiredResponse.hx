@@ -11,22 +11,34 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRCommandWithRequiredResponse extends NSObject implements NSCopying implements NSSecureCoding {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4) extern class MTRCommandWithRequiredResponse extends NSObject implements NSCopying implements NSSecureCoding {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():MTRCommandWithRequiredResponse;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var path(get, set) : MTRCommandPath;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_path():MTRCommandPath;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_path(v:MTRCommandPath):MTRCommandPath;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var commandFields(get, set) : Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_commandFields():Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_commandFields(v:Null<NSDictionary<NSString, Id>>):Null<NSDictionary<NSString, Id>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var requiredResponse(get, set) : Null<NSDictionary<NSNumber, NSDictionary<NSString, Id>>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_requiredResponse():Null<NSDictionary<NSNumber, NSDictionary<NSString, Id>>>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_requiredResponse(v:Null<NSDictionary<NSNumber, NSDictionary<NSString, Id>>>):Null<NSDictionary<NSNumber, NSDictionary<NSString, Id>>>;
 	static var supportsSecureCoding(get, never) : Bool;
 	static function get_supportsSecureCoding():Bool;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function initWithPath(path:MTRCommandPath, commandFields:Null<NSDictionary<NSString, Id>>, requiredResponse:Null<NSDictionary<NSNumber, NSDictionary<NSString, Id>>>):MTRCommandWithRequiredResponse;
 	function copyWithZone(zone:Ptr):Id;
 	function encodeWithCoder(coder:NSCoder):Void;
 	function initWithCoder(coder:NSCoder):Null<MTRCommandWithRequiredResponse>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	override function init():MTRCommandWithRequiredResponse;
 }

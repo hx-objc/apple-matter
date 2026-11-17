@@ -2,9 +2,13 @@
 package matter;
 
 enum abstract MTRICDManagementFeature(Int) to Int {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var CheckInProtocolSupport = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var UserActiveModeTrigger = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var LongIdleTimeSupport = 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var DynamicSitLitSupport = 8;
 	inline function new(v:Int) this = v;
 	var None = 0;

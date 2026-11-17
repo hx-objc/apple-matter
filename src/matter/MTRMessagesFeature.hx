@@ -2,9 +2,13 @@
 package matter;
 
 enum abstract MTRMessagesFeature(Int) to Int {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ReceivedConfirmation = 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ConfirmationResponse = 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ConfirmationReply = 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ProtectedMessages = 8;
 	inline function new(v:Int) this = v;
 	var None = 0;

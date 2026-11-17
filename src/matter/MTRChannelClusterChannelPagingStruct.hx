@@ -6,14 +6,22 @@ import hxmc.objc.Id;
 import hxmc.unsafe.Ptr;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRChannelClusterChannelPagingStruct extends NSObject implements NSCopying {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4) extern class MTRChannelClusterChannelPagingStruct extends NSObject implements NSCopying {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	static function alloc():MTRChannelClusterChannelPagingStruct;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var previousToken(get, set) : Null<MTRChannelClusterPageTokenStruct>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_previousToken():Null<MTRChannelClusterPageTokenStruct>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_previousToken(v:Null<MTRChannelClusterPageTokenStruct>):Null<MTRChannelClusterPageTokenStruct>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var nextToken(get, set) : Null<MTRChannelClusterPageTokenStruct>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function get_nextToken():Null<MTRChannelClusterPageTokenStruct>;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	function set_nextToken(v:Null<MTRChannelClusterPageTokenStruct>):Null<MTRChannelClusterPageTokenStruct>;
 	function copyWithZone(zone:Ptr):Id;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	override function init():MTRChannelClusterChannelPagingStruct;
 }

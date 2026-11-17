@@ -4,13 +4,20 @@ package matter;
 import foundation.NSUUID;
 import foundation.NSXPCConnection;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRXPCDeviceControllerParameters extends MTRDeviceControllerAbstractParameters {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2) extern class MTRXPCDeviceControllerParameters extends MTRDeviceControllerAbstractParameters {
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	static function alloc():MTRXPCDeviceControllerParameters;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var uniqueIdentifier(get, never) : NSUUID;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function get_uniqueIdentifier():NSUUID;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	var xpcConnectionBlock(get, never) : () -> NSXPCConnection;
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function get_xpcConnectionBlock():() -> NSXPCConnection;
+	@:hxmc.available(macos >= 26.0, ios >= 26.0, maccatalyst >= 26.0)
 	function initWithXPCConnectionBlock(xpcConnectionBlock:() -> NSXPCConnection, uniqueIdentifier:NSUUID):MTRXPCDeviceControllerParameters;
 	@:deprecated
+	@:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2)
 	function initWithXPConnectionBlock(xpcConnectionBlock:() -> NSXPCConnection, uniqueIdentifier:NSUUID):MTRXPCDeviceControllerParameters;
 }

@@ -5,7 +5,8 @@ import foundation.NSDictionary;
 import foundation.NSUUID;
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("MTRXPCClientProtocol_MTRDeviceController") extern interface MTRXPCClientProtocol_MTRDeviceController extends NSObjectProtocol {
+@:hxmc.objc("MTRXPCClientProtocol_MTRDeviceController") @:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2) extern interface MTRXPCClientProtocol_MTRDeviceController extends NSObjectProtocol {
+	@:hxmc.available(macos >= 15.3, ios >= 18.3, maccatalyst >= 18.3)
 	@:optional
 	function controller(controller:NSUUID, controllerConfigurationUpdated:NSDictionary):Void;
 }

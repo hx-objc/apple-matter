@@ -3,6 +3,6 @@ package matter;
 
 import objc.NSObjectProtocol;
 
-@:hxmc.objc("MTRXPCClientProtocol") extern interface MTRXPCClientProtocol extends NSObjectProtocol extends MTRXPCClientProtocol_MTRDevice extends MTRXPCClientProtocol_MTRDeviceController {
+@:hxmc.objc("MTRXPCClientProtocol") @:hxmc.available(macos >= 15.2, ios >= 18.2, maccatalyst >= 18.2) extern interface MTRXPCClientProtocol extends NSObjectProtocol extends MTRXPCClientProtocol_MTRDevice extends MTRXPCClientProtocol_MTRDeviceController {
 
 }

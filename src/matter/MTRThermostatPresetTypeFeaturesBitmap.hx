@@ -4,7 +4,9 @@ package matter;
 import hxmc.unsafe.UInt16;
 
 enum abstract MTRThermostatPresetTypeFeaturesBitmap(UInt16) to UInt16 {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Automatic = cast 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var SupportsNames = cast 2;
 	inline function new(v:UInt16) this = v;
 	var None = cast 0;

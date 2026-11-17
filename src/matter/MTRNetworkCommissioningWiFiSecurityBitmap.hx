@@ -4,10 +4,15 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRNetworkCommissioningWiFiSecurityBitmap(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var Unencrypted = cast 1;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var WEP = cast 2;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var WPAPersonal = cast 4;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var WPA2Personal = cast 8;
+	@:hxmc.available(macos >= 14.0, ios >= 17.0, maccatalyst >= 17.0)
 	var WPA3Personal = cast 16;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

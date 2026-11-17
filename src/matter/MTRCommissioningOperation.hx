@@ -4,11 +4,17 @@ package matter;
 import foundation.NSStringArg;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRCommissioningOperation extends NSObject {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2) extern class MTRCommissioningOperation extends NSObject {
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	static function alloc():MTRCommissioningOperation;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	var matchedPayload(get, never) : Null<MTRSetupPayload>;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	function get_matchedPayload():Null<MTRSetupPayload>;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	function initWithParameters(parameters:MTRCommissioningParameters, setupPayload:NSStringArg, delegate:MTRCommissioningDelegate, queue:NSObject):Null<MTRCommissioningOperation>;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	function startWithController(controller:MTRDeviceController):Void;
+	@:hxmc.available(macos >= 26.2, ios >= 26.2, maccatalyst >= 26.2)
 	function stop():Bool;
 }

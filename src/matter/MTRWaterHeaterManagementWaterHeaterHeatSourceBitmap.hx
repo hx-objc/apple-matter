@@ -4,10 +4,15 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRWaterHeaterManagementWaterHeaterHeatSourceBitmap(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ImmersionElement1 = cast 1;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var ImmersionElement2 = cast 2;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var HeatPump = cast 4;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Boiler = cast 8;
+	@:hxmc.available(macos >= 15.4, ios >= 18.4, maccatalyst >= 18.4)
 	var Other = cast 16;
 	inline function new(v:UInt8) this = v;
 	var None = cast 0;

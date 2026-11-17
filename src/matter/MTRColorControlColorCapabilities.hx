@@ -5,14 +5,19 @@ import hxmc.unsafe.UInt16;
 
 @:deprecated enum abstract MTRColorControlColorCapabilities(UInt16) to UInt16 {
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var HueSaturationSupported = cast 1;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var EnhancedHueSupported = cast 2;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var ColorLoopSupported = cast 4;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var XYAttributesSupported = cast 8;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var ColorTemperatureSupported = cast 16;
 	inline function new(v:UInt16) this = v;
 	var None = cast 0;

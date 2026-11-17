@@ -6,23 +6,41 @@ import foundation.NSData;
 import hxmc.I64;
 import objc.NSObject;
 
-@:hxmc.framework("Matter") @:hxmc.objc extern class MTRDeviceControllerParameters extends MTRDeviceControllerAbstractParameters {
+@:hxmc.framework("Matter") @:hxmc.objc @:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6) extern class MTRDeviceControllerParameters extends MTRDeviceControllerAbstractParameters {
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	static function alloc():MTRDeviceControllerParameters;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var productAttestationAuthorityCertificates(get, set) : Null<NSArray<NSData>>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_productAttestationAuthorityCertificates():Null<NSArray<NSData>>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_productAttestationAuthorityCertificates(v:Null<NSArray<NSData>>):Null<NSArray<NSData>>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var certificationDeclarationCertificates(get, set) : Null<NSArray<NSData>>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_certificationDeclarationCertificates():Null<NSArray<NSData>>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_certificationDeclarationCertificates(v:Null<NSArray<NSData>>):Null<NSArray<NSData>>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var shouldAdvertiseOperational(get, set) : Bool;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_shouldAdvertiseOperational():Bool;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_shouldAdvertiseOperational(v:Bool):Bool;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var concurrentSubscriptionEstablishmentsAllowedOnThread(get, set) : I64;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_concurrentSubscriptionEstablishmentsAllowedOnThread():I64;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_concurrentSubscriptionEstablishmentsAllowedOnThread(v:I64):I64;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	var storageBehaviorConfiguration(get, set) : Null<MTRDeviceStorageBehaviorConfiguration>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function get_storageBehaviorConfiguration():Null<MTRDeviceStorageBehaviorConfiguration>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function set_storageBehaviorConfiguration(v:Null<MTRDeviceStorageBehaviorConfiguration>):Null<MTRDeviceStorageBehaviorConfiguration>;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function setOperationalCertificateIssuer(operationalCertificateIssuer:MTROperationalCertificateIssuer, queue:NSObject):Void;
+	@:hxmc.available(macos >= 14.6, ios >= 17.6, maccatalyst >= 17.6)
 	function setOTAProviderDelegate(otaProviderDelegate:MTROTAProviderDelegate, queue:NSObject):Void;
 }

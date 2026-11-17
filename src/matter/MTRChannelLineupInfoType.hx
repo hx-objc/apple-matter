@@ -4,7 +4,9 @@ package matter;
 import hxmc.unsafe.UInt8;
 
 enum abstract MTRChannelLineupInfoType(UInt8) to UInt8 {
+	@:hxmc.available(macos >= 13.3, ios >= 16.4, maccatalyst >= 16.4)
 	var MSO = cast 0;
 	@:deprecated
+	@:hxmc.available(macos >= 13.0, ios >= 16.1, maccatalyst >= 16.1)
 	var Mso = cast 0;
 }
